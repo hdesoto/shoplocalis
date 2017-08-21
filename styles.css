@@ -57,3 +57,8 @@
 .navbar {
     border-radius: 0;
 }
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+    color: #333;
+    background-color: transparent;
+}
