@@ -1,0 +1,27 @@
+{
+  "name": "shoplocalis",
+  "version": "1.0.0",
+  "description": "Marketplace with focus on local shops.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hdesoto/shoplocalis.git"
+  },
+  "keywords": [
+    "shop",
+    "local",
+    "project"
+  ],
+  "author": "Hernán de Soto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hdesoto/shoplocalis/issues"
+  },
+  "homepage": "https://github.com/hdesoto/shoplocalis#readme",
+  "dependencies": {
+    "bower": "^1.8.0"
+  }
+}
