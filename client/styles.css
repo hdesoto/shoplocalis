@@ -18,10 +18,10 @@
 */
 
 
-
 body {
-    padding-top: 55px;
+    padding-top: 66px;
     background-color: #eeeeee;
+    font-family: 'Encode Sans', sans-serif;
 }
 
 .navbar{
@@ -44,7 +44,7 @@ body {
 .jumbotron{
   height: 300px;
   margin-bottom:0px;
-  background-image: url(./img/backgrounds/fruteria.jpg);
+  background-image: url(./img/backgrounds/ropa.jpg);
   background-position: bottom;
   background-size: cover;
   opacity:0.8;
@@ -56,19 +56,17 @@ body {
 }
 
 .search-bar{
-  width:50%;
+  width:49%;
   /*margin-top:10px;*/
   position: absolute;
   right: 30%;
   top: 10px;
 }
 
-
-
 @media(min-width: 377px){
   .search-bar{
     overflow:auto;
-    right:21%;
+    right:28%;
     border:none;
     }
   .search-main-btn{
@@ -84,7 +82,11 @@ body {
     }
   .search-main-dropdown{
     border: none;
-    opacity: 0.9;
+    opacity: 1;
+    border-radius:0px;
+  }
+  .search-main-lupa{
+    border:none;
     border-radius:0px;
   }
 }
@@ -98,9 +100,15 @@ body {
 }
 
 
-.search-main, .search-main-btn .search-main-dropdown{
+.search-main,
+.search-main-btn{
   opacity:0.8;
 }
+
+.search-main-dropdown{
+  opacity:0.9;
+}
+
 
 /* NAVBAR WITH CART */
 
@@ -108,6 +116,13 @@ body {
   position:absolute;
   right:15px;
   top:20px;
+}
+
+.login-link{
+  position:absolute;
+  right:84px;
+  top:21px;
+  
 }
 
 .dropdown-cart{
@@ -489,10 +504,10 @@ ul.dropdown-cart li .item-right button{
 }
 
 @media screen and (min-width: 768px) {
-    #adv-search {
+    /*#adv-search {
         width: 500px;
         margin: 0 auto;
-    }
+    }*/
     .dropdown.dropdown-lg {
         position: static !important;
     }
@@ -503,3 +518,37 @@ ul.dropdown-cart li .item-right button{
 
 
 /* end Search with filters */
+
+
+
+/* carousel */
+
+.carousel-inner{
+  height:300px;
+}
+
+.carousel-caption {
+    top: 82px;
+    bottom: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    /*background-color: #292c2f;*/
+}
+.carousel-caption a{
+  color:#98ce00;
+  font-weight: bold;
+}
+
+/*.item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 300px;
+}*/
+
+/* end carousel */
+
+
+/* LOGIN */ 
+
+
+/* END OF LOGIN*/

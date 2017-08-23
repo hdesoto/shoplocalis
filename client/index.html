@@ -6,37 +6,91 @@
     <title>Shop Localis</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Latest compiled and minified CSS -->
-    
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <!-- BOWER Bootstrap for offline use -->
-        <!-- <link rel="stylesheet" href="bower_components/bootstrap/dist/css/boostrap.min.css">
+    <!-- BOWER Bootstrap for offline use -->
+    <!-- <link rel="stylesheet" href="bower_components/bootstrap/dist/css/boostrap.min.css">
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/boostrap-theme.min.css"> -->
-    
-    
-
     <link href="https://fonts.googleapis.com/css?family=Pragati+Narrow:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900" rel="stylesheet">
     <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
-
-
+    <link href="https://fonts.googleapis.com/css?family=Encode+Sans:400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-
 </head>
 
 <body>
-    <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <a class="navbar-brand brand-text hidden-xs" href="#"><img class="logo-next-to-name" src="./img/icons/shoppingbag.png">Shop Localis</a>
-      <a class="navbar-brand brand-logo hidden-sm hidden-md hidden-lg" href="#"></a>
-    </div>
 
-<div class="input-group search-bar" id="adv-search">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <a class="navbar-brand brand-text hidden-xs" href="#"><img class="logo-next-to-name" src="./img/icons/shoppingbag.png">Shop Localis</a>
+                <a class="navbar-brand brand-logo hidden-sm hidden-md hidden-lg" href="#"></a>
+            </div>
+            
+        </div>
+        <!-- LOGIN -->
+        <a href="#" class="dropdown-toggle login-link" data-toggle="dropdown" role="button" aria-expanded="false"><i class="glyphicon glyphicon-user user"></i> <span class="hidden-xs hidden-sm">USUARIO </span> <span class="badge badge-usuario">2</span></a>
+        <ul class="dropdown-menu dropdown-user" role="menu">
+            <li><a class="text-center" href="">Login</a></li>
+            <li class="divider2"></li>
+            <li><a class="text-center" href="#">Registrarse</a></li>
+        </ul>
+
+
+
+
+        <!-- END of LOGIN -->
+        <!-- CART -->
+        <a href="#" class="dropdown-toggle expandable-cart" data-toggle="dropdown" role="button" aria-expanded="false"><span class="badge">2</span> <span class="glyphicon glyphicon-shopping-cart cart"></span><span class="caret"></span></a>
+        <ul class="dropdown-menu dropdown-cart" role="menu">
+            <li>
+                <span class="item">
+                <span class="item-left">
+                    <img src="http://lorempixel.com/50/50/" alt="" />
+                    <span class="item-info">
+                        <span>Item name</span>
+                <span>23$</span>
+                </span>
+                </span>
+                <span class="item-right">
+                    <button class="btn btn-xs btn-danger pull-right">x</button>
+                </span>
+                </span>
+            </li>
+            <li>
+                <span class="item">
+                <span class="item-left">
+                    <img src="http://lorempixel.com/50/50/" alt="" />
+                    <span class="item-info">
+                        <span>Item name</span>
+                <span>23$</span>
+                </span>
+                </span>
+                <span class="item-right">
+                    <button class="btn btn-xs btn-danger pull-right">x</button>
+                </span>
+                </span>
+            </li>
+            <li class="divider"></li>
+            <li><a class="text-center" href="">Ver carro</a></li>
+            <li class="divider2"></li>
+            <li><a class="text-center" href="#">Login</a></li>
+        </ul>
+        <!-- END of CART -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <!-- END of NAVBAR -->
+
+
+    <div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+       <div class="input-group search-bar" id="adv-search">
                 <input type="text" class="form-control input-lg search-main" placeholder="Quiero..." />
                 <div class="input-group-btn">
                     <div class="btn-group" role="group">
@@ -44,114 +98,83 @@
                             <button type="button" class="btn btn-default search-main-btn dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
                             <div class="dropdown-menu dropdown-menu-right search-main-dropdown" role="menu">
                                 <form class="form-horizontal" role="form">
-                                  <div class="form-group">
-                                    <label for="filter">Filtrar Categorías</label>
-                                    <select class="form-control">
-                                        <option value="0" selected>Todas</option>
-                                        <option value="1">Ropa</option>
-                                        <option value="2">Alimentación</option>
-                                        <option value="3">Más recientes</option>
-                                        <option value="4">Promociones</option>
-                                    </select>
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="contain">Author</label>
-                                    <input class="form-control" type="text" />
-                                  </div>
-                                  <div class="form-group">
-                                    <label for="contain">Contains the words</label>
-                                    <input class="form-control" type="text" />
-                                  </div>
-                                  <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                                    <div class="form-group">
+                                        <label for="filter">Filtrar Categorías</label>
+                                        <select class="form-control">
+                                            <option value="0" selected>Todas</option>
+                                            <option value="1">Ropa</option>
+                                            <option value="2">Alimentación</option>
+                                            <option value="3">Más recientes</option>
+                                            <option value="4">Promociones</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="contain">Author</label>
+                                        <input class="form-control" type="text" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="contain">Contains the words</label>
+                                        <input class="form-control" type="text" />
+                                    </div>
+                                    <button type="submit" class="btn btn-primary "><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
                                 </form>
                             </div>
                         </div>
-                        <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                        <button type="button" class="btn btn-primary search-main-lupa"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
                     </div>
                 </div>
             </div>
-          </div>
+            </div>
+        </div>
+    </div>
+    
 
-
-   <!--  <div class="input-group search-bar">
-        <div class="input-group-btn btn-lg">
-        <button type="button" class="btn btn-default dropdown-toggle search-main-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Todas las categorías <span class="caret"></span></button>
-        <ul class="dropdown-menu">
-          <li><a href="#">Todas las categorías</a></li>
-          <li><a href="#">Categoría 1</a></li>
-          <li><a href="#">Categoría 2</a></li>
-          <li><a href="#">Categoría 3</a></li>
-        </ul>
-      </div>
-
-        <input type="text" class="form-control input-lg search-main" placeholder="I need some...">
-        <span class="input-group-btn">
-        <button class="btn btn-default btn-lg search-main-btn" type="button"><i class="glyphicon glyphicon-search"></i></button>
-        </span>
-    </div> -->
-          <a href="#" class="dropdown-toggle expandable-cart" data-toggle="dropdown" role="button" aria-expanded="false"><span class="badge">2</span> <span class="glyphicon glyphicon-shopping-cart cart"></span><span class="caret"></span></a>
-          <ul class="dropdown-menu dropdown-cart" role="menu">
-              <li>
-                  <span class="item">
-                    <span class="item-left">
-                        <img src="http://lorempixel.com/50/50/" alt="" />
-                        <span class="item-info">
-                            <span>Item name</span>
-                            <span>23$</span>
-                        </span>
-                    </span>
-                    <span class="item-right">
-                        <button class="btn btn-xs btn-danger pull-right">x</button>
-                    </span>
-                </span>
-              </li>
-              <li>
-                  <span class="item">
-                    <span class="item-left">
-                        <img src="http://lorempixel.com/50/50/" alt="" />
-                        <span class="item-info">
-                            <span>Item name</span>
-                            <span>23$</span>
-                        </span>
-                    </span>
-                    <span class="item-right">
-                        <button class="btn btn-xs btn-danger pull-right">x</button>
-                    </span>
-                </span>
-              </li>
-              <li class="divider"></li>
-              <li><a class="text-center" href="">Ver carro</a></li>
-              <li class="divider2"></li>
-              <li><a class="text-center" href="#">Login</a></li>
-          </ul>
-
-  </div><!-- /.container -->
-</nav>
-
-<div class="container-fluid">
-<div class="container">
-
-
-
-</div>
-
-
-</div>
-
-    <!-- JUMBOTRON -->
-                <div class="jumbotron">
-                    <div class="container">
-                        
-                    </div>
+    <!-- JUMBOTRON / CAROUSEL -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="./img/backgrounds/fruteria.jpg" alt="Fruteria">
+                <div class="carousel-caption">
+                    <h3><a href="#" class="carousel-link">ALIMENTACION</a></h3>
+                    <p>Compra frutas y verduras en tu pueblo</p>
                 </div>
+            </div>
+            <div class="item">
+                <img src="./img/backgrounds/ropa.jpg" alt="Ropa">
+                <div class="carousel-caption">
+                    <h3><a href="#" class="carousel-link">VESTIMENTA</a></h3>
+                    <p>Compra ropa en tu barrio</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./img/backgrounds/equipamiento_deportivo_calzado.jpg" alt="Deportivos">
+                <div class="carousel-caption">
+                    <h3><a href="#" class="carousel-link">ARTICULOS DEPORTIVOS</a></h3>
+                    <p>Compra tu equipo en tu ciudad</p>
+                </div>
+            </div>
+        </div>
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
     <!--END JUMBOTRON -->
-
-
     <!-- MAIN BODY - PRODUCTS SHOWN -->
     <div class="container main-body">
-        
         <div class="row">
-            
             <div class="col-md-3 col-sm-4 col-xs-6 box-box box-box">
                 <div class="productbox">
                     <img src="./img/aguacate.jpg" class="img-responsive">
@@ -165,7 +188,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="col-md-3 col-sm-4 col-xs-6 box-box box-box">
                 <div class="productbox">
                     <img src="./img/aguacate.jpg" class="img-responsive">
@@ -179,7 +201,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="col-md-3 col-sm-4 col-xs-6 box-box box-box">
                 <div class="productbox">
                     <img src="./img/aguacate.jpg" class="img-responsive">
@@ -193,7 +214,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="col-md-3 col-sm-4 col-xs-6 box-box box-box">
                 <div class="productbox">
                     <img src="./img/aguacate.jpg" class="img-responsive">
@@ -207,7 +227,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="col-md-3 col-sm-4 col-xs-6 box-box box-box">
                 <div class="productbox">
                     <img src="./img/aguacate.jpg" class="img-responsive">
@@ -221,7 +240,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="col-md-3 col-sm-4 col-xs-6 box-box box-box">
                 <div class="productbox">
                     <img src="./img/aguacate.jpg" class="img-responsive">
@@ -235,7 +253,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="col-md-3 col-sm-4 col-xs-6 box-box box-box">
                 <div class="productbox">
                     <img src="./img/aguacate.jpg" class="img-responsive">
@@ -249,7 +266,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="col-md-3 col-sm-4 col-xs-6 box-box box-box">
                 <div class="productbox">
                     <img src="./img/aguacate.jpg" class="img-responsive">
@@ -263,7 +279,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="col-md-3 col-sm-4 col-xs-6 box-box box-box">
                 <div class="productbox">
                     <img src="./img/aguacate.jpg" class="img-responsive">
@@ -277,7 +292,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="col-md-3 col-sm-4 col-xs-6 box-box box-box">
                 <div class="productbox">
                     <img src="./img/aguacate.jpg" class="img-responsive">
@@ -291,7 +305,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="col-md-3 col-sm-4 col-xs-6 box-box box-box">
                 <div class="productbox">
                     <img src="./img/aguacate.jpg" class="img-responsive">
@@ -305,7 +318,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="col-md-3 col-sm-4 col-xs-6 box-box box-box">
                 <div class="productbox">
                     <img src="./img/aguacate.jpg" class="img-responsive">
@@ -319,7 +331,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="col-md-3 col-sm-4 col-xs-6 box-box box-box">
                 <div class="productbox">
                     <img src="./img/aguacate.jpg" class="img-responsive">
@@ -333,83 +344,71 @@
                     </div>
                 </div>
             </div>
-
-
-
-
-
         </div>
     </div>
     <!-- END OF MAIN BODY - PRODUCTS SHOWN -->
-    
-<!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Mango</h4>
-      </div>
-      <div class="modal-body">
-        <img class="modal-picture img-responsive" src="./img/aguacate.jpg">
-        <p class="description">Los aguacates son verdes y sirven para hacer Guacamole. Llevate también unos tomates, cebollas, limón y ajo.</p>
-        <p class="pricetext">€ 8.95 </p>
-      </div>
-      <div class="modal-footer">
-        <a href="#" class="btn btn-success" role="button"><i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i></a>
-        <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="glyphicon glyphicon-remove-sign"></i></button>
-      </div>
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Mango</h4>
+                </div>
+                <div class="modal-body">
+                    <img class="modal-picture img-responsive" src="./img/aguacate.jpg">
+                    <p class="description">Los aguacates son verdes y sirven para hacer Guacamole. Llevate también unos tomates, cebollas, limón y ajo.</p>
+                    <p class="pricetext">€ 8.95 </p>
+                </div>
+                <div class="modal-footer">
+                    <a href="#" class="btn btn-success" role="button"><i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i></a>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="glyphicon glyphicon-remove-sign"></i></button>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-
-
-<!-- FOOTER -->
+    <!-- FOOTER -->
     <div class="footer-distributed">
-    <div class="footer-left">
-        <h3>Shop<span>Localis</span></h3>
-        <p class="footer-links">
-            <a href="#">Inicio</a> ·
-            <a href="#">Blog</a> ·
-            <a href="#">Soy Vendedor</a> ·
-            <a href="#">Sobre Nosotros</a> ·
-            <a href="#">Preguntas Frecuentes</a> ·
-            <a href="#">Contacto</a>
-        </p>
-        <p class="footer-company-name">Shop Localis &copy; 2017</p>
-    </div>
-    <div class="footer-center">
-        <div>
-            <i class="fa fa-map-marker"></i>
-            <p><span>35 Roc Boronat</span> Barcelona, España</p>
+        <div class="footer-left">
+            <h3>Shop<span>Localis</span></h3>
+            <p class="footer-links">
+                <a href="#">Inicio</a> ·
+                <a href="#">Blog</a> ·
+                <a href="#">Soy Vendedor</a> ·
+                <a href="#">Sobre Nosotros</a> ·
+                <a href="#">Preguntas Frecuentes</a> ·
+                <a href="#">Contacto</a>
+            </p>
+            <p class="footer-company-name">Shop Localis &copy; 2017</p>
         </div>
-        <div>
-            <i class="fa fa-phone"></i>
-            <p>+1 555 123456</p>
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>35 Roc Boronat</span> Barcelona, España</p>
+            </div>
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+1 555 123456</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:support@company.com">support@company.com</a></p>
+            </div>
         </div>
-        <div>
-            <i class="fa fa-envelope"></i>
-            <p><a href="mailto:support@company.com">support@company.com</a></p>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>Sobre Nosotros</span> Buscamos facilitar tu vida junto a los comercios locales.
+            </p>
+            <div class="footer-icons">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-github"></i></a>
+            </div>
         </div>
     </div>
-    <div class="footer-right">
-        <p class="footer-company-about">
-            <span>Sobre Nosotros</span> Buscamos facilitar tu vida junto a los comercios locales.
-        </p>
-        <div class="footer-icons">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-twitter"></i></a>
-            <a href="#"><i class="fa fa-linkedin"></i></a>
-            <a href="#"><i class="fa fa-github"></i></a>
-        </div>
-    </div>
-    </div>
-
-<!-- END OF FOOTER -->
-
-
-
-<!-- SCRIPTS -->
+    <!-- END OF FOOTER -->
+    <!-- SCRIPTS -->
     <script src="https://use.fontawesome.com/73ae896e31.js"></script>
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
@@ -417,7 +416,6 @@
     <!-- <script src="bower_components/jquery/dist/jquery.min.js"></script> -->
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
     <!-- BOWER js for Bootstrap - for offline use -->
     <!-- <script src="bower_components/bootstrap/dist/js/boostrap.min.js"></script> -->
 </body>
