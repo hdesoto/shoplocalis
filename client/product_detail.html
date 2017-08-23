@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shop Localis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- BOWER Bootstrap for offline use -->
+    <!-- <link rel="stylesheet" href="bower_components/bootstrap/dist/css/boostrap.min.css">
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/boostrap-theme.min.css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Pragati+Narrow:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Encode+Sans:400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles-details.css">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <a class="navbar-brand brand-text hidden-xs" href="/"><img class="logo-next-to-name" src="./img/icons/shoppingbag.png">Shop Localis</a>
+                <a class="navbar-brand brand-logo hidden-sm hidden-md hidden-lg" href="/"></a>
+            </div>
+            <!-- LOGIN -->
+            <ul class="top-bar-user-cart">
+                <li class="dropdown user-dropdown">
+                    <a href="#" id="userlink" class="dropdown-toggle login-link" data-toggle="dropdown" role="button" aria-expanded="false">
+            <i class="glyphicon glyphicon-user user"></i> <span class="hidden-xs hidden-sm">USUARIO </span> <span class="badge badge-usuario">2</span></a>
+                    <ul class="dropdown-menu dropdown-user" role="menu" aria-labelledby="userlink">
+                        <li><a class="text-center" href="/login.html">Login</a></li>
+                        <li class="divider2"></li>
+                        <li><a class="text-center" href="#">Registrarse</a></li>
+                    </ul>
+                    <!-- END of LOGIN -->
+                </li>
+                <li class="dropdown open cart-dropdown">
+                    <!-- CART -->
+                    <a href="#" id="cart" class="dropdown-toggle expandable-cart" data-toggle="dropdown" role="button" aria-expanded="false"><span class="badge">2</span> <span class="glyphicon glyphicon-shopping-cart cart"></span><span class="caret"></span></a>
+                    <ul class="dropdown-menu dropdown-cart" role="menu" aria-labelledby="cart">
+                        <li>
+                            <span class="item">
+                        <span class="item-left">
+                            <img src="http://lorempixel.com/50/50/" alt="" />
+                            <span class="item-info">
+                                <span>Item name</span>
+                            <span>23$</span>
+                            </span>
+                            </span>
+                            <span class="item-right">
+                            <button class="btn btn-xs btn-danger pull-right">x</button>
+                        </span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="item">
+                        <span class="item-left">
+                            <img src="http://lorempixel.com/50/50/" alt="" />
+                            <span class="item-info">
+                                <span>Item name</span>
+                            <span>23$</span>
+                            </span>
+                            </span>
+                            <span class="item-right">
+                            <button class="btn btn-xs btn-danger pull-right">x</button>
+                        </span>
+                            </span>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a class="text-center" href="">Ver carro</a></li>
+                    </ul>
+                    <!-- END of CART -->
+                </li>
+            </ul>
+        </div>
+        <!-- /.container -->
+    </nav>
+    <!-- END of NAVBAR -->
+    
+    <!-- CONTENT -->
+    <div class="container">
+        <div class="row detail-info">
+            <div class="col-xs-4 col-md-6 item-photo">
+                <img style="max-width:100%;" src="./img/aguacate.jpg" />
+            </div>
+            <div class="col-xs-5 col-md-6" style="border:0px solid gray">
+                <!-- Datos del vendedor y titulo del producto -->
+                <h3>Aguacate (por unidad)</h3>
+                <h5 style="color:#337ab7">vendido por <a href="#">Almacen Pepito</a> · <small style="color:#337ab7">(5054 ventas)</small></h5>
+                <!-- Precios -->
+                <h6 class="title-price"><small>PRECIO OFERTA</small></h6>
+                <h3 style="margin-top:0px;">€ 5,70</h3>
+                <!-- Detalles especificos del producto -->
+                <div class="section">
+                    <h6 class="title-attr" style="margin-top:15px;"><small>COLOR</small></h6>
+                    <div>
+                        <div class="attr" style="width:25px;background:#5a5a5a;"></div>
+                        <div class="attr" style="width:25px;background:white;"></div>
+                    </div>
+                </div>
+                <div class="section" style="padding-bottom:5px;">
+                    <h6 class="title-attr"><small>Venta por</small></h6>
+                    <div>
+                        <div class="attr2">Unidad</div>
+                        <div class="attr2">Kilo</div>
+                    </div>
+                </div>
+                <div class="section" style="padding-bottom:20px;">
+                    <h6 class="title-attr"><small>CANTIDAD</small></h6>
+                    <div>
+                        <div class="btn-minus"><span class="glyphicon glyphicon-minus"></span></div>
+                        <input value="1" />
+                        <div class="btn-plus"><span class="glyphicon glyphicon-plus"></span></div>
+                    </div>
+                </div>
+                <!-- Botones de compra -->
+                <div class="section" style="padding-bottom:20px;">
+                    <button class="btn btn-success"><span style="margin-right:20px" class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Agregar al carro</button>
+                    <h6><a href="#"><span class="glyphicon glyphicon-heart-empty" style="cursor:pointer;"></span> Agregar a lista de deseos</a></h6>
+                </div>
+            </div>
+            <div class="col-xs-9">
+                <ul class="menu-items">
+                    <li class="active">Detalle del producto</li>
+                    <li>Garantía</li>
+                    <li>Vendedor</li>
+                    <li>Envío</li>
+                </ul>
+                <div style="width:100%;border-top:1px solid silver">
+                    <p style="padding:15px;">
+                        <small>
+                            El mejor aguacate para hacer guacamole.
+                            </small>
+                    </p>
+                    <small>
+                            <ul>
+                                <li>Vitaminas</li>
+                                <li>Minerales</li>
+                                <li>Hierro</li>
+                                <li>Grasas naturales</li>
+                            </ul>  
+                        </small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END of CONTENT -->
+    
+    <!-- FOOTER -->
+    <div class="footer-distributed">
+        <div class="footer-left">
+            <h3>Shop<span>Localis</span></h3>
+            <p class="footer-links">
+                <a href="#">Inicio</a> ·
+                <a href="#">Blog</a> ·
+                <a href="#">Soy Vendedor</a> ·
+                <a href="#">Sobre Nosotros</a> ·
+                <a href="#">Preguntas Frecuentes</a> ·
+                <a href="#">Contacto</a>
+            </p>
+            <p class="footer-company-name">Shop Localis &copy; 2017</p>
+        </div>
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>35 Roc Boronat</span> Barcelona, España</p>
+            </div>
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+1 555 123456</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:support@company.com">support@company.com</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>Sobre Nosotros</span> Buscamos facilitar tu vida junto a los comercios locales.
+            </p>
+            <div class="footer-icons">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-github"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- END OF FOOTER -->
+    
+    <!-- SCRIPTS -->
+    <script src="https://use.fontawesome.com/73ae896e31.js"></script>
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <!-- BOWE jQuery  for offline use-->
+    <!-- <script src="bower_components/jquery/dist/jquery.min.js"></script> -->
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- BOWER js for Bootstrap - for offline use -->
+    <!-- <script src="bower_components/bootstrap/dist/js/boostrap.min.js"></script> -->
+    <script src="./js/product-details.js"></script>
+</body>
+
+</html>

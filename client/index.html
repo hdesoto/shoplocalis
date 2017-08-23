@@ -30,57 +30,60 @@
                 <a class="navbar-brand brand-text hidden-xs" href="#"><img class="logo-next-to-name" src="./img/icons/shoppingbag.png">Shop Localis</a>
                 <a class="navbar-brand brand-logo hidden-sm hidden-md hidden-lg" href="#"></a>
             </div>
-            
-        </div>
+       
         <!-- LOGIN -->
-        <a href="#" class="dropdown-toggle login-link" data-toggle="dropdown" role="button" aria-expanded="false"><i class="glyphicon glyphicon-user user"></i> <span class="hidden-xs hidden-sm">USUARIO </span> <span class="badge badge-usuario">2</span></a>
-        <ul class="dropdown-menu dropdown-user" role="menu">
-            <li><a class="text-center" href="">Login</a></li>
-            <li class="divider2"></li>
-            <li><a class="text-center" href="#">Registrarse</a></li>
-        </ul>
-
-
-
-
-        <!-- END of LOGIN -->
-        <!-- CART -->
-        <a href="#" class="dropdown-toggle expandable-cart" data-toggle="dropdown" role="button" aria-expanded="false"><span class="badge">2</span> <span class="glyphicon glyphicon-shopping-cart cart"></span><span class="caret"></span></a>
-        <ul class="dropdown-menu dropdown-cart" role="menu">
-            <li>
-                <span class="item">
-                <span class="item-left">
-                    <img src="http://lorempixel.com/50/50/" alt="" />
-                    <span class="item-info">
-                        <span>Item name</span>
-                <span>23$</span>
-                </span>
-                </span>
-                <span class="item-right">
-                    <button class="btn btn-xs btn-danger pull-right">x</button>
-                </span>
-                </span>
+        <ul class="top-bar-user-cart">
+            <li class="dropdown user-dropdown">
+                <a href="#" id="userlink" class="dropdown-toggle login-link" data-toggle="dropdown" role="button" aria-expanded="false">
+            <i class="glyphicon glyphicon-user user"></i> <span class="hidden-xs hidden-sm">USUARIO </span> <span class="badge badge-usuario">2</span></a>
+            <ul class="dropdown-menu dropdown-user" role="menu" aria-labelledby="userlink">
+                <li><a class="text-center" href="/login.html">Login</a></li>
+                <li class="divider2"></li>
+                <li><a class="text-center" href="#">Registrarse</a></li>
+            </ul>
+            <!-- END of LOGIN -->
             </li>
-            <li>
-                <span class="item">
-                <span class="item-left">
-                    <img src="http://lorempixel.com/50/50/" alt="" />
-                    <span class="item-info">
-                        <span>Item name</span>
-                <span>23$</span>
-                </span>
-                </span>
-                <span class="item-right">
-                    <button class="btn btn-xs btn-danger pull-right">x</button>
-                </span>
-                </span>
+        
+            <li class="dropdown open cart-dropdown">
+                <!-- CART -->
+                <a href="#" id="cart" class="dropdown-toggle expandable-cart" data-toggle="dropdown" role="button" aria-expanded="false"><span class="badge">2</span> <span class="glyphicon glyphicon-shopping-cart cart"></span><span class="caret"></span></a>
+                <ul class="dropdown-menu dropdown-cart" role="menu" aria-labelledby="cart">
+                    <li>
+                        <span class="item">
+                        <span class="item-left">
+                            <img src="http://lorempixel.com/50/50/" alt="" />
+                            <span class="item-info">
+                                <span>Item name</span>
+                        <span>23$</span>
+                        </span>
+                        </span>
+                        <span class="item-right">
+                            <button class="btn btn-xs btn-danger pull-right">x</button>
+                        </span>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="item">
+                        <span class="item-left">
+                            <img src="http://lorempixel.com/50/50/" alt="" />
+                            <span class="item-info">
+                                <span>Item name</span>
+                        <span>23$</span>
+                        </span>
+                        </span>
+                        <span class="item-right">
+                            <button class="btn btn-xs btn-danger pull-right">x</button>
+                        </span>
+                        </span>
+                    </li>
+                    <li class="divider"></li>
+                    <li><a class="text-center" href="/shoppingcart.html">Ver carro</a></li>
+                  
+                </ul>
+                <!-- END of CART -->
             </li>
-            <li class="divider"></li>
-            <li><a class="text-center" href="">Ver carro</a></li>
-            <li class="divider2"></li>
-            <li><a class="text-center" href="#">Login</a></li>
         </ul>
-        <!-- END of CART -->
+        
         </div>
         <!-- /.container -->
     </nav>
@@ -178,172 +181,227 @@
             <div class="col-md-3 col-sm-4 col-xs-6 box-box box-box">
                 <div class="productbox">
                     <img src="./img/aguacate.jpg" class="img-responsive">
-                    <div class="producttitle">Mango</div>
+                    <div class="producttitle"><a href="/product_detail.html" class="link-to-detail">Aguacate</a></div>
                     <div class="productprice">
                         <div class="pull-right">
                             <a href="#" class="btn btn-success btn-sm" role="button"><i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i></a>
                             <button type='button' class='btn btn-primary btn-sm' data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-info-sign"></i></button>
                         </div>
-                        <div class="pricetext">€ 590,00</div>
+                        <div class="pricetext">€ 5,70</div>
                     </div>
                 </div>
             </div>
+
             <div class="col-md-3 col-sm-4 col-xs-6 box-box box-box">
                 <div class="productbox">
                     <img src="./img/aguacate.jpg" class="img-responsive">
-                    <div class="producttitle">Mango</div>
+                    <div class="producttitle"><a href="/product_detail.html" class="link-to-detail">Aguacate</a></div>
                     <div class="productprice">
                         <div class="pull-right">
                             <a href="#" class="btn btn-success btn-sm" role="button"><i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i></a>
                             <button type='button' class='btn btn-primary btn-sm' data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-info-sign"></i></button>
                         </div>
-                        <div class="pricetext">€ 8.95</div>
+                        <div class="pricetext">€ 5,70</div>
                     </div>
                 </div>
             </div>
+
             <div class="col-md-3 col-sm-4 col-xs-6 box-box box-box">
                 <div class="productbox">
                     <img src="./img/aguacate.jpg" class="img-responsive">
-                    <div class="producttitle">Mango</div>
+                    <div class="producttitle"><a href="/product_detail.html" class="link-to-detail">Mango</a></div>
                     <div class="productprice">
                         <div class="pull-right">
                             <a href="#" class="btn btn-success btn-sm" role="button"><i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i></a>
                             <button type='button' class='btn btn-primary btn-sm' data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-info-sign"></i></button>
                         </div>
-                        <div class="pricetext">€ 8.95</div>
+                        <div class="pricetext">€ 5,70</div>
                     </div>
                 </div>
             </div>
+
             <div class="col-md-3 col-sm-4 col-xs-6 box-box box-box">
                 <div class="productbox">
                     <img src="./img/aguacate.jpg" class="img-responsive">
-                    <div class="producttitle">Mango</div>
+                    <div class="producttitle"><a href="/product_detail.html" class="link-to-detail">Mango</a></div>
                     <div class="productprice">
                         <div class="pull-right">
                             <a href="#" class="btn btn-success btn-sm" role="button"><i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i></a>
                             <button type='button' class='btn btn-primary btn-sm' data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-info-sign"></i></button>
                         </div>
-                        <div class="pricetext">€ 8.95</div>
+                        <div class="pricetext">€ 5,70</div>
                     </div>
                 </div>
             </div>
+
             <div class="col-md-3 col-sm-4 col-xs-6 box-box box-box">
                 <div class="productbox">
                     <img src="./img/aguacate.jpg" class="img-responsive">
-                    <div class="producttitle">Mango</div>
+                    <div class="producttitle"><a href="/product_detail.html" class="link-to-detail">Mango</a></div>
                     <div class="productprice">
                         <div class="pull-right">
                             <a href="#" class="btn btn-success btn-sm" role="button"><i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i></a>
                             <button type='button' class='btn btn-primary btn-sm' data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-info-sign"></i></button>
                         </div>
-                        <div class="pricetext">€ 8.95</div>
+                        <div class="pricetext">€ 5,70</div>
                     </div>
                 </div>
             </div>
+
             <div class="col-md-3 col-sm-4 col-xs-6 box-box box-box">
                 <div class="productbox">
                     <img src="./img/aguacate.jpg" class="img-responsive">
-                    <div class="producttitle">Mango</div>
+                    <div class="producttitle"><a href="/product_detail.html" class="link-to-detail">Mango</a></div>
                     <div class="productprice">
                         <div class="pull-right">
                             <a href="#" class="btn btn-success btn-sm" role="button"><i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i></a>
                             <button type='button' class='btn btn-primary btn-sm' data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-info-sign"></i></button>
                         </div>
-                        <div class="pricetext">€ 8.95</div>
+                        <div class="pricetext">€ 5,70</div>
                     </div>
                 </div>
             </div>
+
             <div class="col-md-3 col-sm-4 col-xs-6 box-box box-box">
                 <div class="productbox">
                     <img src="./img/aguacate.jpg" class="img-responsive">
-                    <div class="producttitle">Mango</div>
+                    <div class="producttitle"><a href="/product_detail.html" class="link-to-detail">Mango</a></div>
                     <div class="productprice">
                         <div class="pull-right">
                             <a href="#" class="btn btn-success btn-sm" role="button"><i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i></a>
                             <button type='button' class='btn btn-primary btn-sm' data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-info-sign"></i></button>
                         </div>
-                        <div class="pricetext">€ 8.95</div>
+                        <div class="pricetext">€ 5,70</div>
                     </div>
                 </div>
             </div>
+
             <div class="col-md-3 col-sm-4 col-xs-6 box-box box-box">
                 <div class="productbox">
                     <img src="./img/aguacate.jpg" class="img-responsive">
-                    <div class="producttitle">Mango</div>
+                    <div class="producttitle"><a href="/product_detail.html" class="link-to-detail">Mango</a></div>
                     <div class="productprice">
                         <div class="pull-right">
                             <a href="#" class="btn btn-success btn-sm" role="button"><i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i></a>
                             <button type='button' class='btn btn-primary btn-sm' data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-info-sign"></i></button>
                         </div>
-                        <div class="pricetext">€ 8.95</div>
+                        <div class="pricetext">€ 5,70</div>
                     </div>
                 </div>
             </div>
+
             <div class="col-md-3 col-sm-4 col-xs-6 box-box box-box">
                 <div class="productbox">
                     <img src="./img/aguacate.jpg" class="img-responsive">
-                    <div class="producttitle">Mango</div>
+                    <div class="producttitle"><a href="/product_detail.html" class="link-to-detail">Aguacate</a></div>
                     <div class="productprice">
                         <div class="pull-right">
                             <a href="#" class="btn btn-success btn-sm" role="button"><i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i></a>
                             <button type='button' class='btn btn-primary btn-sm' data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-info-sign"></i></button>
                         </div>
-                        <div class="pricetext">€ 8.95</div>
+                        <div class="pricetext">€ 5,70</div>
                     </div>
                 </div>
             </div>
+
             <div class="col-md-3 col-sm-4 col-xs-6 box-box box-box">
                 <div class="productbox">
                     <img src="./img/aguacate.jpg" class="img-responsive">
-                    <div class="producttitle">Mango</div>
+                    <div class="producttitle"><a href="/product_detail.html" class="link-to-detail">Aguacate</a></div>
                     <div class="productprice">
                         <div class="pull-right">
                             <a href="#" class="btn btn-success btn-sm" role="button"><i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i></a>
                             <button type='button' class='btn btn-primary btn-sm' data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-info-sign"></i></button>
                         </div>
-                        <div class="pricetext">€ 8.95</div>
+                        <div class="pricetext">€ 5,70</div>
                     </div>
                 </div>
             </div>
+
             <div class="col-md-3 col-sm-4 col-xs-6 box-box box-box">
                 <div class="productbox">
                     <img src="./img/aguacate.jpg" class="img-responsive">
-                    <div class="producttitle">Mango</div>
+                    <div class="producttitle"><a href="/product_detail.html" class="link-to-detail">Aguacate</a></div>
                     <div class="productprice">
                         <div class="pull-right">
                             <a href="#" class="btn btn-success btn-sm" role="button"><i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i></a>
                             <button type='button' class='btn btn-primary btn-sm' data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-info-sign"></i></button>
                         </div>
-                        <div class="pricetext">€ 8.95</div>
+                        <div class="pricetext">€ 5,70</div>
                     </div>
                 </div>
             </div>
+
             <div class="col-md-3 col-sm-4 col-xs-6 box-box box-box">
                 <div class="productbox">
                     <img src="./img/aguacate.jpg" class="img-responsive">
-                    <div class="producttitle">Mango</div>
+                    <div class="producttitle"><a href="/product_detail.html" class="link-to-detail">Aguacate</a></div>
                     <div class="productprice">
                         <div class="pull-right">
                             <a href="#" class="btn btn-success btn-sm" role="button"><i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i></a>
                             <button type='button' class='btn btn-primary btn-sm' data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-info-sign"></i></button>
                         </div>
-                        <div class="pricetext">€ 8.95</div>
+                        <div class="pricetext">€ 5,70</div>
                     </div>
                 </div>
             </div>
+
             <div class="col-md-3 col-sm-4 col-xs-6 box-box box-box">
                 <div class="productbox">
                     <img src="./img/aguacate.jpg" class="img-responsive">
-                    <div class="producttitle">Mango</div>
+                    <div class="producttitle"><a href="/product_detail.html" class="link-to-detail">Aguacate</a></div>
                     <div class="productprice">
                         <div class="pull-right">
                             <a href="#" class="btn btn-success btn-sm" role="button"><i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i></a>
                             <button type='button' class='btn btn-primary btn-sm' data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-info-sign"></i></button>
                         </div>
-                        <div class="pricetext">€ 8.95</div>
+                        <div class="pricetext">€ 5,70</div>
                     </div>
                 </div>
             </div>
+
+            <div class="col-md-3 col-sm-4 col-xs-6 box-box box-box">
+                <div class="productbox">
+                    <img src="./img/aguacate.jpg" class="img-responsive">
+                    <div class="producttitle"><a href="/product_detail.html" class="link-to-detail">Aguacate</a></div>
+                    <div class="productprice">
+                        <div class="pull-right">
+                            <a href="#" class="btn btn-success btn-sm" role="button"><i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i></a>
+                            <button type='button' class='btn btn-primary btn-sm' data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-info-sign"></i></button>
+                        </div>
+                        <div class="pricetext">€ 5,70</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-4 col-xs-6 box-box box-box">
+                <div class="productbox">
+                    <img src="./img/aguacate.jpg" class="img-responsive">
+                    <div class="producttitle"><a href="/product_detail.html" class="link-to-detail">Aguacate</a></div>
+                    <div class="productprice">
+                        <div class="pull-right">
+                            <a href="#" class="btn btn-success btn-sm" role="button"><i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i></a>
+                            <button type='button' class='btn btn-primary btn-sm' data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-info-sign"></i></button>
+                        </div>
+                        <div class="pricetext">€ 5,70</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-4 col-xs-6 box-box box-box">
+                <div class="productbox">
+                    <img src="./img/aguacate.jpg" class="img-responsive">
+                    <div class="producttitle"><a href="/product_detail.html" class="link-to-detail">Aguacate</a></div>
+                    <div class="productprice">
+                        <div class="pull-right">
+                            <a href="#" class="btn btn-success btn-sm" role="button"><i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i></a>
+                            <button type='button' class='btn btn-primary btn-sm' data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-info-sign"></i></button>
+                        </div>
+                        <div class="pricetext">€ 5,70</div>
+                    </div>
+                </div>
+            </div>
+            
         </div>
     </div>
     <!-- END OF MAIN BODY - PRODUCTS SHOWN -->
@@ -353,12 +411,12 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Mango</h4>
+                    <h4 class="modal-title" id="myModalLabel">Aguacate</h4>
                 </div>
                 <div class="modal-body">
                     <img class="modal-picture img-responsive" src="./img/aguacate.jpg">
                     <p class="description">Los aguacates son verdes y sirven para hacer Guacamole. Llevate también unos tomates, cebollas, limón y ajo.</p>
-                    <p class="pricetext">€ 8.95 </p>
+                    <p class="pricetext">€ 5,70 </p>
                 </div>
                 <div class="modal-footer">
                     <a href="#" class="btn btn-success" role="button"><i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i></a>
