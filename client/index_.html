@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shop Localis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+      <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"> -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- BOWER Bootstrap for offline use -->
+    <!-- <link rel="stylesheet" href="bower_components/bootstrap/dist/css/boostrap.min.css">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/boostrap-theme.min.css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Pragati+Narrow:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Encode+Sans:400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/styles.css">
+
+    
+</head>
+<body>
+
+<header>
+    <div class="top-nav">
+        <div class="container">
+            <a href="/"><img src="./img/icons/logohorizontal-narrow.png" alt="logo" class="logo-long"></a>
+            <a href="/"><img src="./img/icons/logo-solo.png" alt="logo" class="logo-short"></a>
+            <nav class="site-nav">
+                <ul>
+                    <li class='li-non-collapsible'><a href="#" class="search-launch">Buscar</a></li>
+                    <li class='li-non-collapsible'><a href="#" class="open-shopping-cart">Carrito</a></li>
+                    <li class='li-non-collapsible user'><a href="#">Usuario</a></li>
+                    <li class='li-collapsible'><a href="#"><i class="fa fa-cog fa-lg site-nav--icon"></i>Configuración</a></li>
+                    <li class='li-collapsible'><a href="#"><i class="fa fa-envelope fa-lg site-nav--icon"></i>Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="user-icon user">
+                <i class="fa fa-user fa-lg"></i>
+            </div>
+            <div class="cart-icon">
+                <i class="fa fa-shopping-cart fa-lg"></i>
+            </div>
+            <div class="search-icon search-launch">
+                <i class="fa fa-search fa-lg"></i>
+            </div>
+            <div class="search-top">
+                <input type="text" placeholder="Buscar producto" class="top-input">
+            </div>
+            <div class="menu-toggle">
+                <div class="hamburger"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="site-nav-carrito">
+        <ul class='list-carrito'>
+    <li class='cart-title'>
+        <p>Su carrito de compras</p>
+    </li>
+    <li class='cart-header'>
+        <p>Unitario</p>
+        <p>Total</p>
+    </li>
+    <li class='cart-item'>
+        <i class="fa fa-plus"></i>
+        <input type='text' value='1' placeholder="1">
+        <i class='fa fa-minus'></i>
+        <img src='./img/peras.jpg'>
+        <p class='unit-price'>€ 5.50</p>
+        <p class='total-item-price'>€ 13.50</p>
+        <i class='fa fa-times'></i>
+    </li>
+    <li class='cart-item'>
+        <i class="fa fa-plus"></i>
+        <input type='text' value='1' placeholder="1">
+        <i class='fa fa-minus'></i>
+        <img src='./img/peras.jpg'>
+        <p class='unit-price'>€ 10.70</p>
+        <p class='total-item-price'>€ 13.50</p>
+        <i class='fa fa-times'></i>
+    </li>
+    <li class='cart-item'>
+        <i class="fa fa-plus"></i>
+        <input type='text' value='1' placeholder="1">
+        <i class='fa fa-minus'></i>
+        <img src='./img/peras.jpg'>
+        <p class='unit-price'>€ 2.00</p>
+        <p class='total-item-price'>€ 13.50</p>
+        <i class='fa fa-times'></i>
+    </li>
+    <li class='cart-item'>
+        <i class="fa fa-plus"></i>
+        <input type='text' value='1' placeholder="1">
+        <i class='fa fa-minus'></i>
+        <img src='./img/peras.jpg'>
+        <p class='unit-price'>€ 4.60</p>
+        <p class='total-item-price'>€ 13.50</p>
+        <i class='fa fa-times'></i>
+    </li>
+    <li class='cart-item'>
+        <i class="fa fa-plus"></i>
+        <input type='text' value='1' placeholder="1">
+        <i class='fa fa-minus'></i>
+        <img src='./img/peras.jpg'>
+        <p class='unit-price'>€ 1.40</p>
+        <p class='total-item-price'>€ 13.50</p>
+        <i class='fa fa-times'></i>
+    </li>
+    <li class='cart-footer'>
+        <p>Monto total del pedido:</p>
+        <p class="total-amount">€ 0.000,00</p>
+        <p class="checkout-box"><a href="#"><i class='fa fa-money fa-2x checkout-icon' aria-hidden='true'></i>Pagar</a></p>
+    </li>
+</ul>
+    </div>
+
+    <div class='login-pane hidden'>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:700,600' rel='stylesheet' type='text/css'>
+        <form method="post" action="index.html">
+            <div class="box">
+                <h1>Usuario</h1>
+                <input type="email" name="email" value="email" onFocus="field_focus(this, 'email');" onblur="field_blur(this, 'email');" class="email" />
+                <input type="password" name="email" value="email" onFocus="field_focus(this, 'email');" onblur="field_blur(this, 'email');" class="email" />
+                <a class="login-btn" href="#">
+                    <div class="btn">Ingresar</div>
+                </a>
+                <!-- End Btn -->
+                <a class='signup-btn' href="#">
+                    <div id="btn2">Registrarse</div>
+                </a>
+                <!-- End Btn2 -->
+            </div>
+            <!-- End Box -->
+        </form>
+        <p>Olvidaste tu clave? <u style="color:#f1c40f;">Click aquí!</u></p>
+    </div>
+
+    <div class="logout-pane hidden">
+        <a class="logout-btn" href="#">
+            <div class="btn">DESCONECTARSE</div>
+        </a>
+    </div>
+
+
+
+</header>
+
+<div class="container jumbotronico">
+    <!-- <img src="./img/fake_map.jpg"> -->
+</div>
+
+<div class="container main-content">
+    <div class="row products-row">
+        
+        <div class="productbox">
+            <img src="./img/aguacate.jpg">
+            <div class="producttitle"><a href="/product_detail.html" class="link-to-detail">Aguacate</a></div>
+            <div class="productprice">
+                <div class="add-to-cart"><a href="#" class="btn btn-carrito" role="button"><i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i>Agregar al carrito</a></div>
+                <div class="more-info"><a href="#" type='button' class='btn btn-primary btn-sm' data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-info-sign"></i>Más Detalles</a></div>
+                <div class="pricetext">€ 5,70</div>
+            </div>
+        </div>
+        
+        <div class="productbox">
+            <img src="./img/aguacate.jpg">
+            <div class="producttitle"><a href="/product_detail.html" class="link-to-detail">Aguacate</a></div>
+            <div class="productprice">
+                <div class="right-side">
+                    <div class="add-to-cart"><a href="#" class="btn btn-carrito" role="button"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Agregar al carrito</a></div>
+                    <div class="more-info"><a href="#" type='button' class='btn btn-primary btn-sm' data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-info-sign"></i>Más Detalles</a></div>
+                </div>
+                <div class="pricetext">€ 5,70</div>
+            </div>
+        </div>
+        
+        <div class="productbox">
+            <img src="./img/aguacate.jpg">
+            <div class="producttitle"><a href="/product_detail.html" class="link-to-detail">Aguacate</a></div>
+            <div class="productprice">
+                <div class="right-side">
+                    <div class="add-to-cart"><a href="#" class="btn btn-carrito" role="button"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Agregar al carrito</a></div>
+                    <div class="more-info"><a href="#" type='button' class='btn btn-primary btn-sm' data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-info-sign"></i>Más Detalles</a></div>
+                </div>
+                <div class="pricetext">€ 5,70</div>
+            </div>
+        </div>
+        
+        <div class="productbox">
+            <img src="./img/aguacate.jpg">
+            <div class="producttitle"><a href="/product_detail.html" class="link-to-detail">Aguacate</a></div>
+            <div class="productprice">
+                <div class="right-side">
+                    <div class="add-to-cart"><a href="#" class="btn btn-carrito" role="button"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Agregar al carrito</a></div>
+                    <div class="more-info"><a href="#" type='button' class='btn btn-primary btn-sm' data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-info-sign"></i>Más Detalles</a></div>
+                </div>
+                <div class="pricetext">€ 5,70</div>
+            </div>
+        </div>
+        
+        <div class="productbox">
+            <img src="./img/aguacate.jpg">
+            <div class="producttitle"><a href="/product_detail.html" class="link-to-detail">Aguacate</a></div>
+            <div class="productprice">
+                <div class="right-side">
+                    <div class="add-to-cart"><a href="#" class="btn btn-carrito" role="button"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Agregar al carrito</a></div>
+                    <div class="more-info"><a href="#" type='button' class='btn btn-primary btn-sm' data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-info-sign"></i>Más Detalles</a></div>
+                </div>
+                <div class="pricetext">€ 5,70</div>
+            </div>
+        </div>
+        
+        <div class="productbox">
+            <img src="./img/aguacate.jpg">
+            <div class="producttitle"><a href="/product_detail.html" class="link-to-detail">Aguacate</a></div>
+            <div class="productprice">
+                <div class="right-side">
+                    <div class="add-to-cart"><a href="#" class="btn btn-carrito" role="button"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Agregar al carrito</a></div>
+                    <div class="more-info"><a href="#" type='button' class='btn btn-primary btn-sm' data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-info-sign"></i>Más Detalles</a></div>
+                </div>
+                <div class="pricetext">€ 5,70</div>
+            </div>
+        </div>
+        
+        <div class="productbox">
+            <img src="./img/aguacate.jpg">
+            <div class="producttitle"><a href="/product_detail.html" class="link-to-detail">Aguacate</a></div>
+            <div class="productprice">
+                <div class="right-side">
+                    <div class="add-to-cart"><a href="#" class="btn btn-carrito" role="button"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Agregar al carrito</a></div>
+                    <div class="more-info"><a href="#" type='button' class='btn btn-primary btn-sm' data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-info-sign"></i>Más Detalles</a></div>
+                </div>
+                <div class="pricetext">€ 5,70</div>
+            </div>
+        </div>
+        
+        <div class="productbox">
+            <img src="./img/aguacate.jpg">
+            <div class="producttitle"><a href="/product_detail.html" class="link-to-detail">Aguacate</a></div>
+            <div class="productprice">
+                <div class="right-side">
+                    <div class="add-to-cart"><a href="#" class="btn btn-carrito" role="button"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Agregar al carrito</a></div>
+                    <div class="more-info"><a href="#" type='button' class='btn btn-primary btn-sm' data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-info-sign"></i>Más Detalles</a></div>
+                </div>
+                <div class="pricetext">€ 5,70</div>
+            </div>
+        </div>
+        
+        <div class="productbox">
+            <img src="./img/aguacate.jpg">
+            <div class="producttitle"><a href="/product_detail.html" class="link-to-detail">Aguacate</a></div>
+            <div class="productprice">
+                <div class="right-side">
+                    <div class="add-to-cart"><a href="#" class="btn btn-carrito" role="button"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Agregar al carrito</a></div>
+                    <div class="more-info"><a href="#" type='button' class='btn btn-primary btn-sm' data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-info-sign"></i>Más Detalles</a></div>
+                </div>
+                <div class="pricetext">€ 5,70</div>
+            </div>
+        </div>
+    
+    </div>
+</div>
+
+
+<footer class="foot">      
+    <div class="container footer-distributed">
+        <div class="footer-left">
+            <img src='./img/logo-full.png' class="footer-logo">
+            <ul class="footer-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Soy Vendedor</a></li>
+                <li><a href="#">Sobre Nosotros</a></li>
+                <li><a href="#">Preguntas Frecuentes</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+            <p class="footer-company-name">Shop Localis &copy; 2017</p>
+        </div>
+        <div class="footer-center">
+          <ul>
+            <li><i class="fa fa-map-marker fa-lg contact-icon"></i><p>Roc Boronat 35, Barcelona, España</p></li>
+            <li><i class="fa fa-phone fa-lg contact-icon"></i><p>+54 555 123456</p></li>
+            <li><i class="fa fa-envelope fa-lg contact-icon"></i><a href="mailto:support@company.com"><p>support@company.com</p></a></li>
+          </ul>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <h3>Sobre Nosotros</h3> Buscamos facilitar tu vida junto a los <strong>comercios locales</strong>.
+            </p>
+            <ul class="footer-icons">
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fa fa-github"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+  <!-- SCRIPTS -->
+        <script src="https://use.fontawesome.com/73ae896e31.js"></script>    
+        <!-- Jquery -->
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+        <!-- BOWE jQuery  for offline use-->
+        <!-- <script src="bower_components/jquery/dist/jquery.min.js"></script> -->
+        <!-- Latest compiled and minified JavaScript -->
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+        <!-- BOWER js for Bootstrap - for offline use -->
+        <!-- <script src="bower_components/bootstrap/dist/js/boostrap.min.js"></script> -->
+        <!-- My Scripts -->
+        <script src="./js/main.js"></script>
+
+</body>
+</html>

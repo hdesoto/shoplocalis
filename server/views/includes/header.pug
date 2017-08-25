@@ -1,0 +1,107 @@
+header
+  .top-nav
+    .container
+      a(href='/')
+        img.logo-long(src='./img/icons/logohorizontal-narrow.png', alt='logo')
+      a(href='/')
+        img.logo-short(src='./img/icons/logo-solo.png', alt='logo')
+      nav.site-nav
+        ul
+          li.li-non-collapsible
+            a.search-launch(href='#') Buscar
+          li.li-non-collapsible
+            a.open-shopping-cart(href='#') Carrito
+          li.li-non-collapsible.user
+            a(href='#') Usuario
+          li.li-collapsible
+            a(href='#')
+              i.fa.fa-cog.fa-lg.site-nav--icon
+              | Configuración
+          li.li-collapsible
+            a(href='#')
+              i.fa.fa-envelope.fa-lg.site-nav--icon
+              | Contacto
+      .user-icon.user
+        i.fa.fa-user.fa-lg
+      .cart-icon
+        i.fa.fa-shopping-cart.fa-lg
+      .search-icon.search-launch
+        i.fa.fa-search.fa-lg
+      .search-top
+        input.top-input(type='text', placeholder='Buscar producto')
+      .menu-toggle
+        .hamburger
+  .site-nav-carrito
+    ul.list-carrito
+      li.cart-title
+        p Su carrito de compras
+      li.cart-header
+        p Unitario
+        p Total
+      li.cart-item
+        i.fa.fa-plus
+        input(type='text', value='1', placeholder='1')
+        i.fa.fa-minus
+        img(src='./img/peras.jpg')
+        p.unit-price € 5.50
+        p.total-item-price € 13.50
+        i.fa.fa-times
+      li.cart-item
+        i.fa.fa-plus
+        input(type='text', value='1', placeholder='1')
+        i.fa.fa-minus
+        img(src='./img/peras.jpg')
+        p.unit-price € 10.70
+        p.total-item-price € 13.50
+        i.fa.fa-times
+      li.cart-item
+        i.fa.fa-plus
+        input(type='text', value='1', placeholder='1')
+        i.fa.fa-minus
+        img(src='./img/peras.jpg')
+        p.unit-price € 2.00
+        p.total-item-price € 13.50
+        i.fa.fa-times
+      li.cart-item
+        i.fa.fa-plus
+        input(type='text', value='1', placeholder='1')
+        i.fa.fa-minus
+        img(src='./img/peras.jpg')
+        p.unit-price € 4.60
+        p.total-item-price € 13.50
+        i.fa.fa-times
+      li.cart-item
+        i.fa.fa-plus
+        input(type='text', value='1', placeholder='1')
+        i.fa.fa-minus
+        img(src='./img/peras.jpg')
+        p.unit-price € 1.40
+        p.total-item-price € 13.50
+        i.fa.fa-times
+      li.cart-footer
+        p Monto total del pedido:
+        p.total-amount € 0.000,00
+        p.checkout-box
+          a(href='#')
+            i.fa.fa-money.fa-2x.checkout-icon(aria-hidden='true')
+            | Pagar
+  .login-pane.hidden
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans:700,600', rel='stylesheet', type='text/css')
+    form(method='post', action='index.html')
+      .box
+        h1 Usuario
+        input.email(type='email', name='email', value='email', onfocus="field_focus(this, 'email');", onblur="field_blur(this, 'email');")
+        input.email(type='password', name='email', value='email', onfocus="field_focus(this, 'email');", onblur="field_blur(this, 'email');")
+        a.login-btn(href='#')
+          .btn Ingresar
+        // End Btn
+        a.signup-btn(href='#')
+          #btn2 Registrarse
+        // End Btn2
+      // End Box
+    p
+      | Olvidaste tu clave? 
+      u(style='color:#f1c40f;') Click aquí!
+  .logout-pane.hidden
+    a.logout-btn(href='#')
+      .btn DESCONECTARSE
