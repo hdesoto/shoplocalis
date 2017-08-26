@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+      .container.admin-header 
+        h1.admin-title Panel Administrador
+      .container.jumbotronico.admin-top
+        .search-admin
+          input.search-admin-input(type='text',value='',placeholder='Buscar productos')
+        .show-orders
+          a.btn.btn-show-orders(href="#")
+            |Ver Pedidos
+        .new-item
+          a.btn.btn-new-item(href="#")
+            |Nuevo Item
+      .cont
+      block main

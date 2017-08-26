@@ -38,17 +38,17 @@ function toggleSearch(){
 
 
 $('.cart-icon').click(function(){
-  $('.site-nav-carrito').toggleClass('site-nav-carrito--open')
+  $('.site-nav-carrito').toggleClass('hidden')
 })
 
 $('.open-shopping-cart').click(function(){
-  $('.site-nav-carrito').toggleClass('site-nav-carrito--open')
+  $('.site-nav-carrito').toggleClass('hidden')
 })
 
 
-$('.like-btn').on('click', function() {
-   $(this).toggleClass('is-active');
-});
+// $('.like-btn').on('click', function() {
+//    $(this).toggleClass('is-active');
+// });
 
 $('.minus-btn').on('click', function(e) {
     e.preventDefault();

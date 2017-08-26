@@ -29,6 +29,10 @@ app.get('/', (req,res) => {
   res.render('pages/index')
 })
 
+app.get('/admin',(req,res)=>{
+  res.render('pages/admin-main')
+})
+
 
 
 app.listen(PORT)
