@@ -33,6 +33,10 @@ app.get('/admin',(req,res)=>{
   res.render('pages/admin-main')
 })
 
+app.get('/edit', (req, res) => {
+  res.render('pages/edit-item')
+})
+
 
 
 app.listen(PORT)

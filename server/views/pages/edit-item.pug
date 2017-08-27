@@ -1,7 +1,31 @@
 extends ../pages/admin
 
 block main
-      .product-details
-        h1 Aguacate
-        img.picture(src="./img/aguacate.jpg")
+      .product-details.container
+        .section.title
+          h1 Aguacate
+        .section.pic
+          img.picture(src="./img/aguacate.jpg")
+        .section
           input(type='file')
+        .section
+          label(for='title-input') Titulo
+          input(type="text", id='title-input')
+        .section
+          label(for='description-input') Descripción
+          textarea(rows='4', cols='40')
+        .section
+          label(for='price-input') Precio
+          input(type='number' id='price-input')
+        .section
+          label(for='stock-input') Unidades en Stock:
+          input(type='number' id='stock-input')
+        .section
+          a.btn.btn-confirm Confirmar
+          a.btn.btn-cancel Cancelar
+        .section
+          a.btn.btn-delete-sku
+            | Eliminar 
+            i.fa.fa-trash-o.fa-2x.bin-icon
+            | Producto
+
