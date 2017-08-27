@@ -15,6 +15,14 @@ header .navbar-dark{
   height: 45px;
 }
 
+.fixed-top li{
+  margin-right: 5%;
+}
+
+.fixed-top .cart-span{
+  
+}
+
 .jumbotron{
   background-image: url('../img/backgrounds/verduleria.jpg');
   background-size: cover;

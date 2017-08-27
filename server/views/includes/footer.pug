@@ -1,50 +1,106 @@
-footer.foot
-  .container.footer-distributed
-    .footer-left
-      img.footer-logo(src='./img/icons/logo-full.png')
-      ul.footer-links
-        li
-          a(href='#') Inicio
-        li
-          a(href='#') Blog
-        li
-          a(href='#') Soy Vendedor
-        li
-          a(href='#') Sobre Nosotros
-        li
-          a(href='#') Preguntas Frecuentes
-        li
-          a(href='#') Contacto
-      p.footer-company-name Shop Localis © 2017
-    .footer-center
-      ul
-        li
-          i.fa.fa-map-marker.fa-lg.contact-icon
-          p Roc Boronat 35, Barcelona, España
-        li
-          i.fa.fa-phone.fa-lg.contact-icon
-          p +54 555 123456
-        li
-          i.fa.fa-envelope.fa-lg.contact-icon
-          a(href='mailto:support@company.com')
-            p support@company.com
-    .footer-right
-      p.footer-company-about
-      h3 Sobre Nosotros
-      |  Buscamos facilitar tu vida junto a los 
-      strong comercios locales
-      | .
-      p
-      ul.footer-icons
-        li
-          a(href='#')
-            i.fa.fa-facebook
-        li
-          a(href='#')
-            i.fa.fa-twitter
-        li
-          a(href='#')
-            i.fa.fa-linkedin
-        li
-          a(href='#')
-            i.fa.fa-github
+footer#footer-Section
+  .footer-top-layout
+    .container
+      .row
+        .col-xl-12.text-center
+          .OurBlog
+            h4 Our Blog
+            p BCM wins mandate for Avendus Wealth Management portal revamp
+            .post-blog-date 20th Oct 2016
+        .footer-middle.col-xl-12.d-flex.flex-column.justify-content-between
+          //- .col-md-4
+          .footer-col-item.mx-auto(style="width:30%")
+            h4 Go Travel Cloud
+            address
+              | 501,507 your company address
+              br
+              |               400015 Maharashtra, UK
+          //- .col-md-4
+          .footer-col-item.mx-auto(style="width:30%")
+            h4 Reach Us
+            .item-contact
+              a(href='tel:630-885-9200')
+                span.link-id P
+                | :
+                span 630-885-9200
+              a(href='tel:630-839.2006')
+                span.link-id F
+                | :
+                span 630-839.2006
+              a(href='mailto:info@brandcatmedia.com')
+                span.link-id E
+                | :
+                span info@brandcatmedia.com
+          //- .col-md-4
+          .footer-col-item.mx-auto(style="width:30%")
+            h4 Sign up for Newsletter
+            form.signUpNewsletter(action='', method='get')
+              input.gt-email.form-control(name='', placeholder='You@youremail.com', type='text')
+              input.btn-go(name='', value='Go', type='button')
+  .footer-bottom-layout
+    .socialMedia-footer
+      a(href='https://github.com/hdesoto')
+        i.fa.fa-github
+      a(href='#')
+        i.fa.fa-facebook-official
+      a(href='https://twitter.com/hdesoto')
+        i.fa.fa-twitter
+      a(href='#')
+        i.fa.fa-google-plus
+      a(href='#')
+        i.fa.fa-envelope
+    .copyright-tag Copyright © 2017 Hernán de Soto - Shop Localis. All Rights Reserved.
+
+
+
+
+//- footer.foot
+//-   .container.footer-distributed
+//-     .footer-left
+//-       img.footer-logo(src='./img/icons/logo-full.png')
+//-       ul.footer-links
+//-         li
+//-           a(href='#') Inicio
+//-         li
+//-           a(href='#') Blog
+//-         li
+//-           a(href='#') Soy Vendedor
+//-         li
+//-           a(href='#') Sobre Nosotros
+//-         li
+//-           a(href='#') Preguntas Frecuentes
+//-         li
+//-           a(href='#') Contacto
+//-       p.footer-company-name Shop Localis © 2017
+//-     .footer-center
+//-       ul
+//-         li
+//-           i.fa.fa-map-marker.fa-lg.contact-icon
+//-           p Roc Boronat 35, Barcelona, España
+//-         li
+//-           i.fa.fa-phone.fa-lg.contact-icon
+//-           p +54 555 123456
+//-         li
+//-           i.fa.fa-envelope.fa-lg.contact-icon
+//-           a(href='mailto:support@company.com')
+//-             p support@company.com
+//-     .footer-right
+//-       p.footer-company-about
+//-       h3 Sobre Nosotros
+//-       |  Buscamos facilitar tu vida junto a los 
+//-       strong comercios locales
+//-       | .
+//-       p
+//-       ul.footer-icons
+//-         li
+//-           a(href='#')
+//-             i.fa.fa-facebook
+//-         li
+//-           a(href='#')
+//-             i.fa.fa-twitter
+//-         li
+//-           a(href='#')
+//-             i.fa.fa-linkedin
+//-         li
+//-           a(href='#')
+//-             i.fa.fa-github
