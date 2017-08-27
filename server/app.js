@@ -30,7 +30,7 @@ app.get('/', (req,res) => {
 })
 
 app.get('/admin',(req,res)=>{
-  res.render('pages/admin-main')
+  res.render('pages/admin')
 })
 
 app.get('/edit', (req, res) => {

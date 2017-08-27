@@ -1,143 +1,247 @@
 extends ../layout
 
 block content
-      .container.jumbotronico
-      //- <img src="./img/fake_map.jpg">
-
-      .container.main-content
-        .row.products-row
-          .productbox
-            img(src='./img/aguacate.jpg')
-            .producttitle
-              a.link-to-detail(href='/product_detail.html') Aguacate
-            .productprice
-              .add-to-cart
-                a.btn.btn-carrito(href='#', role='button')
-                    i.fa.fa-shopping-cart(aria-hidden='true')
-                    | Agregar al carrito
-              .more-info
-                a.btn.btn-masinfo.btn-sm(href='#', type='button', data-toggle='modal', data-target='#myModal')
-                    i.fa.fa-info
-                    | Más Detalles
-              .pricetext € 5,70
-          .productbox
-            img(src='./img/aguacate.jpg')
-            .producttitle
-              a.link-to-detail(href='/product_detail.html') Aguacate
-            .productprice
-              .right-side
-                .add-to-cart
-                  a.btn.btn-carrito(href='#', role='button')
-                    i.fa.fa-shopping-cart(aria-hidden='true')
-                    | Agregar al carrito
-                .more-info
-                  a.btn.btn-masinfo.btn-sm(href='#', type='button', data-toggle='modal', data-target='#myModal')
-                    i.fa.fa-info
-                    | Más Detalles
-              .pricetext € 5,70
-          .productbox
-            img(src='./img/aguacate.jpg')
-            .producttitle
-              a.link-to-detail(href='/product_detail.html') Aguacate
-            .productprice
-              .right-side
-                .add-to-cart
-                  a.btn.btn-carrito(href='#', role='button')
-                    i.fa.fa-shopping-cart(aria-hidden='true')
-                    | Agregar al carrito
-                .more-info
-                  a.btn.btn-masinfo.btn-sm(href='#', type='button', data-toggle='modal', data-target='#myModal')
-                    i.fa.fa-info
-                    | Más Detalles
-              .pricetext € 5,70
-          .productbox
-            img(src='./img/aguacate.jpg')
-            .producttitle
-              a.link-to-detail(href='/product_detail.html') Aguacate
-            .productprice
-              .right-side
-                .add-to-cart
-                  a.btn.btn-carrito(href='#', role='button')
-                    i.fa.fa-shopping-cart(aria-hidden='true')
-                    | Agregar al carrito
-                .more-info
-                  a.btn.btn-masinfo.btn-sm(href='#', type='button', data-toggle='modal', data-target='#myModal')
-                    i.fa.fa-info
-                    | Más Detalles
-              .pricetext € 5,70
-          .productbox
-            img(src='./img/aguacate.jpg')
-            .producttitle
-              a.link-to-detail(href='/product_detail.html') Aguacate
-            .productprice
-              .right-side
-                .add-to-cart
-                  a.btn.btn-carrito(href='#', role='button')
-                    i.fa.fa-shopping-cart(aria-hidden='true')
-                    | Agregar al carrito
-                .more-info
-                  a.btn.btn-masinfo.btn-sm(href='#', type='button', data-toggle='modal', data-target='#myModal')
-                    i.fa.fa-info
-                    | Más Detalles
-              .pricetext € 5,70
-          .productbox
-            img(src='./img/aguacate.jpg')
-            .producttitle
-              a.link-to-detail(href='/product_detail.html') Aguacate
-            .productprice
-              .right-side
-                .add-to-cart
-                  a.btn.btn-carrito(href='#', role='button')
-                    i.fa.fa-shopping-cart(aria-hidden='true')
-                    | Agregar al carrito
-                .more-info
-                  a.btn.btn-masinfo.btn-sm(href='#', type='button', data-toggle='modal', data-target='#myModal')
-                    i.fa.fa-info
-                    | Más Detalles
-              .pricetext € 5,70
-          .productbox
-            img(src='./img/aguacate.jpg')
-            .producttitle
-              a.link-to-detail(href='/product_detail.html') Aguacate
-            .productprice
-              .right-side
-                .add-to-cart
-                  a.btn.btn-carrito(href='#', role='button')
-                    i.fa.fa-shopping-cart(aria-hidden='true')
-                    | Agregar al carrito
-                .more-info
-                  a.btn.btn-masinfo.btn-sm(href='#', type='button', data-toggle='modal', data-target='#myModal')
-                    i.fa.fa-info
-                    | Más Detalles
-              .pricetext € 5,70
-          .productbox
-            img(src='./img/aguacate.jpg')
-            .producttitle
-              a.link-to-detail(href='/product_detail.html') Aguacate
-            .productprice
-              .right-side
-                .add-to-cart
-                  a.btn.btn-carrito(href='#', role='button')
-                    i.fa.fa-shopping-cart(aria-hidden='true')
-                    | Agregar al carrito
-                .more-info
-                  a.btn.btn-masinfo.btn-sm(href='#', type='button', data-toggle='modal', data-target='#myModal')
-                    i.fa.fa-info
-                    | Más Detalles
-              .pricetext € 5,70
-          .productbox
-            img(src='./img/aguacate.jpg')
-            .producttitle
-              a.link-to-detail(href='/product_detail.html') Aguacate
-            .productprice
-              .right-side
-                .add-to-cart
-                  a.btn.btn-carrito(href='#', role='button')
-                    i.fa.fa-shopping-cart(aria-hidden='true')
-                    | Agregar al carrito
-                .more-info
-                  a.btn.btn-masinfo(href='#', type='button', data-toggle='modal', data-target='#myModal')
-                    i.fa.fa-info
-                    | Más Detalles
-              .pricetext € 5,70
-
+      .jumbotron.jumbotron-fluid
+        .container.bg-dark
+          h1.display-3.text-uppercase.text-center.bg-dark.text-light Welcome to Shop Localis
+          .row
+            .col-lg-12
+              .input-group.input-group-lg
+                input.form-control.text-center(type='text', placeholder='Search for...', aria-label='Search for...')
+                span.input-group-btn
+                  button.btn.btn-secondary(type='button') Go!
+      .container
+        .card-deck
+          .card
+            img.card-img-top(src='./img/fresas.jpg', alt='Card image cap')
+            .card-body
+              h4.card-title Fresas
+              p.card-text Las mejores fresas de estación, de agricultura ecológica.
+            .card-footer.d-flex.justify-content-around
+              button.btn.btn-success(type='button')
+                i.fa.fa-cart-plus
+                |  Añadir
+              button.btn.btn-info(type='button', data-toggle='modal', data-target='#ProductDetail1')
+                i.fa.fa-info-circle
+                |  Detalles
+              // <small class="text-muted">Last updated 3 mins ago</small>
+          .card
+            img.card-img-top(src='./img/papaya.jpg', alt='Card image cap')
+            .card-body
+              h4.card-title Papaya
+              p.card-text Ideal para smoothies y batidos bien fríos.
+            .card-footer.d-flex.justify-content-around
+              button.btn.btn-success(type='button')
+                i.fa.fa-cart-plus
+                |  Añadir
+              button.btn.btn-info(type='button', data-toggle='modal', data-target='#ProductDetail1')
+                i.fa.fa-info-circle
+                |  Detalles
+              // <small class="text-muted">Last updated 3 mins ago</small>
+          .card
+            img.card-img-top(src='./img/naranjas.jpg', alt='Card image cap')
+            .card-body
+              h4.card-title Naranjas
+              p.card-text De Valencia, bien dulces, ideal para jugo.
+            .card-footer.d-flex.justify-content-around
+              button.btn.btn-success(type='button')
+                i.fa.fa-cart-plus
+                |  Añadir
+              button.btn.btn-info(type='button', data-toggle='modal', data-target='#ProductDetail1')
+                i.fa.fa-info-circle
+                |  Detalles
+              // <small class="text-muted">Last updated 3 mins ago</small>
+          .card
+            img.card-img-top(src='./img/bananas.jpg', alt='Card image cap')
+            .card-body
+              h4.card-title Bananas
+              p.card-text Bananas de Ecuador, las mejores.
+            .card-footer.d-flex.justify-content-around
+              button.btn.btn-success(type='button')
+                i.fa.fa-cart-plus
+                |  Añadir
+              button.btn.btn-info(type='button', data-toggle='modal', data-target='#ProductDetail1')
+                i.fa.fa-info-circle
+                |  Detalles
+              // <small class="text-muted">Last updated 3 mins ago</small>
+          .card
+            img.card-img-top(src='./img/kiwi.jpg', alt='Card image cap')
+            .card-body
+              h4.card-title Kiwi
+              p.card-text Kiwi nacional mejor que cualquiera.
+            .card-footer.d-flex.justify-content-around
+              button.btn.btn-success(type='button')
+                i.fa.fa-cart-plus
+                |  Añadir
+              button.btn.btn-info(type='button', data-toggle='modal', data-target='#ProductDetail1')
+                i.fa.fa-info-circle
+                |  Detalles
+              // <small class="text-muted">Last updated 3 mins ago</small>
+          .card
+            img.card-img-top(src='./img/fresas.jpg', alt='Card image cap')
+            .card-body
+              h4.card-title Fresas
+              p.card-text Las mejores fresas de estación, de agricultura ecológica.
+            .card-footer.d-flex.justify-content-around
+              button.btn.btn-success(type='button')
+                i.fa.fa-cart-plus
+                |  Añadir
+              button.btn.btn-info(type='button', data-toggle='modal', data-target='#ProductDetail1')
+                i.fa.fa-info-circle
+                |  Detalles
+              // <small class="text-muted">Last updated 3 mins ago</small>
+          .card
+            img.card-img-top(src='./img/papaya.jpg', alt='Card image cap')
+            .card-body
+              h4.card-title Papaya
+              p.card-text Ideal para smoothies y batidos bien fríos.
+            .card-footer.d-flex.justify-content-around
+              button.btn.btn-success(type='button')
+                i.fa.fa-cart-plus
+                |  Añadir
+              button.btn.btn-info(type='button', data-toggle='modal', data-target='#ProductDetail1')
+                i.fa.fa-info-circle
+                |  Detalles
+              // <small class="text-muted">Last updated 3 mins ago</small>
+          .card
+            img.card-img-top(src='./img/naranjas.jpg', alt='Card image cap')
+            .card-body
+              h4.card-title Naranjas
+              p.card-text De Valencia, bien dulces, ideal para jugo.
+            .card-footer.d-flex.justify-content-around
+              button.btn.btn-success(type='button')
+                i.fa.fa-cart-plus
+                |  Añadir
+              button.btn.btn-info(type='button', data-toggle='modal', data-target='#ProductDetail1')
+                i.fa.fa-info-circle
+                |  Detalles
+              // <small class="text-muted">Last updated 3 mins ago</small>
+          .card
+            img.card-img-top(src='./img/bananas.jpg', alt='Card image cap')
+            .card-body
+              h4.card-title Bananas
+              p.card-text Bananas de Ecuador, las mejores.
+            .card-footer.d-flex.justify-content-around
+              button.btn.btn-success(type='button')
+                i.fa.fa-cart-plus
+                |  Añadir
+              button.btn.btn-info(type='button', data-toggle='modal', data-target='#ProductDetail1')
+                i.fa.fa-info-circle
+                |  Detalles
+              // <small class="text-muted">Last updated 3 mins ago</small>
+          .card
+            img.card-img-top(src='./img/kiwi.jpg', alt='Card image cap')
+            .card-body
+              h4.card-title Kiwi
+              p.card-text Kiwi nacional mejor que cualquiera.
+            .card-footer.d-flex.justify-content-around
+              button.btn.btn-success(type='button')
+                i.fa.fa-cart-plus
+                |  Añadir
+              button.btn.btn-info(type='button', data-toggle='modal', data-target='#ProductDetail1')
+                i.fa.fa-info-circle
+                |  Detalles
+              // <small class="text-muted">Last updated 3 mins ago</small>
+          .card
+            img.card-img-top(src='./img/fresas.jpg', alt='Card image cap')
+            .card-body
+              h4.card-title Fresas
+              p.card-text Las mejores fresas de estación, de agricultura ecológica.
+            .card-footer.d-flex.justify-content-around
+              button.btn.btn-success(type='button')
+                i.fa.fa-cart-plus
+                |  Añadir
+              button.btn.btn-info(type='button', data-toggle='modal', data-target='#ProductDetail1')
+                i.fa.fa-info-circle
+                |  Detalles
+              // <small class="text-muted">Last updated 3 mins ago</small>
+          .card
+            img.card-img-top(src='./img/papaya.jpg', alt='Card image cap')
+            .card-body
+              h4.card-title Papaya
+              p.card-text Ideal para smoothies y batidos bien fríos.
+            .card-footer.d-flex.justify-content-around
+              button.btn.btn-success(type='button')
+                i.fa.fa-cart-plus
+                |  Añadir
+              button.btn.btn-info(type='button', data-toggle='modal', data-target='#ProductDetail1')
+                i.fa.fa-info-circle
+                |  Detalles
+              // <small class="text-muted">Last updated 3 mins ago</small>
+          .card
+            img.card-img-top(src='./img/naranjas.jpg', alt='Card image cap')
+            .card-body
+              h4.card-title Naranjas
+              p.card-text De Valencia, bien dulces, ideal para jugo.
+            .card-footer.d-flex.justify-content-around
+              button.btn.btn-success(type='button')
+                i.fa.fa-cart-plus
+                |  Añadir
+              button.btn.btn-info(type='button', data-toggle='modal', data-target='#ProductDetail1')
+                i.fa.fa-info-circle
+                |  Detalles
+              // <small class="text-muted">Last updated 3 mins ago</small>
+          .card
+            img.card-img-top(src='./img/bananas.jpg', alt='Card image cap')
+            .card-body
+              h4.card-title Bananas
+              p.card-text Bananas de Ecuador, las mejores.
+            .card-footer.d-flex.justify-content-around
+              button.btn.btn-success(type='button')
+                i.fa.fa-cart-plus
+                |  Añadir
+              button.btn.btn-info(type='button', data-toggle='modal', data-target='#ProductDetail1')
+                i.fa.fa-info-circle
+                |  Detalles
+              // <small class="text-muted">Last updated 3 mins ago</small>
+          .card
+            img.card-img-top(src='./img/kiwi.jpg', alt='Card image cap')
+            .card-body
+              h4.card-title Kiwi
+              p.card-text Kiwi nacional mejor que cualquiera.
+            .card-footer.d-flex.justify-content-around
+              button.btn.btn-success(type='button')
+                i.fa.fa-cart-plus
+                |  Añadir
+              button.btn.btn-info(type='button', data-toggle='modal', data-target='#ProductDetail1')
+                i.fa.fa-info-circle
+                |  Detalles
+              // <small class="text-muted">Last updated 3 mins ago</small>
+      // Modals
+      #ProductDetail1.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+        .modal-dialog(role='document')
+          .modal-content
+            .modal-header
+              h5#exampleModalLabel.modal-title Fresas
+              button.close(type='button', data-dismiss='modal', aria-label='Close')
+                span(aria-hidden='true') ×
+            .modal-body
+              img.card-img-top(src='./img/kiwi.jpg', alt='Card image cap')
+              p.modal-description
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo ut mollitia ipsam, quo voluptatibus aspernatur molestias? Maiores voluptatibus deleniti recusandae, natus eligendi nemo tenetur, ipsa temporibus voluptate aliquam voluptates consequatur.
+            .modal-footer
+              button.btn.btn-success(type='button')
+                i.fa.fa-cart-plus
+                |  Añadir
+              button.btn.btn-outline-secondary(type='button', data-dismiss='modal') Cerrar
+      #modal-login.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+        .modal-dialog(role='document')
+          .modal-content
+            .modal-header
+              h5#exampleModalLabel.modal-title Conéctese
+              button.close(type='button', data-dismiss='modal', aria-label='Close')
+                span(aria-hidden='true') ×
+            .modal-body
+              form.form-signin
+                // <h2 class="form-signin-heading">Please sign in</h2>
+                label.sr-only(for='inputEmail') Email address
+                input#inputEmail.form-control(type='email', placeholder='Email address', required='', autofocus='')
+                label.sr-only(for='inputPassword') Password
+                input#inputPassword.form-control(type='password', placeholder='Password', required='')
+                .checkbox
+                  label
+                    input(type='checkbox', value='remember-me')
+                    |  Remember me
+                button.btn.btn-lg.btn-primary.btn-block(type='submit') Sign in
+            .modal-footer
+              button.btn.btn-outline-secondary(type='button', data-dismiss='modal') Cerrar
