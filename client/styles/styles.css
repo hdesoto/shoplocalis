@@ -1,6 +1,18 @@
 
 body{
-  margin-top:99px;
+  margin-top:55px;
+}
+
+header .navbar-dark{
+  /*background-color: #55d6aa!important;*/
+}
+
+.fixed-top{
+    padding: 0 16px;
+}
+
+.fixed-top img{
+  height: 45px;
 }
 
 .jumbotron{
@@ -10,10 +22,11 @@ body{
 }
 
 .jumbotron .input-group{
-  padding: 5%;
+  padding: 2% 3%;
 }
 
 .jumbotron h1{
+  font-size: 273%;
   padding-bottom: 9px;
   border-bottom: 1px solid #eee;}
 
@@ -40,6 +53,32 @@ body{
 
 .modal-content{
   background: #eee;
+}
+
+.btn-signup{
+  width: 100%;
+}
+
+
+
+
+@media (min-width: 989px){
+  body{
+    margin-top: 99px;
+  }
+
+  .fixed-top{
+    padding: 8px 16px;
+  }
+
+  .fixed-top img{
+    height: 100%;
+  }
+
+  .sidebar{
+    top:55px;
+  }
+
 }
 
 

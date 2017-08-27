@@ -1,243 +1,93 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <title>Shop Localis</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <!-- BOWER Bootstrap for offline use -->
-    <!-- <link rel="stylesheet" href="bower_components/bootstrap/dist/css/boostrap.min.css">
-        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/boostrap-theme.min.css"> -->
-    <link href="https://fonts.googleapis.com/css?family=Pragati+Narrow:400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900" rel="stylesheet">
-    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Encode+Sans:400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="styles-cart.css">
-</head>
-
-<body>
-
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <a class="navbar-brand brand-text hidden-xs" href="/"><img class="logo-next-to-name" src="./img/icons/shoppingbag.png">Shop Localis</a>
-                <a class="navbar-brand brand-logo hidden-sm hidden-md hidden-lg" href="/"></a>
-            </div>
-       
-        <!-- LOGIN -->
-        <ul class="top-bar-user-cart">
-            <li class="dropdown user-dropdown">
-                <a href="#" id="userlink" class="dropdown-toggle login-link" data-toggle="dropdown" role="button" aria-expanded="false">
-            <i class="glyphicon glyphicon-user user"></i> <span class="hidden-xs hidden-sm">USUARIO </span> <span class="badge badge-usuario">2</span></a>
-            <ul class="dropdown-menu dropdown-user" role="menu" aria-labelledby="userlink">
-                <li><a class="text-center" href="/login.html">Login</a></li>
-                <li class="divider2"></li>
-                <li><a class="text-center" href="#">Registrarse</a></li>
-            </ul>
-            <!-- END of LOGIN -->
-            </li>
-        
-            <li class="dropdown open cart-dropdown">
-                <!-- CART -->
-                <a href="#" id="cart" class="dropdown-toggle expandable-cart" data-toggle="dropdown" role="button" aria-expanded="false"><span class="badge">2</span> <span class="glyphicon glyphicon-shopping-cart cart"></span><span class="caret"></span></a>
-                <ul class="dropdown-menu dropdown-cart" role="menu" aria-labelledby="cart">
-                    <li>
-                        <span class="item">
-                        <span class="item-left">
-                            <img src="http://lorempixel.com/50/50/" alt="" />
-                            <span class="item-info">
-                                <span>Item name</span>
-                        <span>23$</span>
-                        </span>
-                        </span>
-                        <span class="item-right">
-                            <button class="btn btn-xs btn-danger pull-right">x</button>
-                        </span>
-                        </span>
-                    </li>
-                    <li>
-                        <span class="item">
-                        <span class="item-left">
-                            <img src="http://lorempixel.com/50/50/" alt="" />
-                            <span class="item-info">
-                                <span>Item name</span>
-                        <span>23$</span>
-                        </span>
-                        </span>
-                        <span class="item-right">
-                            <button class="btn btn-xs btn-danger pull-right">x</button>
-                        </span>
-                        </span>
-                    </li>
-                    <li class="divider"></li>
-                    <li><a class="text-center" href="">Ver carro</a></li>
-   
-                </ul>
-                <!-- END of CART -->
-            </li>
-        </ul>
-        
-        </div>
-        <!-- /.container -->
-    </nav>
-    <!-- END of NAVBAR -->
-
-    <div class="container">
+<div class="container">
     <div class="row">
-        <div class="col-xs-8">
-            <div class="panel panel-info">
-                <div class="panel-heading">
-                    <div class="panel-title">
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <h5><span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart</h5>
+        <div class="col-sm-12 col-md-10 col-md-offset-1">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th class="text-center">Price</th>
+                        <th class="text-center">Total</th>
+                        <th> </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="col-sm-8 col-md-6">
+                        <div class="media">
+                            <a class="thumbnail pull-left" href="#"> <img class="media-object" src="http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/72/product-icon.png" style="width: 72px; height: 72px;"> </a>
+                            <div class="media-body">
+                                <h4 class="media-heading"><a href="#">Product name</a></h4>
+                                <h5 class="media-heading"> by <a href="#">Brand name</a></h5>
+                                <span>Status: </span><span class="text-success"><strong>In Stock</strong></span>
                             </div>
-                            <div class="col-xs-6">
-                                <a href="/" type="button" class="btn btn-primary btn-sm btn-block">
-                                    <span class="glyphicon glyphicon-share-alt"></span> Continue shopping
-                                </a>
+                        </div></td>
+                        <td class="col-sm-1 col-md-1" style="text-align: center">
+                        <input type="email" class="form-control" id="exampleInputEmail1" value="3">
+                        </td>
+                        <td class="col-sm-1 col-md-1 text-center"><strong>$4.87</strong></td>
+                        <td class="col-sm-1 col-md-1 text-center"><strong>$14.61</strong></td>
+                        <td class="col-sm-1 col-md-1">
+                        <button type="button" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove"></span> Remove
+                        </button></td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-6">
+                        <div class="media">
+                            <a class="thumbnail pull-left" href="#"> <img class="media-object" src="http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/72/product-icon.png" style="width: 72px; height: 72px;"> </a>
+                            <div class="media-body">
+                                <h4 class="media-heading"><a href="#">Product name</a></h4>
+                                <h5 class="media-heading"> by <a href="#">Brand name</a></h5>
+                                <span>Status: </span><span class="text-warning"><strong>Leaves warehouse in 2 - 3 weeks</strong></span>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel-body">
-                    <div class="row">
-                        <div class="col-xs-2"><img class="img-responsive" src="http://placehold.it/100x70">
-                        </div>
-                        <div class="col-xs-4">
-                            <h4 class="product-name"><strong>Product name</strong></h4><h4><small>Product description</small></h4>
-                        </div>
-                        <div class="col-xs-6">
-                            <div class="col-xs-6 text-right">
-                                <h6><strong>25.00 <span class="text-muted">x</span></strong></h6>
-                            </div>
-                            <div class="col-xs-4">
-                                <input type="text" class="form-control input-sm" value="1">
-                            </div>
-                            <div class="col-xs-2">
-                                <button type="button" class="btn btn-link btn-xs">
-                                    <span class="glyphicon glyphicon-trash"> </span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                        <div class="col-xs-2"><img class="img-responsive" src="http://placehold.it/100x70">
-                        </div>
-                        <div class="col-xs-4">
-                            <h4 class="product-name"><strong>Product name</strong></h4><h4><small>Product description</small></h4>
-                        </div>
-                        <div class="col-xs-6">
-                            <div class="col-xs-6 text-right">
-                                <h6><strong>25.00 <span class="text-muted">x</span></strong></h6>
-                            </div>
-                            <div class="col-xs-4">
-                                <input type="text" class="form-control input-sm" value="1">
-                            </div>
-                            <div class="col-xs-2">
-                                <button type="button" class="btn btn-link btn-xs">
-                                    <span class="glyphicon glyphicon-trash"> </span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                    <div class="row">
-                        <div class="text-center">
-                            <div class="col-xs-9">
-                                <h6 class="text-right">Added items?</h6>
-                            </div>
-                            <div class="col-xs-3">
-                                <button type="button" class="btn btn-default btn-sm btn-block">
-                                    Update cart
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel-footer">
-                    <div class="row text-center">
-                        <div class="col-xs-9">
-                            <h4 class="text-right">Total <strong>$50.00</strong></h4>
-                        </div>
-                        <div class="col-xs-3">
-                            <button type="button" class="btn btn-success btn-block">
-                                Checkout
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                        </div></td>
+                        <td class="col-md-1" style="text-align: center">
+                        <input type="email" class="form-control" id="exampleInputEmail1" value="2">
+                        </td>
+                        <td class="col-md-1 text-center"><strong>$4.99</strong></td>
+                        <td class="col-md-1 text-center"><strong>$9.98</strong></td>
+                        <td class="col-md-1">
+                        <button type="button" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove"></span> Remove
+                        </button></td>
+                    </tr>
+                    <tr>
+                        <td>   </td>
+                        <td>   </td>
+                        <td>   </td>
+                        <td><h5>Subtotal</h5></td>
+                        <td class="text-right"><h5><strong>$24.59</strong></h5></td>
+                    </tr>
+                    <tr>
+                        <td>   </td>
+                        <td>   </td>
+                        <td>   </td>
+                        <td><h5>Estimated shipping</h5></td>
+                        <td class="text-right"><h5><strong>$6.94</strong></h5></td>
+                    </tr>
+                    <tr>
+                        <td>   </td>
+                        <td>   </td>
+                        <td>   </td>
+                        <td><h3>Total</h3></td>
+                        <td class="text-right"><h3><strong>$31.53</strong></h3></td>
+                    </tr>
+                    <tr>
+                        <td>   </td>
+                        <td>   </td>
+                        <td>   </td>
+                        <td>
+                        <button type="button" class="btn btn-default">
+                            <span class="glyphicon glyphicon-shopping-cart"></span> Continue Shopping
+                        </button></td>
+                        <td>
+                        <button type="button" class="btn btn-success">
+                            Checkout <span class="glyphicon glyphicon-play"></span>
+                        </button></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>
-
-
-
-
-
-
-    <!-- FOOTER -->
-    <div class="footer-distributed">
-        <div class="footer-left">
-            <h3>Shop<span>Localis</span></h3>
-            <p class="footer-links">
-                <a href="#">Inicio</a> ·
-                <a href="#">Blog</a> ·
-                <a href="#">Soy Vendedor</a> ·
-                <a href="#">Sobre Nosotros</a> ·
-                <a href="#">Preguntas Frecuentes</a> ·
-                <a href="#">Contacto</a>
-            </p>
-            <p class="footer-company-name">Shop Localis &copy; 2017</p>
-        </div>
-        <div class="footer-center">
-            <div>
-                <i class="fa fa-map-marker"></i>
-                <p><span>35 Roc Boronat</span> Barcelona, España</p>
-            </div>
-            <div>
-                <i class="fa fa-phone"></i>
-                <p>+1 555 123456</p>
-            </div>
-            <div>
-                <i class="fa fa-envelope"></i>
-                <p><a href="mailto:support@company.com">support@company.com</a></p>
-            </div>
-        </div>
-        <div class="footer-right">
-            <p class="footer-company-about">
-                <span>Sobre Nosotros</span> Buscamos facilitar tu vida junto a los comercios locales.
-            </p>
-            <div class="footer-icons">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-linkedin"></i></a>
-                <a href="#"><i class="fa fa-github"></i></a>
-            </div>
-        </div>
-    </div>
-    <!-- END OF FOOTER -->
-    <!-- SCRIPTS -->
-    <script src="https://use.fontawesome.com/73ae896e31.js"></script>
-    <!-- Jquery -->
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <!-- BOWE jQuery  for offline use-->
-    <!-- <script src="bower_components/jquery/dist/jquery.min.js"></script> -->
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- BOWER js for Bootstrap - for offline use -->
-    <!-- <script src="bower_components/bootstrap/dist/js/boostrap.min.js"></script> -->
-    <script src="./js/main.js"></script>
-</body>
-
-</html>

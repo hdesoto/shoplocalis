@@ -261,6 +261,7 @@
 </div>
 
 <!-- Modals -->
+<!-- Modal PRODUCT DETAILS -->
 <div class="modal fade" id="ProductDetail1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -283,41 +284,125 @@
 </div>
 
 
+<!-- Modal LOGIN / REGISTER -->
 <div class="modal fade" id="modal-login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Conéctese</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" id="login-tab" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-expanded="true">Ingresar</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="signup-tab" data-toggle="tab" href="#signup" role="tab" aria-controls="singup">Registrarse</a>
+                </li>
+              </ul>
             </div>
             <div class="modal-body">
-                <form class="form-signin">
-                    <!-- <h2 class="form-signin-heading">Please sign in</h2> -->
-                    <label for="inputEmail" class="sr-only">Email address</label>
-                    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
-                    <label for="inputPassword" class="sr-only">Password</label>
-                    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" value="remember-me"> Remember me
-                        </label>
-                    </div>
-                    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-                </form>
+              <div class="tab-content" id="myTabContent">
+                <!-- LOGIN MODAL -->
+                  <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                    <form class="form-signin">
+                      <label for="inputEmail" class="sr-only">Email</label>
+                      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+                      <label for="inputPassword" class="sr-only">Password</label>
+                      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+                      <div class="checkbox">
+                          <label>
+                              <input type="checkbox" value="remember-me"> Recordarme
+                          </label>
+                      </div>
+                      <button class="btn btn-lg btn-primary btn-block" type="submit">Ingresar</button>
+                    </form>
+                  </div>
+                <!-- REGISTER MODAL -->
+                  <div class="tab-pane fade" id="signup" role="tabpanel" aria-labelledby="signup-tab">
+                    <form class="form-horizontal" role="form" method="POST" action="/register">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                  <label for="name" class="sr-only">Nombre completo</label>
+                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                        <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-user"></i></div>
+                                        <input type="text" name="name" class="form-control" id="name" placeholder="Nombre Completo" required autofocus>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="col-md-3">
+                                <div class="form-control-feedback">
+                                    <span class="text-danger align-middle"> -->
+                                                        <!-- Put name validation error messages here -->
+                                                    <!-- </span>
+                                </div>
+                            </div> -->
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                  <label for="email" class="sr-only">E-Mail</label>
+                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                        <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-at"></i></div>
+                                        <input type="text" name="email" class="form-control" id="email" placeholder="nombre@ejemplo.com" required autofocus>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="col-md-3">
+                                <div class="form-control-feedback">
+                                    <span class="text-danger align-middle"> -->
+                                                        <!-- Put e-mail validation error messages here -->
+                                                    <!-- </span>
+                                </div>
+                            </div> -->
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group has-danger">
+                                <label for="password" class="sr-only">Password</label>
+                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                        <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-key"></i></div>
+                                        <input type="password" name="password" class="form-control" id="password" placeholder="Password" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="col-md-3">
+                                <div class="form-control-feedback">
+                                    <span class="text-danger align-middle">
+                                                        <i class="fa fa-close"> Example Error Message</i>
+                                                    </span>
+                                </div>
+                            </div> -->
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                  <label for="password-confirm" class="sr-only">Password</label>
+                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                                        <div class="input-group-addon" style="width: 2.6rem">
+                                            <i class="fa fa-key"></i>
+                                        </div>
+                                        <input type="password" name="password-confirmation" class="form-control" id="password-confirm" placeholder="Repita password" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!-- <div class="col-md-3"></div> -->
+                            <div class="col-md-12">
+                                <button type="submit" class="btn btn-lg btn-block btn-success btn-signup">Registrar</button>
+                            </div>
+                        </div>
+                    </form>
+                  </div>
+              </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">
+                Cerrar
                 </button>
             </div>
         </div>
     </div>
 </div>
-
-
-
-
 
 
 

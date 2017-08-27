@@ -15,11 +15,13 @@
   margin-bottom: 20px;
   padding-bottom: 9px;
   border-bottom: 1px solid #eee;
+  text-align:center;
+  font-size: 190%;
 }
 
- .dashboard-body .navbar-brand img{
+/* .dashboard-body .navbar-brand img{
   width: 100px;
-}
+}*/
 
 /*
  * Sidebar
@@ -27,7 +29,7 @@
 
 .sidebar {
   position: fixed;
-  top: 99px;
+  top: 55px;
   bottom: 0;
   left: 0;
   z-index: 1000;
@@ -71,4 +73,19 @@
 .placeholder img {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+
+
+@media (min-width: 989px){
+  .sidebar{
+    top:99px;
+  }
+}
+
+@media (min-width: 460px){
+  .dashboard-body h1 {
+    text-align: left;
+    font-size: 2.2rem;
+  }
+
 }
