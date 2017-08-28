@@ -3,23 +3,32 @@ header
     a.navbar-brand(href='#')
       img(src='./img/icons/logohorizontal-narrow.png')
     button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
-      span.navbar-toggler-icon
       span.badge.badge-info.items-in-cart 3
+      span.navbar-toggler-icon
     #navbarSupportedContent.collapse.navbar-collapse
-      ul.navbar-nav.mr-auto
+      ul.navbar-nav.mr-auto.navbar-list
         li.nav-item.active
-          a.nav-link(href='/')
+          a.nav-link(href='#')
             | Inicio 
             span.sr-only (current)
-        //- li.nav-item
         li.nav-item
           a.nav-link(href='#', data-toggle='modal', data-target='#modal-login') Login
-        li.nav-item
-          a.nav-link(href='./admin') Configuración
-      form.my-2.my-lg-0.d-flex.justify-content-between
-        input.form-control.mr-sm-2(type='text', placeholder='Search', aria-label='Search')
-        button.btn.btn-outline-success.mr-sm-2.my-2.my-sm-0(type='submit') Search
-      a.nav-link.btn.btn-secondary.mb-sm-3.mb-lg-0.my-2.my-sm-0(href='#', data-toggle='modal', data-target='#modal-cart')
+        //
+          <li class="nav-item">
+          <a class="nav-link" href="../dashboard.html">Configuración</a>
+          </li>
+        li.nav-item.dropdown.navbar-admin
+          a#navbarAdmin.nav-link.dropdown-toggle.navbar-admin-link(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+            | Administrador
+          .dropdown-menu.navbar-admin-dropdown(aria-labelledby='navbarAdmin')
+            a.dropdown-item(href='/admin') Panel de Control
+            a.dropdown-item(href='#') Modificar Producto
+            a.dropdown-item(href='#') Crear Producto
+            a.dropdown-item(href='#') Eliminar Producto
+      form.form-inline.my-2.my-lg-0
+        input.form-control.mr-sm-2(type='text', placeholder='Buscar Producto', aria-label='Search')
+        button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Buscar
+      a.nav-link.btn.btn-secondary.ml-2.mb-sm-3.mb-lg-0.my-2.my-sm-0(href='#', data-toggle='modal', data-target='#modal-cart')
             span.cart-span.mr-2
               i.fa.fa-shopping-cart
             | Carrito 

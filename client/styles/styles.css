@@ -5,6 +5,7 @@ body{
 
 header .navbar-dark{
   /*background-color: #55d6aa!important;*/
+  box-shadow: 0 0 4px rgba(0,0,0,.14);
 }
 
 .fixed-top{
