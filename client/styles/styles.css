@@ -19,9 +19,29 @@ header .navbar-dark{
   margin-right: 5%;
 }
 
-.fixed-top .cart-span{
-  
+.navbar-list > ul > li > a{
+  padding-top:28px;
+  padding-bottom:28px;
 }
+
+.navbar-list > ul > li > a:hover,
+.navbar-list > ul > li > a:focus{
+  background: #21b89e;
+}
+
+.navbar-admin-link{
+  width: 120%;
+}
+
+.navbar-admin-dropdown{
+  background: #807A7A;
+  border-radius: 0;
+}
+
+.navbar-admin-dropdown a{
+  color:white;
+}
+
 
 .jumbotron{
   background-image: url('../img/backgrounds/verduleria.jpg');
@@ -264,6 +284,47 @@ header .navbar-dark{
     font-size: 2.2rem;
   }
 
+}
+
+
+.upload-form{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.upload-button{
+  width:100%;
+  margin-top: 15px;
+}
+
+.upload-details{
+  height: 186px;
+}
+
+.group-upload-details{
+  /*padding-bottom:15px;*/
+  margin-bottom:7px;
+}
+
+.group-upload-title{
+  margin-top:16px;
+}
+
+.select-upload{
+  width:100%;
+}
+
+.group-upload-stock{
+  width: 100%;
+}
+
+@media(min-width: 768px){
+  .group-upload-title{
+    margin-top:0;
+  }
+  .upload-form{
+    padding:15px;
+  }  
 }
 
 

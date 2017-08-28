@@ -22,3 +22,11 @@ $('.btn-minus').click( function() {
   var newQuantity = +currentQuantity - 1
   $('.quantity-required').val(newQuantity.toString())
 })
+
+
+/* ==== Dashboard == */
+
+$("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
