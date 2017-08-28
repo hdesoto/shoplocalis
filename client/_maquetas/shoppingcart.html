@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shop Localis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <styles>
+    </styles>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+          <img src='../img/icons/logohorizontal-narrow.png'>
+          </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#" data-toggle="modal" data-target="#modal-login">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../dashboard.html">Configuración</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+      </nav>
+    </header>
+
+
+<!-- Modal SHOPPING CART-->
+<!-- <div id="modal-cart" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade">
+  <div role="document" class="modal-dialog modal-lg modal-dialog-cart">
+    <div class="modal-content"> -->
+      <div class="modal-header">
+        <h1>Carrito</h1>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 col-lg-12 mx-md-auto">
+              <table class="table table-responsive table-sm table-hover table-striped">
+                <thead class="thead-inverse">
+                  <tr>
+                    <th>Producto</th>
+                    <th>Quantity</th>
+                    <th class="text-center">Price</th>
+                    <th class="text-center">Total</th>
+                    <th> </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="col-md-8 col-lg-6">
+                      <div class="media"><a href="#" class="thumbnail float-left"><img src="http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/72/product-icon.png" style="width: 72px; height: 72px;" class="media-object"/></a>
+                        <div class="media-body">
+                          <h4 class="media-heading"><a href="#">Un producto</a></h4>
+                        </div>
+                      </div>
+                    </td>
+                    <td style="text-align: center" class="col-md-1 col-lg-1">
+                      <input id="exampleInputEmail1" type="email" value="3" class="form-control"/>
+                    </td>
+                    <td class="col-md-1 col-lg-1 text-center"><strong>€4.87</strong></td>
+                    <td class="col-md-1 col-lg-1 text-center"><strong>€14.61</strong></td>
+                    <td class="col-md-1 col-lg-1">
+                      <button type="button" class="btn btn-danger"><span class="fa fa-times"></span> Remove</button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="col-lg-6">
+                      <div class="media"><a href="#" class="thumbnail float-left"><img src="http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/72/product-icon.png" style="width: 72px; height: 72px;" class="media-object"/></a>
+                        <div class="media-body">
+                          <h4 class="media-heading"><a href="#">Un producto</a></h4>
+                        </div>
+                      </div>
+                    </td>
+                    <td style="text-align: center" class="col-lg-1">
+                      <input id="exampleInputEmail1" type="email" value="2" class="form-control"/>
+                    </td>
+                    <td class="col-lg-1 text-center"><strong>€4.99</strong></td>
+                    <td class="col-lg-1 text-center"><strong>€9.98</strong></td>
+                    <td class="col-lg-1">
+                      <button type="button" class="btn btn-danger"><span class="fa fa-times"></span> Remove</button>
+                    </td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td colspan="3"></td>
+                    <td>
+                      <h5>Subtotal</h5>
+                    </td>
+                    <td class="text-right">
+                      <h5><strong>€24.59</strong></h5>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="3"></td>
+                    <td>
+                      <h5>Estimated shipping</h5>
+                    </td>
+                    <td class="text-right">
+                      <h5><small>€6.94</small></h5>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="3"></td>
+                    <td>
+                      <h3>Total</h3>
+                    </td>
+                    <td class="text-right">
+                      <h5>
+                        <h3>€31.53</h3>
+                      </h5>
+                    </td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" data-dismiss="modal" class="btn btn-secondary"><span class="fa fa-shopping-cart"></span> Continue Shopping</button>
+        <button type="button" class="btn btn-success">Checkout <span class="fa fa-arrow-circle-o-right"></span></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- SCRIPTS -->
+    <!-- Font Awesome -->
+    <script src="https://use.fontawesome.com/73ae896e31.js"></script>
+    <!-- jquery for Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!-- popper for bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <!-- bootstra 4 -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shop Localis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="../styles/styles.css">
+
+<styles>
+
+</styles>
+    
+</head>
+<body>
+
+<header>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">
+          <img src='../img/icons/logohorizontal-narrow.png'>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" data-toggle="modal" data-target="#modal-login">Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../dashboard.html">Configuración</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+</header>
+
+<div class="container">
+  <form>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="input-name" class="col-form-label">Nombre</label>
+      <input type="text" class="form-control" id="input-name" placeholder="NOMBRE">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="input-lastname" class="col-form-label ">Apellido</label>
+      <input type="text" class="form-control" id="input-lastname" placeholder="APELLIDO">
+    </div>
+  </div>
+  <div class="form-group direccion1-row">
+    <label for="input-address" class="col-form-label">Dirección</label>
+    <input type="text" class="form-control" id="input-address" placeholder="Calle y Número de Puerta">
+  </div>
+  <div class="form-group direccion2-row">
+    <label for="input-address2" class="col-form-label">Dirección 2</label>
+    <input type="text" class="form-control" id="input-address2" placeholder="Piso, Puerta, etc..">
+  </div>
+  <div class="form-row ciudad-provincia-zip-row">
+    <div class="form-group col-md-6 ciudad-group">
+      <label for="input-city" class="col-form-label">Ciudad</label>
+      <input type="text" class="form-control" id="input-city" placeholder="CIUDAD">
+    </div>
+    <div class="form-group col-md-4 provincia-group">
+      <label for="input-state" class="col-form-label" placeholder="PROVINCIA">Provincia</label>
+      <select id="input-state" class="form-control">
+        <option value="">Seleccione...</option>
+        <option value="15">A coru&#241;a</option>
+        <option value="1">&#193;lava</option>
+        <option value="2">Albacete</option>
+        <option value="3">Alicante</option>
+        <option value="4">Almer&#237;a</option>
+        <option value="33">Asturias</option>
+        <option value="5">&#193;vila</option>
+        <option value="6">Badajoz</option>
+        <option value="7">Baleares</option>
+        <option value="8">Barcelona</option>
+        <option value="9">Burgos</option>
+        <option value="10">C&#225;ceres</option>
+        <option value="11">C&#225;diz</option>
+        <option value="39">Cantabria</option>
+        <option value="12">Castell&#243;n</option>
+        <option value="51">Ceuta</option>
+        <option value="13">Ciudad Real</option>
+        <option value="14">C&#243;rdoba</option>
+        <option value="16">Cuenca</option>
+        <option value="99">Extranjero</option>
+        <option value="17">Girona</option>
+        <option value="18">Granada</option>
+        <option value="19">Guadalajara</option>
+        <option value="20">Guip&#250;zcoa</option>
+        <option value="21">Huelva</option>
+        <option value="22">Huesca</option>
+        <option value="23">Ja&#233;n</option>
+        <option value="26">La rioja</option>
+        <option value="35">Las palmas</option>
+        <option value="24">Le&#243;n</option>
+        <option value="25">Lleida</option>
+        <option value="27">Lugo</option>
+        <option value="28">Madrid</option>
+        <option value="29">M&#225;laga</option>
+        <option value="52">Melilla</option>
+        <option value="30">Murcia</option>
+        <option value="31">Navarra</option>
+        <option value="32">Ourense</option>
+        <option value="34">Palencia</option>
+        <option value="36">Pontevedra</option>
+        <option value="37">Salamanca</option>
+        <option value="38">Santa cruz de tenerife</option>
+        <option value="40">Segovia</option>
+        <option value="41">Sevilla</option>
+        <option value="42">Soria</option>
+        <option value="43">Tarragona</option>
+        <option value="44">Teruel</option>
+        <option value="45">Toledo</option>
+        <option value="46">Valencia</option>
+        <option value="47">Valladolid</option>
+        <option value="48">Vizcaya</option>
+        <option value="49">Zamora</option>
+        <option value="50">Zaragoza</option>
+      </select>
+    </div>
+    <div class="form-group col-md-2">
+      <label for="inputZip" class="col-form-label">Código Postal</label>
+      <input type="text" class="form-control" id="inputZip">
+    </div>
+  </div>
+  <div class="form-row checkout-last-row">
+    <div class="form-group col-md-6 horario-entrega">
+      <label class="mr-sm-2 col-form-label" for="inlineFormCustomSelect">Horario de Entrega</label>
+      <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="delivery-hour">
+        <option selected>Seleccione...</option>
+        <option value="1">de 9 hs a 12 hs</option>
+        <option value="2">de 12 hs a 17 hs</option>
+        <option value="3">de 17 hs a 21 hs</option>
+      </select>
+    </div>
+    <div class="form-group col-md-6 medio-pago">
+      <label class="mr-sm-2 col-form-label" for="inlineFormCustomSelect">Método de Pago</label>
+      <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="payment-methods">
+        <option selected>Seleccione...</option>
+        <option value="1"><i class="fa fa-money"></i>Efectivo</option>
+        <option value="2"><i class="fa fa-credit-card"></i>Tarjeta</option>
+        <option value="3">PayPal</option>
+      </select>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-lg btn-block btn-success mb-3"><i class="fa fa-check mx-3"></i>Confirmar Compra</button>
+</form>
+</div>
+
+
+
+
+
+
+
+
+
+  <!-- SCRIPTS -->
+        
+        <!-- Font Awesome -->
+        <script src="https://use.fontawesome.com/73ae896e31.js"></script>    
+        
+        <!-- jquery for Bootstrap -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <!-- popper for bootstrap -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+
+        <!-- bootstra 4 -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+        
+
+        <script src="../js/main.js"></script>
+
+</body>
+</html>
