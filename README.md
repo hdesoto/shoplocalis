@@ -23,3 +23,8 @@ All the payment processing will also be handled by our website.
 
 
 ## Technologies used in this project
+
+
+
+## TEST APIs
+curl -H "Content-Type: application/json" -X POST -d '{"title":"Yerba Mate","description":"Yerba Canarias - la yerba de mi pías", "price": 5,"uom":"kg", "stock": 25, "picture": "http://canarias.com.uy/wp-content/uploads/2012/11/home-canarias.png"}' http://localhost:3001/api/products

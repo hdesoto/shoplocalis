@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shop Localis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    
+    
+
+    <link rel="stylesheet" href="../styles/styles.css">
+
+    
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">
+        <img src='../img/icons/logohorizontal-narrow.png'>
+        </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto navbar-list">
+              <li class="nav-item active">
+                  <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#" data-toggle="modal" data-target="#modal-login">Login</a>
+              </li>
+              <!-- <li class="nav-item">
+                  <a class="nav-link" href="../dashboard.html">Configuración</a>
+              </li> -->
+              <li class="nav-item dropdown navbar-admin">
+                <a class="nav-link dropdown-toggle navbar-admin-link" href="#" id="navbarAdmin" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Administrador
+                </a>
+                <div class="dropdown-menu navbar-admin-dropdown" aria-labelledby="navbarAdmin">
+                  <a class="dropdown-item" href="/admin">Panel de Control</a>
+                  <a class="dropdown-item" href="#">Modificar Producto</a>
+                  <a class="dropdown-item" href="#">Crear Producto</a>
+                  <a class="dropdown-item" href="#">Eliminar Producto</a>
+                </div>
+              </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="text" placeholder="Buscar Producto" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar </button>
+          </form>
+      </div>
+    </nav>
+  </header>
+
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container bg-dark">
+    <h1 class="display-3 text-uppercase text-center bg-dark text-light">Welcome to Shop Localis</h1>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="input-group input-group-lg">
+            <input type="text" class="form-control text-center" placeholder="Search for..." aria-label="Search for...">
+            <span class="input-group-btn">
+              <button class="btn btn-secondary" type="button">Go!</button>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="card-deck" >
+      <div class="card">
+        <img class="card-img-top" src="../img/fresas.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h4 class="card-title">Fresas</h4>
+          <p class="card-text">Las mejores fresas de estación, de agricultura ecológica.</p>
+        </div>
+        <div class="card-footer d-flex justify-content-around">
+            <button type="button" class="btn btn-success">
+            <i class="fa fa-cart-plus"></i> Añadir</button>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-product-detail"><i class="fa fa-info-circle"></i> Detalles</button>
+          <!-- <small class="text-muted">Last updated 3 mins ago</small> -->
+        </div>
+      </div>
+      <div class="card">
+        <img class="card-img-top" src="../img/papaya.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h4 class="card-title">Papaya</h4>
+          <p class="card-text">Ideal para smoothies y batidos bien fríos.</p>
+        </div>
+        <div class="card-footer d-flex justify-content-around">
+            <button type="button" class="btn btn-success">
+            <i class="fa fa-cart-plus"></i> Añadir</button>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-product-detail"><i class="fa fa-info-circle"></i> Detalles</button>
+          <!-- <small class="text-muted">Last updated 3 mins ago</small> -->
+        </div>
+      </div>
+      
+      <div class="card">
+        <img class="card-img-top" src="../img/papaya.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h4 class="card-title">Papaya</h4>
+          <p class="card-text">Ideal para smoothies y batidos bien fríos.</p>
+        </div>
+        <div class="card-footer d-flex justify-content-around">
+            <button type="button" class="btn btn-success">
+            <i class="fa fa-cart-plus"></i> Añadir</button>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#modal-product-detail"><i class="fa fa-info-circle"></i> Detalles</button>
+          <!-- <small class="text-muted">Last updated 3 mins ago</small> -->
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+
+  <!-- SCRIPTS -->
+        
+        <!-- Font Awesome -->
+        <script src="https://use.fontawesome.com/73ae896e31.js"></script>    
+        
+        <!-- jquery for Bootstrap -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <!-- popper for bootstrap -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+
+        <!-- bootstra 4 -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+        
+
+        <script src="../js/main.js"></script>
+
+</body>
+</html>

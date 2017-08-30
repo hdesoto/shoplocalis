@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shop Localis</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="../styles/styles.css">
+
+<!-- custom styles for Product Details -->
+<style>
+
+</style>
+
+</head>
+<body>
+
+  <header>
+      <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">
+            <img src='../img/icons/logohorizontal-narrow.png'>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-toggle="modal" data-target="#modal-login">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./dashboard.html">Configuración</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+  </header>
+
+<div class="container-fluid text-center edit-header">
+  <h1>Editar Producto</h1>
+</div>
+
+<div class="container product-edit">
+  <!-- <div class="card"> -->
+    <div class="container-fluid">
+      <form class="edit-form">
+        <div class="form-row edit-form">
+          <div class="col-md-4 picture-left d-flex flex-column">
+            <img src="../img/default-placeholder.png" class="img-thumbnail" alt="Responsive image">
+            <label for='file2' class='sr-only'>Seleccionar Foto</label>
+            <input type="file" id="file2" class="form-control-file form-control-lg" disabled>
+            <button class="btn btn-dark edit-btn"><i class="fa fa-edit"></i></button>
+              <!-- <span class="custom-file-control"></span> -->            
+          </div>
+          <div class="details-right col-md-8">
+            <div class="form-group group-edit-title d-flex justify-content-between">
+              <label for="edit-title" class="sr-only">Título</label>
+              <input type="text" class="form-control form-control-lg mr-1" id="edit-title" placeholder="Titulo" disabled>
+              <!-- <input type="text" class="form-control form-control-lg mr-1" id="edit-title" placeholder="Titulo" disabled> -->
+              <button class="btn btn-dark edit-btn"><i class="fa fa-edit"></i></button>
+            </div>
+            <div class="form-group group-edit-details">
+              <label for="edit-details" class="sr-only">Descripción</label>
+              <textarea class="form-control edit-details" id="edit-details" rows="3" disabled></textarea>
+              <button class="btn btn-dark edit-btn"><i class="fa fa-edit"></i></button>
+            </div>
+            <div class="form-row group-edit-price d-flex justify-content-between">
+              <div class="form-group d-flex justify-content-between">
+                <label for="edit-price" class="sr-only">Precio</label>
+                <input type="number" class="form-control" id="edit-price" placeholder="Precio" disabled>
+                <button class="btn btn-dark edit-btn"><i class="fa fa-edit"></i></button>
+              </div>
+              <div class="form-group d-flex justify-content-around">
+                <select class="custom-select select-edit" disabled>
+                  <option selected>por Kg</option>
+                  <option value="1">por Unidad</option>
+                  <option value="2">Litro</option>
+                  <option value="3">por Paquete</option>
+                </select>
+                <button class="btn btn-dark edit-btn"><i class="fa fa-edit"></i></button>
+              </div>
+            </div>
+            <div class="form-row edit-stock d-flex">
+              <div class="form-group group-edit-stock">
+                <label for="edit-stock" class="sr-only">Cantidad en Stock</label>
+                <input type="number" class="form-control" id="edit-stock" placeholder="Stock inicial" disabled>
+                <button class="btn btn-dark edit-btn"><i class="fa fa-edit"></i></button>
+              </div>
+              <!-- <div class="form-group col-md-4 hidden" hidden>
+                <select class="custom-select select-edit">
+                  <option selected>por Kg</option>
+                  <option value="1">por Unidad</option>
+                  <option value="2">Litro</option>
+                  <option value="3">por Paquete</option>
+                </select>
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="action col-md-12">
+            <button type="button" class="btn btn-warning btn-add-to-cart edit-button"><i class="fa fa-edit"></i> 
+            Aplicar Cambios
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+<!--   </div> -->
+</div>
+
+
+
+
+
+
+
+  
+
+<!-- SCRIPTS -->
+      
+  <!-- Font Awesome -->
+  <script src="https://use.fontawesome.com/73ae896e31.js"></script>    
+  
+  <!-- jquery for Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <!-- popper for bootstrap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <!-- bootstra 4 -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+  
+
+  <script src="../js/main.js"></script>
+  <script src="../js/product-details.js"></script>
+
+</body>
+</html>

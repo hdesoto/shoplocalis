@@ -30,3 +30,22 @@ $("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
     });
+
+
+/* === Edit PRODUCT === */
+
+$('.edit-btn').click(function(e){
+  e.preventDefault()
+  $editableField = $(this).prev()
+  $objective = $(this).prev().prop('disabled')
+  
+  if($objective){
+    $editableField.prop('disabled',false)
+  } else {
+    $editableField.prop('disabled', true)
+  }
+})
+
+// $('.edit-details').hover(function(){
+//   $(this).sibling('button').toggle()
+// })

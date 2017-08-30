@@ -6,357 +6,90 @@ block content
           h1.display-3.text-uppercase.text-center.bg-dark.text-light Shop Localis
           .row
             .col-lg-12
-              .input-group.input-group-lg
-                input.form-control.text-center(type='text', placeholder='Search for...', aria-label='Search for...')
+              form.input-group.input-group-lg(action='/product/search', method='get')
+                input.form-control.text-center(type='text', name='title', placeholder='Search for...', aria-label='Search for...')
                 span.input-group-btn
-                  button.btn.btn-secondary(type='button') Go!
+                  button.btn.btn-secondary(type='submit') Go!
       .container
         .card-deck
-          .card
-            img.card-img-top(src='./img/fresas.jpg', alt='Card image cap')
-            .card-body
-              h4.card-title Fresas
-              p.card-text Las mejores fresas de estación, de agricultura ecológica.
-            .card-footer.d-flex.justify-content-around
-              button.btn.btn-success(type='button')
-                i.fa.fa-cart-plus
-                |  Añadir
-              button.btn.btn-info(type='button', data-toggle='modal', data-target='#modal-product-detail')
-                i.fa.fa-info-circle
-                |  Detalles
-              // <small class="text-muted">Last updated 3 mins ago</small>
-          .card
-            img.card-img-top(src='./img/papaya.jpg', alt='Card image cap')
-            .card-body
-              h4.card-title Papaya
-              p.card-text Ideal para smoothies y batidos bien fríos.
-            .card-footer.d-flex.justify-content-around
-              button.btn.btn-success(type='button')
-                i.fa.fa-cart-plus
-                |  Añadir
-              button.btn.btn-info(type='button', data-toggle='modal', data-target='#modal-product-detail')
-                i.fa.fa-info-circle
-                |  Detalles
-              // <small class="text-muted">Last updated 3 mins ago</small>
-          .card
-            img.card-img-top(src='./img/naranjas.jpg', alt='Card image cap')
-            .card-body
-              h4.card-title Naranjas
-              p.card-text De Valencia, bien dulces, ideal para jugo.
-            .card-footer.d-flex.justify-content-around
-              button.btn.btn-success(type='button')
-                i.fa.fa-cart-plus
-                |  Añadir
-              button.btn.btn-info(type='button', data-toggle='modal', data-target='#modal-product-detail')
-                i.fa.fa-info-circle
-                |  Detalles
-              // <small class="text-muted">Last updated 3 mins ago</small>
-          .card
-            img.card-img-top(src='./img/bananas.jpg', alt='Card image cap')
-            .card-body
-              h4.card-title Bananas
-              p.card-text Bananas de Ecuador, las mejores.
-            .card-footer.d-flex.justify-content-around
-              button.btn.btn-success(type='button')
-                i.fa.fa-cart-plus
-                |  Añadir
-              button.btn.btn-info(type='button', data-toggle='modal', data-target='#modal-product-detail')
-                i.fa.fa-info-circle
-                |  Detalles
-              // <small class="text-muted">Last updated 3 mins ago</small>
-          .card
-            img.card-img-top(src='./img/kiwi.jpg', alt='Card image cap')
-            .card-body
-              h4.card-title Kiwi
-              p.card-text Kiwi nacional mejor que cualquiera.
-            .card-footer.d-flex.justify-content-around
-              button.btn.btn-success(type='button')
-                i.fa.fa-cart-plus
-                |  Añadir
-              button.btn.btn-info(type='button', data-toggle='modal', data-target='#modal-product-detail')
-                i.fa.fa-info-circle
-                |  Detalles
-              // <small class="text-muted">Last updated 3 mins ago</small>
-          .card
-            img.card-img-top(src='./img/fresas.jpg', alt='Card image cap')
-            .card-body
-              h4.card-title Fresas
-              p.card-text Las mejores fresas de estación, de agricultura ecológica.
-            .card-footer.d-flex.justify-content-around
-              button.btn.btn-success(type='button')
-                i.fa.fa-cart-plus
-                |  Añadir
-              button.btn.btn-info(type='button', data-toggle='modal', data-target='#modal-product-detail')
-                i.fa.fa-info-circle
-                |  Detalles
-              // <small class="text-muted">Last updated 3 mins ago</small>
-          .card
-            img.card-img-top(src='./img/papaya.jpg', alt='Card image cap')
-            .card-body
-              h4.card-title Papaya
-              p.card-text Ideal para smoothies y batidos bien fríos.
-            .card-footer.d-flex.justify-content-around
-              button.btn.btn-success(type='button')
-                i.fa.fa-cart-plus
-                |  Añadir
-              button.btn.btn-info(type='button', data-toggle='modal', data-target='#modal-product-detail')
-                i.fa.fa-info-circle
-                |  Detalles
-              // <small class="text-muted">Last updated 3 mins ago</small>
-          .card
-            img.card-img-top(src='./img/naranjas.jpg', alt='Card image cap')
-            .card-body
-              h4.card-title Naranjas
-              p.card-text De Valencia, bien dulces, ideal para jugo.
-            .card-footer.d-flex.justify-content-around
-              button.btn.btn-success(type='button')
-                i.fa.fa-cart-plus
-                |  Añadir
-              button.btn.btn-info(type='button', data-toggle='modal', data-target='#modal-product-detail')
-                i.fa.fa-info-circle
-                |  Detalles
-              // <small class="text-muted">Last updated 3 mins ago</small>
-          .card
-            img.card-img-top(src='./img/bananas.jpg', alt='Card image cap')
-            .card-body
-              h4.card-title Bananas
-              p.card-text Bananas de Ecuador, las mejores.
-            .card-footer.d-flex.justify-content-around
-              button.btn.btn-success(type='button')
-                i.fa.fa-cart-plus
-                |  Añadir
-              button.btn.btn-info(type='button', data-toggle='modal', data-target='#modal-product-detail')
-                i.fa.fa-info-circle
-                |  Detalles
-              // <small class="text-muted">Last updated 3 mins ago</small>
-          .card
-            img.card-img-top(src='./img/kiwi.jpg', alt='Card image cap')
-            .card-body
-              h4.card-title Kiwi
-              p.card-text Kiwi nacional mejor que cualquiera.
-            .card-footer.d-flex.justify-content-around
-              button.btn.btn-success(type='button')
-                i.fa.fa-cart-plus
-                |  Añadir
-              button.btn.btn-info(type='button', data-toggle='modal', data-target='#modal-product-detail')
-                i.fa.fa-info-circle
-                |  Detalles
-              // <small class="text-muted">Last updated 3 mins ago</small>
-          .card
-            img.card-img-top(src='./img/fresas.jpg', alt='Card image cap')
-            .card-body
-              h4.card-title Fresas
-              p.card-text Las mejores fresas de estación, de agricultura ecológica.
-            .card-footer.d-flex.justify-content-around
-              button.btn.btn-success(type='button')
-                i.fa.fa-cart-plus
-                |  Añadir
-              button.btn.btn-info(type='button', data-toggle='modal', data-target='#modal-product-detail')
-                i.fa.fa-info-circle
-                |  Detalles
-              // <small class="text-muted">Last updated 3 mins ago</small>
-          .card
-            img.card-img-top(src='./img/papaya.jpg', alt='Card image cap')
-            .card-body
-              h4.card-title Papaya
-              p.card-text Ideal para smoothies y batidos bien fríos.
-            .card-footer.d-flex.justify-content-around
-              button.btn.btn-success(type='button')
-                i.fa.fa-cart-plus
-                |  Añadir
-              button.btn.btn-info(type='button', data-toggle='modal', data-target='#modal-product-detail')
-                i.fa.fa-info-circle
-                |  Detalles
-              // <small class="text-muted">Last updated 3 mins ago</small>
-          .card
-            img.card-img-top(src='./img/naranjas.jpg', alt='Card image cap')
-            .card-body
-              h4.card-title Naranjas
-              p.card-text De Valencia, bien dulces, ideal para jugo.
-            .card-footer.d-flex.justify-content-around
-              button.btn.btn-success(type='button')
-                i.fa.fa-cart-plus
-                |  Añadir
-              button.btn.btn-info(type='button', data-toggle='modal', data-target='#modal-product-detail')
-                i.fa.fa-info-circle
-                |  Detalles
-              // <small class="text-muted">Last updated 3 mins ago</small>
-          .card
-            img.card-img-top(src='./img/bananas.jpg', alt='Card image cap')
-            .card-body
-              h4.card-title Bananas
-              p.card-text Bananas de Ecuador, las mejores.
-            .card-footer.d-flex.justify-content-around
-              button.btn.btn-success(type='button')
-                i.fa.fa-cart-plus
-                |  Añadir
-              button.btn.btn-info(type='button', data-toggle='modal', data-target='#modal-product-detail')
-                i.fa.fa-info-circle
-                |  Detalles
-              // <small class="text-muted">Last updated 3 mins ago</small>
-          .card
-            img.card-img-top(src='./img/kiwi.jpg', alt='Card image cap')
-            .card-body
-              h4.card-title Kiwi
-              p.card-text Kiwi nacional mejor que cualquiera.
-            .card-footer.d-flex.justify-content-around
-              button.btn.btn-success(type='button')
-                i.fa.fa-cart-plus
-                |  Añadir
-              button.btn.btn-info(type='button', data-toggle='modal', data-target='#modal-product-detail')
-                i.fa.fa-info-circle
-                |  Detalles
-              // <small class="text-muted">Last updated 3 mins ago</small>
+          each product in products
+            .card
+              img.card-img-top(src=product.image_url, alt='Card image cap')
+              .card-body
+                h4.card-title=product.title
+                p.card-text=product.description
+              .card-footer.d-flex.justify-content-around
+                button.btn.btn-success(type='button')
+                  i.fa.fa-cart-plus
+                  |  Añadir
+                button.btn.btn-info(type='button', data-toggle='modal', data-target=`#${product._id}`)
+                  //- button.btn.btn-info(type='button', data-toggle='modal', data-target='#modal-product-detail')
+                  i.fa.fa-info-circle
+                  |  Detalles
+                // <small class="text-muted">Last updated 3 mins ago</small>
+      
+      // NEW_Modal PRODUCT DETAILS
+      each product in products
+        div.modal.fade(id=product._id, tabindex='-1', role='dialog', aria-labelledby='productDetails', aria-hidden='true')
+          .modal-dialog.modal-lg(role='document')
+            .modal-content
+              .modal-header
+                h3.product-title=product.title
+              .modal-body
+                .container.product-details
+                  .card-modal
+                    .container-fluid
+                      .wrapper.row
+                        .col-lg-6.picture-left.d-flex.flex-column
+                          img.img-thumbnail(src=product.image_url, alt='Responsive image')
+                          label.custom-file.my-1.mx-auto.hidden
+                            input#file2.custom-file-input(type='file')
+                            span.custom-file-control
+                        .details-right.col-lg-6
+                          h3.product-title=product.title
+                          p.product-description=product.description
+                          h4.price
+                            | Precio: 
+                            span.price-value € #{product.price}
+                            | #{product.uom}
+                          .input-group.quantity-selector
+                            span.input-group-btn
+                              button.btn.btn-outline-primary.btn-number.btn-plus(type='button', data-type='minus', data-field='quantity')
+                                i.fa.fa-plus
+                            input.form-control.input-number(type='text', name='quantity', value='10', min='1', max='100')
+                            span.input-group-btn
+                              button.btn.btn-outline-secondary.btn-number.btn-minus(type='button', data-type='plus', data-field='quantity')
+                                i.fa.fa-minus
+                          .action
+                            button.btn.btn-success.btn-add-to-cart(type='button')
+                              i.fa.fa-cart-plus
+                              |  Añadir
+                            // <button type="button" class="btn btn-outline-secondary btn-close-alert">Cerrar</button>
+              .modal-footer
+                button.btn.btn-outline-secondary(type='button', data-dismiss='modal')
+                  | Cerrar  
+
+
+      nav(aria-label='Page navigation')
+          ul.pagination.justify-content-center
+            li.page-item
+              a.page-link(href='#', aria-label='Previous')
+                span(aria-hidden='true') «
+                span.sr-only Previous
+            li.page-item.disabled
+              a.page-link(href='#') 1
+            li.page-item
+              a.page-link(href='#') 2
+            li.page-item
+              a.page-link(href='#') 3
+            li.page-item
+              a.page-link(href='#') 4  
+            li.page-item
+              a.page-link(href='#', aria-label='Next')
+                span(aria-hidden='true') »
+                span.sr-only Next        
       // Modals
       
-      // Modal LOGIN / REGISTER
-      #modal-login.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
-        .modal-dialog(role='document')
-          .modal-content
-            .modal-header
-              ul#myTab.nav.nav-tabs(role='tablist')
-                li.nav-item
-                  a#login-tab.nav-link.active(data-toggle='tab', href='#login', role='tab', aria-controls='login', aria-expanded='true') Ingresar
-                li.nav-item
-                  a#signup-tab.nav-link(data-toggle='tab', href='#signup', role='tab', aria-controls='singup') Registrarse
-            .modal-body
-              #myTabContent.tab-content
-                // LOGIN MODAL
-                #login.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='login-tab')
-                  form.form-signin
-                    label.sr-only(for='inputEmail') Email
-                    input#inputEmail.form-control(type='email', placeholder='Email address', required='', autofocus='')
-                    label.sr-only(for='inputPassword') Password
-                    input#inputPassword.form-control(type='password', placeholder='Password', required='')
-                    .checkbox
-                      label
-                        input(type='checkbox', value='remember-me')
-                        |  Recordarme
-                    button.btn.btn-lg.btn-primary.btn-block(type='submit') Ingresar
-                // REGISTER MODAL
-                #signup.tab-pane.fade(role='tabpanel', aria-labelledby='signup-tab')
-                  form.form-horizontal(role='form', method='POST', action='/register')
-                    .row
-                      .col-md-12
-                        .form-group
-                          label.sr-only(for='name') Nombre completo
-                          .input-group.mb-2.mr-sm-2.mb-sm-0
-                            .input-group-addon(style='width: 2.6rem')
-                              i.fa.fa-user
-                            input#name.form-control(type='text', name='name', placeholder='Nombre Completo', required='', autofocus='')
-                      //
-                        <div class="col-md-3">
-                        <div class="form-control-feedback">
-                        <span class="text-danger align-middle">
-                      // Put name validation error messages here
-                      //
-                        </span>
-                        </div>
-                        </div>
-                    .row
-                      .col-md-12
-                        .form-group
-                          label.sr-only(for='email') E-Mail
-                          .input-group.mb-2.mr-sm-2.mb-sm-0
-                            .input-group-addon(style='width: 2.6rem')
-                              i.fa.fa-at
-                            input#email.form-control(type='text', name='email', placeholder='nombre@ejemplo.com', required='', autofocus='')
-                      //
-                        <div class="col-md-3">
-                        <div class="form-control-feedback">
-                        <span class="text-danger align-middle">
-                      // Put e-mail validation error messages here
-                      //
-                        </span>
-                        </div>
-                        </div>
-                    .row
-                      .col-md-12
-                        .form-group.has-danger
-                          label.sr-only(for='password') Password
-                          .input-group.mb-2.mr-sm-2.mb-sm-0
-                            .input-group-addon(style='width: 2.6rem')
-                              i.fa.fa-key
-                            input#password.form-control(type='password', name='password', placeholder='Password', required='')
-                      //
-                        <div class="col-md-3">
-                        <div class="form-control-feedback">
-                        <span class="text-danger align-middle">
-                        <i class="fa fa-close"> Example Error Message</i>
-                        </span>
-                        </div>
-                        </div>
-                    .row
-                      .col-md-12
-                        .form-group
-                          label.sr-only(for='password-confirm') Password
-                          .input-group.mb-2.mr-sm-2.mb-sm-0
-                            .input-group-addon(style='width: 2.6rem')
-                              i.fa.fa-key
-                            input#password-confirm.form-control(type='password', name='password-confirmation', placeholder='Repita password', required='')
-                    .row
-                      // <div class="col-md-3"></div>
-                      .col-md-12
-                        button.btn.btn-lg.btn-block.btn-success.btn-signup(type='submit') Registrar
-            .modal-footer
-              button.btn.btn-outline-secondary(type='button', data-dismiss='modal')
-                | Cerrar
-      // NEW_Modal PRODUCT DETAILS
-      #modal-product-detail.modal.fade(tabindex='-1', role='dialog', aria-labelledby='productDetails', aria-hidden='true')
-        .modal-dialog.modal-lg(role='document')
-          .modal-content
-            .modal-header
-              h3.product-title Zanahorias
-            .modal-body
-              .container.product-details
-                .card
-                  .container-fliud
-                    .wrapper.row
-                      .col-lg-6.picture-left.d-flex.flex-column
-                        img.img-thumbnail(src='../img/zanahorias.jpg', alt='Responsive image')
-                        label.custom-file.my-1.mx-auto.hidden
-                          input#file2.custom-file-input(type='file')
-                          span.custom-file-control
-                      .details-right.col-lg-6
-                        h3.product-title Zanahorias
-                        p.product-description
-                          | Suspendisse quos? Tempus cras iure temporibus? Eu laudantium cubilia sem
-                          | sem! Repudiandae et! Massa senectus enim minim sociosqu delectus posuere.
-                        h4.price
-                          | Precio: 
-                          span.price-value € 1.00
-                          | /kg
-                        .input-group.quantity-selector
-                          span.input-group-btn
-                            button.btn.btn-outline-primary.btn-number.btn-plus(type='button', data-type='minus', data-field='quantity')
-                              i.fa.fa-plus
-                          input.form-control.input-number(type='text', name='quantity', value='10', min='1', max='100')
-                          span.input-group-btn
-                            button.btn.btn-outline-secondary.btn-number.btn-minus(type='button', data-type='plus', data-field='quantity')
-                              i.fa.fa-minus
-                        .action
-                          button.btn.btn-success.btn-add-to-cart(type='button')
-                            i.fa.fa-cart-plus
-                            |  Añadir
-                          // <button type="button" class="btn btn-outline-secondary btn-close-alert">Cerrar</button>
-            .modal-footer
-              button.btn.btn-outline-secondary(type='button', data-dismiss='modal')
-                | Cerrar
-      // Old_Modal PRODUCT DETAILS
-      #ProductDetail1.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
-        .modal-dialog(role='document')
-          .modal-content
-            .modal-header
-              h5#exampleModalLabel.modal-title Fresas
-              button.close(type='button', data-dismiss='modal', aria-label='Close')
-                span(aria-hidden='true') ×
-            .modal-body
-              img.card-img-top(src='./img/kiwi.jpg', alt='Card image cap')
-              p.modal-description
-                | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo ut mollitia ipsam, quo voluptatibus aspernatur molestias? Maiores voluptatibus deleniti recusandae, natus eligendi nemo tenetur, ipsa temporibus voluptate aliquam voluptates consequatur.
-            .modal-footer
-              button.btn.btn-success(type='button')
-                i.fa.fa-cart-plus
-                |  Añadir
-              button.btn.btn-outline-secondary(type='button', data-dismiss='modal') Cerrar
+      
+      
 

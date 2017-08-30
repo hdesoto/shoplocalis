@@ -69,7 +69,14 @@ header .navbar-dark{
 
 .card{
   min-width: 200px;
+  max-width: 260px;
   margin-bottom:15px;
+}
+
+.card-text{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .card-footer .img{
@@ -108,18 +115,8 @@ header .navbar-dark{
 
 }
 
-/* ===== PRODUCT DETAILS ===== */
 
-.custom-file-control:lang(en)::before {
-    content:"Buscar";
-  }
-  .custom-file-control:lang(en):empty::after {
-    content: "Elegir Foto";
-  }
-  .custom-file-control::before {
-    color: #f8f9fa;
-    background-color: #004085;
-  }
+/* ===== PRODUCT DETAILS ===== */
 
 .quantity-selector{
     width: 150px;
@@ -288,6 +285,21 @@ header .navbar-dark{
 }
 
 
+/* === UPLOAD AND EDIT CHOOSE FILE PARAMS === */
+
+.custom-file-control:lang(en)::before {
+  content:"Buscar";
+}
+.custom-file-control:lang(en):empty::after {
+  content: "Elegir Foto";
+}
+.custom-file-control::before {
+  color: #f8f9fa;
+  background-color: #004085;
+}
+
+
+/*==== UPLOAD ===*/
 .upload-form{
   padding-left: 0px;
   padding-right: 0px;
@@ -300,6 +312,19 @@ header .navbar-dark{
 
 .upload-details{
   height: 186px;
+}
+
+.upload-header{
+  background: #28a745;
+}
+.upload-header h1{
+  color:white;
+  padding:15px;
+}
+
+.upload-form{
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .group-upload-details{
@@ -324,6 +349,69 @@ header .navbar-dark{
     margin-top:0;
   }
   .upload-form{
+    padding:15px;
+  }  
+}
+
+/* === EDIT ITEM ===*/
+
+.edit-form{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.edit-btn{
+  width: 38px;
+  /*display: none;
+  position: absolute;
+  top: 65px;
+  right: 6px;*/
+}
+
+.edit-button{
+  width:100%;
+  margin-top: 15px;
+}
+
+.edit-details{
+  height: 186px;
+}
+
+.edit-header{
+  background: #ffc107;
+}
+.edit-header h1{
+  color:white;
+  padding:15px;
+}
+
+.edit-form{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.group-edit-details{
+  /*padding-bottom:15px;*/
+  margin-bottom:7px;
+}
+
+.group-edit-title{
+  margin-top:16px;
+}
+
+.select-edit{
+  width:100%;
+}
+
+.group-edit-stock{
+  width: 100%;
+}
+
+@media(min-width: 768px){
+  .group-edit-title{
+    margin-top:0;
+  }
+  .edit-form{
     padding:15px;
   }  
 }

@@ -1,0 +1,66 @@
+<div class="container-fluid text-center upload-header">
+  <h1>Crear producto nuevo</h1>
+</div>
+
+<div class="container product-upload">
+  <!-- <div class="card"> -->
+    <div class="container-fluid">
+      <form class="upload-form">
+        <div class="form-row upload-form">
+          <div class="col-md-4 picture-left d-flex flex-column">
+            <img src="../img/default-placeholder.png" class="img-thumbnail" alt="Responsive image">
+            <label class="custom-file my-1 mx-auto">
+              <input type="file" id="file2" class="custom-file-input">
+              <span class="custom-file-control"></span>
+            </label>
+          </div>
+          <div class="details-right col-md-8">
+            <div class="form-group group-upload-title">
+              <label for="upload-title" class="sr-only">Título</label>
+              <input type="text" class="form-control form-control-lg" id="upload-title" placeholder="Titulo">
+            </div>
+            <div class="form-group group-upload-details">
+              <label for="upload-details" class="sr-only">Descripción</label>
+              <textarea class="form-control upload-details" id="upload-details" rows="3"></textarea>
+            </div>
+            <div class="form-row">
+              <div class="form-group col-md-8">
+                <label for="upload-price" class="sr-only">Precio</label>
+                <input type="number" class="form-control" id="upload-price" placeholder="Precio">
+              </div>
+              <div class="form-group col-md-4">
+                <select class="custom-select select-upload">
+                  <option selected>por Kg</option>
+                  <option value="1">por Unidad</option>
+                  <option value="2">Litro</option>
+                  <option value="3">por Paquete</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row upload-stock d-flex">
+              <div class="form-group group-upload-stock">
+                <label for="upload-stock" class="sr-only">Cantidad en Stock</label>
+                <input type="number" class="form-control" id="upload-stock" placeholder="Stock inicial">
+              </div>
+              <div class="form-group col-md-4 hidden" hidden>
+                <select class="custom-select select-upload">
+                  <option selected>por Kg</option>
+                  <option value="1">por Unidad</option>
+                  <option value="2">Litro</option>
+                  <option value="3">por Paquete</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="action col-md-12">
+            <button type="button" class="btn btn-success btn-add-to-cart upload-button"><i class="fa fa-upload"></i> 
+            Crear Producto Nuevo
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+<!--   </div> -->
+</div>
