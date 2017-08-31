@@ -50,7 +50,6 @@ var productSchema = new Schema({
 
 var Product = module.exports = mongoose.model('Product', productSchema)
 
-
 // GET ALL PRODUCTS
 module.exports.getAllProducts = function (callback, limit) {
   Product.find(callback).limit(limit)
@@ -79,4 +78,10 @@ module.exports.updateProduct = function (id, update, options, callback) {
 // DELETE PRODUCT
 module.exports.deleteProduct = function (id, callback) {
   Product.findByIdAndRemove(id, callback)
+}
+
+// SEARCH PRODUCT BY TITLE
+module.exports.searchProductByTitle = function (title, callback) {
+  const searchedTitle = new RegExp(title, 'i')
+  Product.find({title: searchedTitle}, callback)
 }

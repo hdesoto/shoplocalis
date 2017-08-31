@@ -3,11 +3,13 @@ const collection = 'orders'
 const Schema = mongoose.Schema
 const ObjectId = Schema.Types.ObjectId
 
+
 var orderSchema = new mongoose.Schema({
   ordernbr: {
     type: Number,
     required: true,
-    uniquer: true
+    index: true,
+    unique: true
   },
   email: {
     type: String,
@@ -57,8 +59,6 @@ module.exports.addOrder = function (order, callback) {
 
 // UPDATE ORDER
 module.exports.updateOrder = function (id, update, options, callback) {
-  
-
   var updatedOrder = {
     deliveryaddress: update.deliveryaddress,
     dateofdelivery: update.dateofdelivery,

@@ -27,9 +27,11 @@ All the payment processing will also be handled by our website.
 
 
 ## TEST APIs
+
 curl -H "Content-Type: application/json" -X POST -d '{"title":"Yerba Mate","description":"Yerba Canarias - la yerba de mi pías", "price": 5,"uom":"kg", "stock": 25, "image_url": "http://canarias.com.uy/wp-content/uploads/2012/11/home-canarias.png"}' http://localhost:3001/api/products
 
 
+**Create Product**
 curl -H "Content-Type: application/json" -X POST -d '{"title":"Patatas fritas gourmet finissimas",
 "description":"Denominación del alimento:Patatas fritas
 Nombre del operador de la empresa alimentaria:PepsiCo Foods. A.I.E.
@@ -39,3 +41,8 @@ Dirección del operador/importador:Avenida de los Olmos, 2, 01013 - Vitoria, Esp
 "uom":"unidad",
 "stock": 50,
 "image_url": "https://static.carrefour.es/hd_280x_/supermercado/bcc_static/catalogImages/product/799201/799201.png"}' http://localhost:3001/api/products
+
+
+
+**Create Order**
+curl -H "Content-Type: application/json" -X POST -d '{"ordernbr":2,"email": "some@mail.com","deliveryaddress":"Carrer Ferran nro 28, piso 3","items": [{"_id":"59a7df85c10c4820648155f9"}]}' localhost:3001/api/orders

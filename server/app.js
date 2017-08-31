@@ -30,20 +30,23 @@ mongoose.connect(URL_DB, (err, db) => {
 
 /* === Routes === */
 
-
+// Call to Models and theirs methods
 const Product = require('./models/Product')
-
-const routesAllProducts = require('./routes/products')
-const routesSingleProduct = require('./routes/product')
-// app.use('/', routesAllProducts)
-app.use('/product', routesSingleProduct)
+const Order = require('./models/Order')
+const User = require('./models/User')
 
 
-// API PRODUCTS
+// const routesAllProducts = require('./routes/products')
+// const routesSingleProduct = require('./routes/product')
+// // app.use('/', routesAllProducts)
+// app.use('/product', routesSingleProduct)
 
-app.get('/api/products', function(req, res){
-  Product.getAllProducts(function(err, products){
-    if(err){
+
+// ********** API PRODUCTS ********** 
+
+app.get('/api/products', function (req, res) {
+  Product.getAllProducts(function (err, products) {
+    if (err) {
       throw err
     }
     res.json(products)
@@ -88,8 +91,123 @@ app.delete('/api/product/:_id', function (req, res) {
   })
 })
 
+app.get('/api/products/search', function (req, res){
+  Product.searchProductByTitle(req.query.title, function (err, products){
+    if (err) {
+      throw err
+    }
+    res.json(products)
+  })
+})
 
 
+
+// ********** API ORDERS ********** 
+
+app.get('/api/orders', function (req, res) {
+  Order.getAllOrders(function (err, orders) {
+    if (err) {
+      throw err
+    }
+    res.json(orders)
+  })
+})
+
+// var lastOrderNumber = 5;
+
+app.post('/api/orders', function (req, res) {
+  var order = req.body
+  // order.ordernbr = lastOrderNumber + 1
+  Order.addOrder(order, function (err, order) {
+    if (err) {
+      throw err
+    }
+    res.json(order)
+  })
+})
+
+app.put('/api/order/:_id', function (req, res) {
+  var id = req.params._id
+  var updatedOrder = {
+    deliveryaddress: req.body.deliveryaddress,
+    dateofdelivery: req.body.dateofdelivery
+  }
+  Order.updateOrder(id, updatedOrder, {}, function (err, order) {
+    if (err) {
+      throw err
+    }
+    res.json(order)
+  })
+})
+
+app.delete('/api/order/:_id', function (req, res) {
+  var id = req.params._id
+  Order.deleteOrder(id, function (err, order) {
+    if (err) {
+      throw err
+    }
+    res.json(order)
+  })
+})
+
+
+// ********** API USERS ********** 
+
+app.get('/api/users', function (req, res) {
+  User.getAllUsers(function (err, users) {
+    if (err) {
+      throw err
+    }
+    res.json(users)
+  })
+})
+
+// var lastOrderNumber = 5;
+
+app.post('/api/users', function (req, res) {
+  var user = req.body
+  User.addUser(user, function (err, user) {
+    if (err) {
+      throw err
+    }
+    res.json(user)
+  })
+})
+
+app.put('/api/user/:_id', function (req, res) {
+  var id = req.params._id
+  var updatedUser = {
+    name: req.body.name,
+    email: req.body.email,
+    password: req.body.password,
+    isAdmin: req.body.isAdmin
+  }
+  User.updateUser(id, updatedUser, {}, function (err, user) {
+    if (err) {
+      throw err
+    }
+    res.json(user)
+  })
+})
+
+app.delete('/api/user/:_id', function (req, res) {
+  var id = req.params._id
+  User.deleteUser(id, function (err, user) {
+    if (err) {
+      throw err
+    }
+    res.json(user)
+  })
+})
+
+app.get('/api/users/search', function (req, res){
+  User.searchUserByName(req.query.name, function (err, users){
+    if (err) {
+      throw err
+    }
+    res.json(users)
+  })
+})
 
 
 // HOME
@@ -102,6 +220,16 @@ app.get('/', function (req, res) {
     res.render('pages/index', {products})
   }, 10)
 })
+
+app.get('/product/search', function (req, res) {
+  Product.searchProductByTitle(req.query.title, function (err, products) {
+    if (err) {
+      throw err
+    }
+    res.render('pages/index', {products})
+  })
+})
+
 
 // app.use('/products', routesAllProducts)
 // app.use('/api/products', routesAllProducts)
