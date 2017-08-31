@@ -12,17 +12,25 @@ $('.btn-close-alert').click(function(){
 /* ==== PRODUCT DETAILS ==== */
 
 $('.btn-plus').click( function() {
-  var currentQuantity = $('.quantity-required').val()
+  var $input = $(this).siblings('.input-number')
+  // $input.css('background-color','red')
+  var currentQuantity = $input.val()
   var newQuantity = +currentQuantity + 1
-  $('.quantity-required').val(newQuantity.toString())
+  $input.val(newQuantity.toString())
 })
 
 $('.btn-minus').click( function() {
-  var currentQuantity = $('.quantity-required').val()
-  var newQuantity = +currentQuantity - 1
-  $('.quantity-required').val(newQuantity.toString())
+  var newQuantity
+  var $input = $(this).siblings('.input-number')
+  // $input.css('background-color','red')
+  var currentQuantity = $input.val()
+  if (currentQuantity <= 1) {
+    newQuantity = 1
+  } else {
+    newQuantity = +currentQuantity - 1
+  }
+  $input.val(newQuantity.toString())
 })
-
 
 /* ==== Dashboard == */
 

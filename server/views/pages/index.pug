@@ -53,12 +53,12 @@ block content
                             span.price-value € #{product.price}
                             | #{product.uom}
                           .input-group.quantity-selector
-                            span.input-group-btn
-                              button.btn.btn-outline-primary.btn-number.btn-plus(type='button', data-type='minus', data-field='quantity')
+                            span.input-group-btn.btn-plus
+                              button.btn.btn-outline-primary.btn-number(type='button', data-type='plus', data-field='quantity')
                                 i.fa.fa-plus
-                            input.form-control.input-number(type='text', name='quantity', value='10', min='1', max='100')
-                            span.input-group-btn
-                              button.btn.btn-outline-secondary.btn-number.btn-minus(type='button', data-type='plus', data-field='quantity')
+                            input.form-control.input-number(type='text', name='quantity', value='1', min='1', max='100')
+                            span.input-group-btn.btn-minus
+                              button.btn.btn-outline-secondary.btn-number(type='button', data-type='minus', data-field='quantity')
                                 i.fa.fa-minus
                           .action
                             button.btn.btn-success.btn-add-to-cart(type='button')

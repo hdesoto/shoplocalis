@@ -30,7 +30,8 @@ var productSchema = new Schema({
   },
   creationDate: {
     type: Number,
-    default: Date.now()
+    default: Date.now(),
+    required: true
   },
   createdBy: {
     type: ObjectId,
@@ -47,4 +48,35 @@ var productSchema = new Schema({
   }
 }, { collection })
 
-module.exports = mongoose.model('Product', productSchema)
+var Product = module.exports = mongoose.model('Product', productSchema)
+
+
+// GET ALL PRODUCTS
+module.exports.getAllProducts = function (callback, limit) {
+  Product.find(callback).limit(limit)
+}
+
+// ADD PRODUCT
+module.exports.addProduct = function (product, callback) {
+  Product.create(product, callback)
+}
+
+// UPDATE PRODUCT
+module.exports.updateProduct = function (id, update, options, callback) {
+  var updatedProduct = {
+    title: update.title,
+    description: update.description,
+    price: update.price,
+    uom: update.uom,
+    stock: update.stock,
+    image_url: update.image_url,
+    modifiedDate: Date.now()
+    // , modifiedBy: 'User...'
+  }
+  Product.findByIdAndUpdate(id, updatedProduct, {runValidators: true}, callback)
+}
+
+// DELETE PRODUCT
+module.exports.deleteProduct = function (id, callback) {
+  Product.findByIdAndRemove(id, callback)
+}

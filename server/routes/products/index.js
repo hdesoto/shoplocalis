@@ -17,7 +17,7 @@ const apiGetAllProducts = require('./handlers/apiGetAllProducts')
 router.get('/', getAllProducts)
 
 router.get('/api/products', apiGetAllProducts)
-router.post('/api/products',apiAddProduct)
+// router.post('/api/products',apiAddProduct)
 
 
 module.exports = router

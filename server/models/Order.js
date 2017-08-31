@@ -6,13 +6,14 @@ const ObjectId = Schema.Types.ObjectId
 var orderSchema = new mongoose.Schema({
   ordernbr: {
     type: Number,
-    required: true
+    required: true,
+    uniquer: true
   },
   email: {
     type: String,
     required: true
   },
-  createdBy:{
+  createdBy: {
     type: ObjectId,
     ref: 'User'
   },
@@ -28,7 +29,47 @@ var orderSchema = new mongoose.Schema({
     type: Number,
     required: false
   },
-  items: [{type: ObjectId, ref: 'Product'}]
+  modifiedDate: {
+    type: Number,
+    required: false
+  },
+  modifiedBy: {
+    type: ObjectId,
+    ref: 'User'
+  },
+  items: [{
+    type: ObjectId,
+    ref: 'Product'
+  }]
 }, { collection })
 
-module.exports = mongoose.model('Order', orderSchema)
+var Order = module.exports = mongoose.model('Order', orderSchema)
+
+// GET ALL ORDERS
+module.exports.getAllOrders = function (callback, limit) {
+  Order.find(callback).limit(limit)
+}
+
+// ADD ORDER
+module.exports.addOrder = function (order, callback) {
+  Order.create(order, callback)
+}
+
+// UPDATE ORDER
+module.exports.updateOrder = function (id, update, options, callback) {
+  
+
+  var updatedOrder = {
+    deliveryaddress: update.deliveryaddress,
+    dateofdelivery: update.dateofdelivery,
+    // items: [{type: ObjectId, ref: 'Product'}
+    modifiedDate: Date.now()
+    // , modifiedBy: 'User...'
+  }
+  Order.findByIdAndUpdate(id, updatedOrder, {runValidators: true}, callback)
+}
+
+// DELETE ORDER
+module.exports.deleteOrder = function (id, callback) {
+  Order.findByIdAndRemove(id, callback)
+}
