@@ -1,0 +1,62 @@
+<div class="container-fluid text-center edit-header">
+  <h1>Editar Producto</h1>
+</div>
+
+<div class="container product-edit">
+  <!-- <div class="card"> -->
+    <div class="container-fluid">
+      <form class="edit-form">
+        <div class="form-row edit-form">
+          <div class="col-md-4 picture-left d-flex flex-column">
+            <img src="../img/default-placeholder.png" class="img-thumbnail" alt="Responsive image">
+            <label for='file2' class='sr-only'>Seleccionar Foto</label>
+            <input type="file" id="file2" class="form-control-file form-control-lg" disabled>
+            <button class="btn btn-dark edit-btn"><i class="fa fa-edit"></i></button>         
+          </div>
+          <div class="details-right col-md-8">
+            <div class="form-group group-edit-title d-flex justify-content-between">
+              <label for="edit-title" class="sr-only">Título</label>
+              <input type="text" class="form-control form-control-lg mr-1" id="edit-title" placeholder="Titulo" disabled>
+              <button class="btn btn-dark edit-btn"><i class="fa fa-edit"></i></button>
+            </div>
+            <div class="form-group group-edit-details">
+              <label for="edit-details" class="sr-only">Descripción</label>
+              <textarea class="form-control edit-details" id="edit-details" rows="3" disabled></textarea>
+              <button class="btn btn-dark edit-btn"><i class="fa fa-edit"></i></button>
+            </div>
+            <div class="form-row group-edit-price d-flex justify-content-between">
+              <div class="form-group d-flex justify-content-between">
+                <label for="edit-price" class="sr-only">Precio</label>
+                <input type="number" class="form-control" id="edit-price" placeholder="Precio" disabled>
+                <button class="btn btn-dark edit-btn"><i class="fa fa-edit"></i></button>
+              </div>
+              <div class="form-group d-flex justify-content-around">
+                <select class="custom-select select-edit" disabled>
+                  <option selected>por Kg</option>
+                  <option value="1">por Unidad</option>
+                  <option value="2">Litro</option>
+                  <option value="3">por Paquete</option>
+                </select>
+                <button class="btn btn-dark edit-btn"><i class="fa fa-edit"></i></button>
+              </div>
+            </div>
+            <div class="form-row edit-stock d-flex">
+              <div class="form-group group-edit-stock">
+                <label for="edit-stock" class="sr-only">Cantidad en Stock</label>
+                <input type="number" class="form-control" id="edit-stock" placeholder="Stock inicial" disabled>
+                <button class="btn btn-dark edit-btn"><i class="fa fa-edit"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="action col-md-12">
+            <button type="button" class="btn btn-warning btn-add-to-cart edit-button"><i class="fa fa-edit"></i> 
+            Aplicar Cambios
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+<!--   </div> -->
+</div>

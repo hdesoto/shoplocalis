@@ -2,6 +2,10 @@
 
 angular.module('storeApp')
       .config(function ($routeProvider) {
-        $routerProvider
-      .when('')
+        $routeProvider
+      .when('/', {
+        templateUrl: 'app/routes/dashboard/dashboard.html',
+        contoller: 'dashboardController',
+        controllerAs: 'dashCtrl'
+      })
       })

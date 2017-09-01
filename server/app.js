@@ -11,8 +11,12 @@ const URL_DB = process.env.URL_DB || 'mongodb://localhost:27017/shoplocalis'
 
 const app = express()
 
-app.use(express.static(path.join(__dirname, '../client')))
-app.use(bodyParser.urlencoded({extended:false}))
+const assetsPath = path.join('__dirname', '../client')
+const adminPath = path.join('__dirname', '../client/admin')
+
+app.use(express.static(assetsPath))
+app.use('/admin', express.static(adminPath))
+app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
 app.set('view engine', 'pug')
@@ -35,15 +39,7 @@ const Product = require('./models/Product')
 const Order = require('./models/Order')
 const User = require('./models/User')
 
-
-// const routesAllProducts = require('./routes/products')
-// const routesSingleProduct = require('./routes/product')
-// // app.use('/', routesAllProducts)
-// app.use('/product', routesSingleProduct)
-
-
 // ********** API PRODUCTS ********** 
-
 app.get('/api/products', function (req, res) {
   Product.getAllProducts(function (err, products) {
     if (err) {
@@ -100,10 +96,7 @@ app.get('/api/products/search', function (req, res){
   })
 })
 
-
-
 // ********** API ORDERS ********** 
-
 app.get('/api/orders', function (req, res) {
   Order.getAllOrders(function (err, orders) {
     if (err) {
@@ -150,9 +143,7 @@ app.delete('/api/order/:_id', function (req, res) {
   })
 })
 
-
 // ********** API USERS ********** 
-
 app.get('/api/users', function (req, res) {
   User.getAllUsers(function (err, users) {
     if (err) {
@@ -210,8 +201,7 @@ app.get('/api/users/search', function (req, res){
 })
 
 
-// HOME
-
+// ********** API HOME ********** 
 app.get('/', function (req, res) {
   Product.getAllProducts(function (err, products) {
     if (err) {
@@ -230,6 +220,13 @@ app.get('/product/search', function (req, res) {
   })
 })
 
+
+
+
+// const routesAllProducts = require('./routes/products')
+// const routesSingleProduct = require('./routes/product')
+// // app.use('/', routesAllProducts)
+// app.use('/product', routesSingleProduct)
 
 // app.use('/products', routesAllProducts)
 // app.use('/api/products', routesAllProducts)
