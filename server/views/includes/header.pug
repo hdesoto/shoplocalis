@@ -1,18 +1,18 @@
 header
   nav.navbar.fixed-top.navbar-expand-lg.navbar-dark.bg-dark
-    a.navbar-brand(href='#')
+    a.navbar-brand(href='../')
       img(src='/img/icons/logohorizontal-narrow.png')
     button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
       span.badge.badge-info.items-in-cart 3
       span.navbar-toggler-icon
     #navbarSupportedContent.collapse.navbar-collapse
       ul.navbar-nav.mr-auto.navbar-list
-        li.nav-item.active
-          a.nav-link(href='/')
-            | Inicio 
-            span.sr-only (current)
-        li.nav-item
-          a.nav-link(href='#', data-toggle='modal', data-target='#modal-login') Login
+        //- li.nav-item.active
+        //-   a.nav-link(href='/')
+        //-     | Inicio 
+        //-     span.sr-only (current)
+        //- li.nav-item
+        //-   a.nav-link(href='#', data-toggle='modal', data-target='#modal-login') Login
         li.nav-item.dropdown.navbar-admin
           a#navbarAdmin.nav-link.dropdown-toggle.navbar-admin-link(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
             | Administrador
@@ -24,7 +24,8 @@ header
       form.form-inline.my-2.my-lg-0(action='/product/search', method='get')
         input.form-control.mr-sm-2(type='text', name='title' , placeholder='Buscar Producto', aria-label='Search')
         button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Buscar
-      a.nav-link.btn.btn-secondary.ml-2.mb-sm-3.mb-lg-0.my-2.my-sm-0(href='#', data-toggle='modal', data-target='#modal-cart')
+      a.nav-link.btn.btn-secondary.ml-2.mb-sm-3.mb-lg-0.my-2.my-sm-0(href='/cart')
+            //- , data-toggle='modal', data-target='#modal-cart')
             span.cart-span.mr-2
               i.fa.fa-shopping-cart
             | Carrito 

@@ -52,19 +52,23 @@ block content
                             | Precio: 
                             span.price-value € #{product.price}
                             | #{product.uom}
-                          .input-group.quantity-selector
-                            span.input-group-btn.btn-plus
-                              button.btn.btn-outline-primary.btn-number(type='button', data-type='plus', data-field='quantity')
-                                i.fa.fa-plus
-                            input.form-control.input-number(type='text', name='quantity', value='1', min='1', max='100')
-                            span.input-group-btn.btn-minus
-                              button.btn.btn-outline-secondary.btn-number(type='button', data-type='minus', data-field='quantity')
-                                i.fa.fa-minus
-                          .action
-                            button.btn.btn-success.btn-add-to-cart(type='button')
-                              i.fa.fa-cart-plus
-                              |  Añadir
-                            // <button type="button" class="btn btn-outline-secondary btn-close-alert">Cerrar</button>
+                          form(action="/cart", method="post")
+                            .input-group.quantity-selector  
+                              span.input-group-btn.btn-plus
+                                button.btn.btn-outline-primary.btn-number(type='button', data-type='plus', data-field='quantity')
+                                  i.fa.fa-plus
+                              input.form-control.input-number(type='text', name='quantity', value='1', min='1', max='100')
+                              span.input-group-btn.btn-minus
+                                button.btn.btn-outline-secondary.btn-number(type='button', data-type='minus', data-field='quantity')
+                                  i.fa.fa-minus
+                            .action
+                              //- form.addToCart(action="/addToCart", method="POST")
+                              input.hidden(name="product", value=product)
+                              //- input.hidden(name="_id", value=product._id)
+                              button.btn.btn-success.btn-add-to-cart(type="submit")
+                                i.fa.fa-cart-plus
+                                |  Añadir
+                              // <button type="button" class="btn btn-outline-secondary btn-close-alert">Cerrar</button>
               .modal-footer
                 button.btn.btn-outline-secondary(type='button', data-dismiss='modal')
                   | Cerrar  
@@ -89,6 +93,7 @@ block content
                 span(aria-hidden='true') »
                 span.sr-only Next        
       // Modals
+
       
       
       

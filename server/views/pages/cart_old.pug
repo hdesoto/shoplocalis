@@ -1,0 +1,85 @@
+extends ../layout
+
+block content
+      // SHOPPING CART
+      .container-fluid.carrito-title
+        h1 Carrito
+      .container
+        .row
+          .col-md-12.col-lg-12.mx-md-auto
+            table.table.table-responsive.table-sm.table-hover.table-striped
+              thead.thead-inverse
+                tr
+                  th Producto
+                  th Quantity
+                  th.text-center Price
+                  th.text-center Total
+                  th  
+              tbody
+                each item in cart
+                  tr
+                    td.col-md-8.col-lg-6
+                      .media
+                        a.thumbnail.float-left(href='#')
+                          img.media-object(src=item.image_url, style='width: 72px; height: 72px;')
+                        .media-body
+                          h4.media-heading
+                            //- a(href='#')
+                            #{item.title}
+                          //- h5.media-heading
+                          //-   | by 
+                          //-   a(href='#') Brand name
+                          //- span Status: 
+                          //- span.text-success
+                          //-   strong In Stock
+                    td.col-md-1.col-lg-1(style='text-align: center')
+                      input.quantity.form-control(type='number', value=item.quantity)
+                    td.col-md-1.col-lg-1.text-center
+                      strong € #{item.price}
+                    td.col-md-1.col-lg-1.text-center
+                      strong € #{item.itemTotal}
+                    td.col-md-1.col-lg-1
+                      form.deleteform(method="delete", action="/cart")
+                      //- input.hidden(type="text", name="id" value=item._id)
+                      button.btn.btn-danger.btn-remove(id=item._id, type='button')
+                        i.fa.fa-times
+                          |  
+              tfoot
+                tr
+                  td(colspan="3")
+                  //- td  
+                  //- td  
+                  td
+                    h5
+                      | Subtotal
+                  td.text-right
+                    h5
+                      strong
+                        | €24.59
+                tr
+                  td(colspan="3")
+                  //- td  
+                  //- td  
+                  td
+                    h5
+                      | Estimated shipping
+                  td.text-right
+                    h5
+                      small
+                        | €6.94
+                tr
+                  td(colspan="3")
+                  //- td  
+                  //- td  
+                  td
+                    h3
+                      | Total
+                  td.text-right
+                    h5
+                      h3 €31.53
+      button.btn.btn-secondary(type='button', data-dismiss='modal')
+                      span.fa.fa-shopping-cart
+                      |  Continue Shopping
+      button.btn.btn-success(type='button')
+                      | Checkout 
+                      span.fa.fa-arrow-circle-o-right

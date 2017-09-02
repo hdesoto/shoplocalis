@@ -1,0 +1,47 @@
+extends ../layout
+
+block content
+      .container-fluid.align-items-center.cart-title
+        h2 CARRITO
+      .container.cart-items-container
+        ul.list-group.cart-items
+          li.list-group-item.list-group-item-secondary.list-header
+            .row.align-items-center
+              .col-sm-2.img-div
+                p.font-weight-bold.text-center
+              .col-sm-3.col-3
+                p.font-weight-bold.text-center Producto
+              .col-sm-1.col-1
+                p.font-weight-bold.text-center Cant.
+              .col-sm-2.col-3
+                p.font-weight-bold.text-center Precio
+              .col-sm-2.col-3
+                p.font-weight-bold.text-center Total
+              .col-sm-2.col-2
+                p.font-weight-bold.text-center.remove-title Quitar
+          if cart.length == 0
+            li.list-group-item.text-center
+              h3 No tienes nada en el carrito!
+          else
+          for item in cart
+            li.list-group-item
+              .row.align-items-center
+                .col-sm-2.img-div
+                  img.img-thumbnail.img-fluid(src=item.image_url)
+                .col-sm-3.col-3
+                  p.align-middle #{item.title}
+                .col-sm-1.col-1
+                  p #{item.quantity}
+                .col-sm-2.col-3
+                  p
+                    strong
+                      small €
+                      |  #{item.price}
+                .col-sm-2.col-3
+                  p
+                    strong
+                      small €
+                      |  #{item.itemTotal}
+                .col-sm-2.col-2
+                  button.btn.btn-danger.btn-sm(id=item._id)
+                    i.fa.fa-times

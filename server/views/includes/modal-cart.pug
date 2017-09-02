@@ -17,54 +17,32 @@
                           th.text-center Total
                           th  
                       tbody
-                        tr
-                          td.col-md-8.col-lg-6
-                            .media
-                              a.thumbnail.float-left(href='#')
-                                img.media-object(src='http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/72/product-icon.png', style='width: 72px; height: 72px;')
-                              .media-body
-                                h4.media-heading
-                                  a(href='#') Un producto
-                                //- h5.media-heading
-                                //-   | by 
-                                //-   a(href='#') Brand name
-                                //- span Status: 
-                                //- span.text-success
-                                //-   strong In Stock
-                          td.col-md-1.col-lg-1(style='text-align: center')
-                            input#exampleInputEmail1.form-control(type='email', value='3')
-                          td.col-md-1.col-lg-1.text-center
-                            strong €4.87
-                          td.col-md-1.col-lg-1.text-center
-                            strong €14.61
-                          td.col-md-1.col-lg-1
-                            button.btn.btn-danger(type='button')
-                              span.fa.fa-times
-                              |  Remove
-                        tr
-                          td.col-lg-6
-                            .media
-                              a.thumbnail.float-left(href='#')
-                                img.media-object(src='http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/72/product-icon.png', style='width: 72px; height: 72px;')
-                              .media-body
-                                h4.media-heading
-                                  a(href='#') Un producto
-                                //- h5.media-heading
-                                //-   | by 
-                                //-   a(href='#') Brand name
-                                //- span Status: 
-                                //- span.text-warning
-                                //-   strong Leaves warehouse in 2 - 3 weeks
-                          td.col-lg-1(style='text-align: center')
-                            input#exampleInputEmail1.form-control(type='email', value='2')
-                          td.col-lg-1.text-center
-                            strong €4.99
-                          td.col-lg-1.text-center
-                            strong €9.98
-                          td.col-lg-1
-                            button.btn.btn-danger(type='button')
-                              span.fa.fa-times
-                              |  Remove
+                        each item in cart
+                          tr
+                            td.col-md-8.col-lg-6
+                              .media
+                                a.thumbnail.float-left(href='#')
+                                  img.media-object(src=item.image_url, style='width: 72px; height: 72px;')
+                                .media-body
+                                  h4.media-heading
+                                    //- a(href='#')
+                                    #{item.title}
+                                  //- h5.media-heading
+                                  //-   | by 
+                                  //-   a(href='#') Brand name
+                                  //- span Status: 
+                                  //- span.text-success
+                                  //-   strong In Stock
+                            td.col-md-1.col-lg-1(style='text-align: center')
+                              input#exampleInputEmail1.form-control(type='email', value='3')
+                            td.col-md-1.col-lg-1.text-center
+                              strong € #{item.price}
+                            td.col-md-1.col-lg-1.text-center
+                              strong € #{item.itemTotal}
+                            td.col-md-1.col-lg-1
+                              button.btn.btn-danger(type='button')
+                                span.fa.fa-times
+                                |  Remove
                       tfoot
                         tr
                           td(colspan="3")
@@ -105,7 +83,3 @@
               button.btn.btn-success(type='button')
                               | Checkout 
                               span.fa.fa-arrow-circle-o-right
-
-
-
-

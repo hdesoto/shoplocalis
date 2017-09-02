@@ -57,3 +57,19 @@ $('.edit-btn').click(function(e){
 // $('.edit-details').hover(function(){
 //   $(this).sibling('button').toggle()
 // })
+
+
+/* === CART === */
+
+// $('.btn-remove').click(function(e){
+//   e.preventDefault()
+//   const id = $(this).attr('id')
+//   const url = `/cart/${id}`
+//   const method = 'DELETE'
+
+//   $.ajax({url, method})
+//     .then(data => {
+//       $(this).closes(0)
+//     })
+
+// })

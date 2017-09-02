@@ -24,10 +24,11 @@
           <div aria-labelledby="navbarAdmin" class="dropdown-menu navbar-admin-dropdown"><a href="/admin" class="dropdown-item">Panel de Control</a><a href="#!/editProduct" class="dropdown-item">Modificar Producto</a><a href="#!/newProduct" class="dropdown-item">Crear Producto</a><a href="#!/deleteProduct" class="dropdown-item">Eliminar Producto</a></div>
         </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0">
-        <input type="text" placeholder="Buscar Producto" aria-label="Search" class="form-control mr-sm-2"/>
-        <button type="submit" class="btn btn-outline-success my-2 my-sm-0">Buscar</button>
-      </form><a href="#" data-toggle="modal" data-target="#modal-cart" class="nav-link btn btn-secondary ml-2 mb-sm-3 mb-lg-0 my-2 my-sm-0"><span class="cart-span mr-2"><i class="fa fa-shopping-cart"></i></span>Carrito <span class="badge badge-danger items-in-cart">3</span><span class="sr-only">Items in cart</span></a>
+      <form class="form-inline my-2 my-lg-0" action="/search">
+        <input ng-model="searchCtrl.query" type="text" placeholder="Buscar Producto" aria-label="Search" class="form-control mr-sm-2"/>
+        <button type="submit" ng-click="searchCtrl.searchProduct()" class="btn btn-outline-success my-2 my-sm-0">Buscar</button>
+      </form>
+      <a href="#" data-toggle="modal" data-target="#modal-cart" class="nav-link btn btn-secondary ml-2 mb-sm-3 mb-lg-0 my-2 my-sm-0"><span class="cart-span mr-2"><i class="fa fa-shopping-cart"></i></span>Carrito <span class="badge badge-danger items-in-cart">3</span><span class="sr-only">Items in cart</span></a>
     </div>
   </nav>
 </header>
@@ -81,6 +82,10 @@ HELLO WORLD
     <!-- NEW PRODUCT -->
     <script src="app/routes/newProduct/controller.js"></script>
     <script src="app/routes/newProduct/config.js"></script>
+
+     <!-- SEARCH PRODUCTS -->
+    <script src="app/routes/searchProduct/controller.js"></script>
+    <script src="app/routes/searchProduct/config.js"></script>
 
     <!-- ROUTE / nowPlaying -->
     <!-- <script src="app/routes/nowPlaying/controller.js"></script>
