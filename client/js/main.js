@@ -1,17 +1,16 @@
-/* $ global */
+/* global $ */
 
-$('.btn-add-to-cart').click(function(){
-  $('.alert-added-to-cart').toggleClass('hidden');
-})
+// $('.btn-add-to-cart').click(function () {
+//   $('.alert-added-to-cart').toggleClass('hidden')
+// })
 
-$('.btn-close-alert').click(function(){
-  $('.alert-added-to-cart').toggleClass('hidden');
-})
-
+// $('.btn-close-alert').click(function () {
+//   $('.alert-added-to-cart').toggleClass('hidden')
+// })
 
 /* ==== PRODUCT DETAILS ==== */
 
-$('.btn-plus').click( function() {
+$('.btn-plus').click(function () {
   var $input = $(this).siblings('.input-number')
   // $input.css('background-color','red')
   var currentQuantity = $input.val()
@@ -19,7 +18,7 @@ $('.btn-plus').click( function() {
   $input.val(newQuantity.toString())
 })
 
-$('.btn-minus').click( function() {
+$('.btn-minus').click(function () {
   var newQuantity
   var $input = $(this).siblings('.input-number')
   // $input.css('background-color','red')
@@ -34,42 +33,60 @@ $('.btn-minus').click( function() {
 
 /* ==== Dashboard == */
 
-$("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-
+$('#menu-toggle').click(function (e) {
+  e.preventDefault()
+  $('#wrapper').toggleClass('toggled')
+})
 
 /* === Edit PRODUCT === */
 
-$('.edit-btn').click(function(e){
+$('.edit-btn').click(function (e) {
   e.preventDefault()
-  $editableField = $(this).prev()
-  $objective = $(this).prev().prop('disabled')
-  
-  if($objective){
-    $editableField.prop('disabled',false)
+  var $editableField = $(this).prev()
+  var $objective = $(this).prev().prop('disabled')
+  if ($objective) {
+    $editableField.prop('disabled', false)
   } else {
     $editableField.prop('disabled', true)
   }
 })
 
-// $('.edit-details').hover(function(){
-//   $(this).sibling('button').toggle()
-// })
-
-
 /* === CART === */
 
-// $('.btn-remove').click(function(e){
-//   e.preventDefault()
-//   const id = $(this).attr('id')
-//   const url = `/cart/${id}`
-//   const method = 'DELETE'
+$('.cart-added-item').click(function (e) {
+  var items = $('.items-in-cart-badge').html()
+  var newItems = +items + 1
+  $('.items-in-cart-badge').html(newItems)
+})
 
-//   $.ajax({url, method})
-//     .then(data => {
-//       $(this).closes(0)
-//     })
+$('.cart-remove-btn').click(function (e) {
+  e.preventDefault()
+  const cartItem = $(this).attr('id')
+  // alert('Cart Item to remove: ' + cartItem)
+  const url = `/cart/${cartItem}`
+  const method = 'DELETE'
 
-// })
+  $.ajax({url, method})
+    .then(data => {
+      $(this).closest('li').remove()
+      $('.items-in-cart-badge').html(data.cart.length)
+      document.location.reload(true)
+      // console.log(data)
+    })
+})
+
+// UPDATING - Changing the Qty of item in Cart
+$('.cart-quantity').on('focusout', function (e) {
+  const cartItem = $(this).attr('id')
+  const newQuantity = $(this).val()
+  const data = { quantity: newQuantity }
+  const price = $(this).closest('li').find('.item-price').html()
+  const url = `/cart/${cartItem}`
+  const method = 'PUT'
+
+  $.ajax({url, method, data})
+     .then(data => {
+       $(this).closest('li').find('.item-total').html(Math.round((newQuantity * price) * 100) / 100)
+       document.location.reload(true)
+     })
+})

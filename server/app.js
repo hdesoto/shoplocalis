@@ -227,33 +227,37 @@ app.get('/', function (req, res) {
 })
 
 app.get('/product/search', function (req, res) {
+  const cart = req.session.cart
   Product.searchProductByTitle(req.query.title, function (err, products) {
     if (err) {
       throw err
     }
     // const cart = req.session.cart
-    res.render('pages/index', {products})
+    res.render('pages/index', {products, cart})
   })
 })
 
 // **** ADD ITEM TO CART
 app.post('/cart', (req, res) => {
-  // let tempCart = req.session.cart
-  // console.log('Before adding item')
-  // console.log(tempCart)
   const {_id, title, image_url, price} = JSON.parse(req.body.product)
   const quantity = +req.body.quantity
   const itemTotal = quantity * price
-  const newCartItem = {_id, title, image_url, price, quantity, itemTotal}
-  // tempCart.push(newCartItem)
-  // console.log('After adding item in variable temp cart: ')
-  // console.log(req.session.cart)
-  // req.session.cart = cart
-  req.session.cart.push(newCartItem)
-  console.log('After adding item in req.session.cart: ')
-  console.log(req.session.cart)
-  //res.redirect('/')
-  res.send('Added to Cart')
+  const cartItem = req.session.cart.length + 1
+  // console.log("Cart item: " + cartItem)
+  const newCartItem = {cartItem, _id, title, image_url, price, quantity, itemTotal}
+  var repeated = false
+  req.session.cart.forEach(function (item) {
+    if (item._id === newCartItem._id) {
+      repeated = true
+    }
+  })
+  if (!repeated) {
+    req.session.cart.push(newCartItem)
+  }
+  req.session.save(function (err) {
+    if (err) throw err
+    res.redirect('/')
+  })
 })
 
 app.get('/cart', (req, res) => {
@@ -261,22 +265,35 @@ app.get('/cart', (req, res) => {
   res.render('pages/cart', {cart})
 })
 
-app.delete('/cart/:id', function (req, res) {
-  var id = req.params._id
-  var newCart = req.session.cart.filter(item => { return item._id !== id })
+app.delete('/cart/:cartItem', function (req, res) {
+  var cartItem = +req.params.cartItem
+  // console.log(req.session.cart)
+  // console.log('Cart item to remove: ' + cartItem)
+  var newCart = req.session.cart.filter(item => { return item.cartItem !== cartItem })
+  // console.log(newCart)
   req.session.cart = newCart
-  res.redirect('/cart')
+  req.session.save(function (err) {
+    if (err) throw err
+    res.send({'ok': 'Item deleted from Cart', 'cart': req.session.cart})
+  })
 })
 
-app.put('/cart/:id', function (req, res) {
-  var id = req.params._id
-  var newQuantity = req.body.quantity
+app.put('/cart/:cartItem', function (req, res) {
+  var cartItem = +req.params.cartItem
+  var newQuantity = +req.body.quantity
+  console.log(req.session.cart)
+  // console.log(req.body)
+  // console.log(newQuantity)
   req.session.cart.forEach(function (item) {
-    if (item._id === id) {
+    if (item.cartItem === cartItem) {
       item.quantity = newQuantity
+      item.itemTotal = Math.round((newQuantity * item.price) * 100) / 100
     }
   })
-  res.redirect('/cart')
+  req.session.save(function (err) {
+    if (err) throw err
+    res.send({'ok': 'Quantity updated', 'cart': req.session.cart})
+  })
 })
 
 // const routesAllProducts = require('./routes/products')

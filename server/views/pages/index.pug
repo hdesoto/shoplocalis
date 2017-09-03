@@ -19,9 +19,12 @@ block content
                 h4.card-title=product.title
                 p.card-text=product.description
               .card-footer.d-flex.justify-content-around
-                button.btn.btn-success(type='button')
-                  i.fa.fa-cart-plus
-                  |  Añadir
+                form(action='/cart', method='POST')
+                  input.hidden(value='1', name='quantity')
+                  input.hidden(name="product", value=product)
+                  button.btn.btn-success(type='submit')
+                    i.fa.fa-cart-plus.cart-added-item
+                    |  Añadir
                 button.btn.btn-info(type='button', data-toggle='modal', data-target=`#${product._id}`)
                   //- button.btn.btn-info(type='button', data-toggle='modal', data-target='#modal-product-detail')
                   i.fa.fa-info-circle
@@ -50,9 +53,12 @@ block content
                           p.product-description=product.description
                           h4.price
                             | Precio: 
-                            span.price-value € #{product.price}
-                            | #{product.uom}
-                          form(action="/cart", method="post")
+                            span.price-value €
+                            | 
+                            span #{product.price}
+                            | 
+                            span #{product.uom}
+                          form(action='/cart', method='POST')
                             .input-group.quantity-selector  
                               span.input-group-btn.btn-plus
                                 button.btn.btn-outline-primary.btn-number(type='button', data-type='plus', data-field='quantity')
@@ -66,7 +72,7 @@ block content
                               input.hidden(name="product", value=product)
                               //- input.hidden(name="_id", value=product._id)
                               button.btn.btn-success.btn-add-to-cart(type="submit")
-                                i.fa.fa-cart-plus
+                                i.fa.fa-cart-plus.cart-added-item
                                 |  Añadir
                               // <button type="button" class="btn btn-outline-secondary btn-close-alert">Cerrar</button>
               .modal-footer

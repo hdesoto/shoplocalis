@@ -12,8 +12,9 @@ myApp.service('DataService', function ($http) {
 		  	console.log(response)
 		  		callback(response.data.results)
 		  })
-
 	}
+
+	// self.addProduct = function(req)
 
 	// self.getPopular = function(callback){
 	// 	console.log('getPopular Called!')

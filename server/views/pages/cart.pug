@@ -30,18 +30,21 @@ block content
                   img.img-thumbnail.img-fluid(src=item.image_url)
                 .col-sm-3.col-3
                   p.align-middle #{item.title}
-                .col-sm-1.col-1
-                  p #{item.quantity}
+                .col-sm-1.col-1.div-quantity
+                  input.cart-quantity(type="text", id=item.cartItem, value=item.quantity)
+                  //- p #{item.quantity}
                 .col-sm-2.col-3
                   p
                     strong
                       small €
-                      |  #{item.price}
+                      | 
+                      span.item-price #{item.price}
                 .col-sm-2.col-3
                   p
                     strong
                       small €
-                      |  #{item.itemTotal}
+                      | 
+                      span.item-total #{item.itemTotal}
                 .col-sm-2.col-2
-                  button.btn.btn-danger.btn-sm(id=item._id)
+                  button.btn.btn-danger.btn-sm.cart-remove-btn(id=item.cartItem)
                     i.fa.fa-times
