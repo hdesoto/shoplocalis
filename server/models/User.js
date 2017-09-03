@@ -3,7 +3,6 @@ const collection = 'users'
 const Schema = mongoose.Schema
 const ObjectId = Schema.Types.ObjectId
 
-
 var userSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -27,44 +26,11 @@ var userSchema = new mongoose.Schema({
     type: Number,
     default: Date.now()
   },
-  modifiedDate : {
+  modifiedDate: {
     type: Number,
     required: false
   }
 }, { collection })
 
-var User = module.exports = mongoose.model('User', userSchema)
-
-// GET ALL USERS
-module.exports.getAllUsers = function (callback, limit) {
-  User.find(callback).limit(limit)
-}
-
-// ADD USER
-module.exports.addUser = function (user, callback) {
-  User.create(user, callback)
-}
-
-// UPDATE USER
-module.exports.updateUser = function (id, update, options, callback) {
-  var updatedUser = {
-    name: update.name,
-    email: update.email,
-    password: update.password,
-    isAdmin: update.isAdmin,
-    modifiedDate: Date.now()
-    // , modifiedBy: 'User...'
-  }
-  User.findByIdAndUpdate(id, updatedUser, {runValidators: true}, callback)
-}
-
-// DELETE USER
-module.exports.deleteUser = function (id, callback) {
-  User.findByIdAndRemove(id, callback)
-}
-
-// SEARCH USER BY NAME
-module.exports.searchUserByName = function (name, callback) {
-  const searchedName = new RegExp(name, 'i')
-  User.find({name: searchedName}, callback)
-}
+// var User = module.exports = mongoose.model('User', userSchema)
+module.exports = mongoose.model('User', userSchema)
