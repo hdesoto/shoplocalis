@@ -1,0 +1,22 @@
+<div class="container-fluid text-center admin-home-header">
+  <h1>Admin Home</h1>
+</div>
+
+<div class="container">
+  <div class="card-deck" ng-init="showAllProducts()">
+    <div ng-repeat='product in adminHomeCtrl.aProducts' class="card">
+      <img class="card-img-top" ng-src='{{product.image_url}}' alt="Card image cap">
+      <div class="card-body">
+        <h4 class="card-title">{{product.title}}</h4>
+        <p class="card-text">{{product.description}}</p>
+      </div>
+      <div class="card-footer d-flex justify-content-around">
+          <input type="text" class="hidden" value="{{product._id}}">
+          <a  href="#!/edit_product/{{product._id}}" class="btn btn-info">
+          <i class="fa fa-pencil-square-o"></i> Editar</a>
+          <button type="submit" class="btn btn-danger" data-toggle="modal" data-target="#modal-product-detail"><i class="fa fa-times"></i> Eliminar </button>
+        <!-- <small class="text-muted">Last updated 3 mins ago</small> -->
+      </div>
+    </div>
+  </div>
+</div>

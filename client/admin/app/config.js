@@ -4,9 +4,12 @@
 //       .config(function ($routeProvider) {
 //         $routeProvider
 //       .when('/admin', {
-//         templateUrl: 'routes/dashboard/dashboard.html',
-//         controller: 'dashboardController',
-//         controllerAs: 'dashCtrl'
+//         templateUrl: 'app/routes/adminHome/admin_home.html',
+//         controller: 'adminHomeController',
+//         controllerAs: 'adminHomeCtrl'
+//         // templateUrl: 'routes/login/admin_login.html',
+//         // controller: 'loginController',
+//         // controllerAs: 'loginCtrl'
 //       })
 //       })
-//       
+      

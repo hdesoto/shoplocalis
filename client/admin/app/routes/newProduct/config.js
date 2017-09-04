@@ -3,7 +3,7 @@
 angular.module('storeApp')
       .config(function ($routeProvider) {
         $routeProvider
-      .when('/newProduct', {
+      .when('/new_product', {
         templateUrl: 'app/routes/newProduct/product_upload.html',
         contoller: 'newProductController',
         controllerAs: 'newCtrl'

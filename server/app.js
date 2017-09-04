@@ -23,6 +23,7 @@ const adminPath = path.join('__dirname', '../client/admin')
 
 app.use(express.static(assetsPath))
 app.use('/admin', express.static(adminPath))
+
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 app.use(session({

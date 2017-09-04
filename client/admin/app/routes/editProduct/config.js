@@ -3,9 +3,9 @@
 angular.module('storeApp')
       .config(function ($routeProvider) {
         $routeProvider
-      .when('/editProduct', {
+      .when('/edit_product/:id', {
         templateUrl: 'app/routes/editProduct/product_edit.html',
-        contoller: 'editProductController',
+        controller: 'editProductController',
         controllerAs: 'editCtrl'
       })
       })

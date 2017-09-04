@@ -72,9 +72,14 @@ header .navbar-dark{
   opacity: 0.9;
 }
 
+.card-deck{
+  margin-right:auto;
+  margin-left:auto;
+}
+
 .card{
   min-width: 200px;
-  max-width: 260px;
+  max-width: 220px;
   margin-bottom:15px;
 }
 
@@ -86,6 +91,7 @@ header .navbar-dark{
 
 .card-footer .img{
   min-height: 100%;
+  max-width: 80%;
 }
 
 .form-signin input{
@@ -690,6 +696,16 @@ body {
 
 
 /* ======== ADMIN ==========  */
+
+.admin-home-header{
+  background: #21b89e;
+  /*height: 50px;*/
+}
+.admin-home-header h1{
+  color:white;
+  padding:10px;
+}
+
 
 .admin-login-body {
   padding-top: 40px;

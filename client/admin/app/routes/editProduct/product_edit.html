@@ -8,55 +8,55 @@
       <form class="edit-form">
         <div class="form-row edit-form">
           <div class="col-md-4 picture-left d-flex flex-column">
-            <img src="../img/default-placeholder.png" class="img-thumbnail" alt="Responsive image">
-            <label for='file2' class='sr-only'>Seleccionar Foto</label>
-            <input type="file" id="file2" class="form-control-file form-control-lg" disabled>
-            <button class="btn btn-dark edit-btn"><i class="fa fa-edit"></i></button>         
+            <img ng-src="{{editCtrl.image_url}}" class="img-thumbnail" alt="Responsive image">
+            <div class="form-group">
+              <label class="form-control-label" for="image">Imagen (url) </label>
+              <input type="text" name="image_url" ng-model="editCtrl.image_url" class="form-control" id="image" placeholder="URL de Imagen">
+            </div>
           </div>
           <div class="details-right col-md-8">
-            <div class="form-group group-edit-title d-flex justify-content-between">
-              <label for="edit-title" class="sr-only">Título</label>
-              <input type="text" class="form-control form-control-lg mr-1" id="edit-title" placeholder="Titulo" disabled>
-              <button class="btn btn-dark edit-btn"><i class="fa fa-edit"></i></button>
+            <div class="form-group">
+              <label for="edit-title" class="col-form-label">Titulo</label>
+              <input type="text" name="title" class="form-control" id="edit-title" placeholder="Titulo" ng-model="editCtrl.title">
             </div>
+            <!-- <p>{{editCtrl.title}}</p> -->
             <div class="form-group group-edit-details">
-              <label for="edit-details" class="sr-only">Descripción</label>
-              <textarea class="form-control edit-details" id="edit-details" rows="3" disabled></textarea>
-              <button class="btn btn-dark edit-btn"><i class="fa fa-edit"></i></button>
+              <label for="edit-details">Description</label>
+              <textarea name="description" class="form-control edit-details" id="edit-details" rows="3" ng-model="editCtrl.description">{{editCtrl.product.description}}</textarea>
             </div>
-            <div class="form-row group-edit-price d-flex justify-content-between">
-              <div class="form-group d-flex justify-content-between">
-                <label for="edit-price" class="sr-only">Precio</label>
-                <input type="number" class="form-control" id="edit-price" placeholder="Precio" disabled>
-                <button class="btn btn-dark edit-btn"><i class="fa fa-edit"></i></button>
+             <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="edit-price" class="col-form-label">Price</label>
+                <input name="price" type="number" class="form-control" id="edit-price" placeholder="Precio" ng-model="editCtrl.price">
               </div>
-              <div class="form-group d-flex justify-content-around">
-                <select class="custom-select select-edit" disabled>
-                  <option selected>por Kg</option>
-                  <option value="1">por Unidad</option>
-                  <option value="2">Litro</option>
-                  <option value="3">por Paquete</option>
+              <div class="form-group col-md-4">
+                <label for="uomselect" class="col-form-label">Unidad</label>
+                <select name="uom" id="uomselect" class="form-control custom-select select-edit" ng-model="editCtrl.uom">
+                  <option selected ng-value="editCtrl.uom">{{editCtrl.product.uom}}</option>
+                  <option value="por Kg">por Kg</option>
+                  <option value="por Unidad">por Unidad</option>
+                  <option value="por Litro">Litro</option>
+                  <option value="por Paquete">por Paquete</option>
                 </select>
-                <button class="btn btn-dark edit-btn"><i class="fa fa-edit"></i></button>
+              </div>
+              <div class="form-group col-md-2">
+                <label for="edit-stock" class="col-form-label">Stock</label>
+                <input name="stock" type="number" class="form-control" id="edit-stock" ng-value="editCtrl.stock" placeholder="Stock inicial">
               </div>
             </div>
-            <div class="form-row edit-stock d-flex">
-              <div class="form-group group-edit-stock">
-                <label for="edit-stock" class="sr-only">Cantidad en Stock</label>
-                <input type="number" class="form-control" id="edit-stock" placeholder="Stock inicial" disabled>
-                <button class="btn btn-dark edit-btn"><i class="fa fa-edit"></i></button>
-              </div>
-            </div>
+            <p class="small pull-right">Última modificación: {{editCtrl.product.modifiedDate * 1000 | date:'dd-MM-yyyy'}}</p>        
           </div>
         </div>
         <div class="row">
           <div class="action col-md-12">
-            <button type="button" class="btn btn-warning btn-add-to-cart edit-button"><i class="fa fa-edit"></i> 
+            <button type="button" ng-click="editCtrl.updateProduct()" class="btn btn-warning btn-add-to-cart edit-button"><i class="fa fa-edit"></i> 
             Aplicar Cambios
             </button>
           </div>
         </div>
+
       </form>
+
     </div>
 <!--   </div> -->
 </div>

@@ -1,7 +1,6 @@
 /* global angular */
 
-var myApp = angular.module('storeApp', ['ngRoute'])
-
+var myApp = angular.module('storeApp', ['ngRoute', 'oitozero.ngSweetAlert'])
 
 // // Rutas
 // .config(function($routeProvider){
