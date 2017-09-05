@@ -124,10 +124,9 @@ app.post('/cart', (req, res) => {
 app.get('/cart', (req, res) => {
   const cart = req.session.cart
   // console.log(cart)
-  const total = cart.reduce(function(sum, value){
+  const total = Math.round((cart.reduce(function (sum, value) {
     return sum + value.itemTotal
-  },0)
-  // console.log(total)
+  }, 0)) * 100) / 100
   res.render('pages/cart', {cart, total})
 })
 

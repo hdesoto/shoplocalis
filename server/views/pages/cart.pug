@@ -48,5 +48,18 @@ block content
                 .col-sm-2.col-2
                   button.btn.btn-danger.btn-sm.cart-remove-btn(id=item.cartItem)
                     i.fa.fa-times
-      .container.cart-total-container
-        h2.mr-auto Monto total: € #{total}
+          if total != 0
+            li.list-group-item.list-group-item-secondary.list-header
+              .row.align-items-center
+                .col-sm-2.img-div
+                  p.font-weight-bold.text-center
+                .col-sm-3.col-3
+                  p.font-weight-bold.text-center
+                .col-sm-3.col-4
+                  p.font-weight-bold.text-center Monto Total:
+                //- .col-sm-2.col-3
+                //-   p.font-weight-bold.text-center Precio
+                .col-sm-2.col-3
+                  p.font-weight-bold.text-center € #{total}
+                .col-sm-2.col-2
+                  p.font-weight-bold.text-center.remove-title

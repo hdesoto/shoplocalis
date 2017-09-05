@@ -14,25 +14,42 @@ block content
         .container.alert.alert-primary(role='alert')
           | [ #{products.length} ] productos encontrados con el texto: " #{query} " .
       .container
-        .card-deck
+        .card-deck.d-flex.justify-content-around
           each product in products
-            .card
+            .col.productbox.d-flex.flex-column.justify-content-between.mx-1
               a(href="#", data-toggle='modal', data-target=`#${product._id}`)
-                img.card-img-top(src=product.image_url, alt='Card image cap')
-              .card-body
-                h4.card-title=product.title
-                p.card-text=product.description
-              .card-footer.d-flex.justify-content-around
-                form(action='/cart', method='POST')
-                  input.hidden(value='1', name='quantity')
-                  input.hidden(name="product", value=product)
-                  button.btn.btn-success(type='submit')
-                    i.fa.fa-cart-plus.cart-added-item
-                    |  Añadir
-                button.btn.btn-info(type='button', data-toggle='modal', data-target=`#${product._id}`)
-                  //- button.btn.btn-info(type='button', data-toggle='modal', data-target='#modal-product-detail')
-                  i.fa.fa-info-circle
-                  |  Detalles
+                img.img-responsive(src=product.image_url)
+              .title-price
+                .producttitle=product.title
+                  a.item-info(href="#", data-toggle='modal', data-target=`#${product._id}`)
+                    i.fa.fa-info-circle.pull-right
+                .productprice
+                  .pull-right
+                    form(action='/cart', method='POST')
+                      input.hidden(value='1', name='quantity')
+                      input.hidden(name="product", value=product)
+                      button.btn.btn-success.btn-sm.btn-add-one-to-cart(type='submit') 
+                        i.fa.fa-cart-plus.cart-added-item
+                        |  Comprar
+                  .pricetext € #{product.price}
+            
+            //- .card
+            //-   a(href="#", data-toggle='modal', data-target=`#${product._id}`)
+            //-     img.card-img-top(src=product.image_url, alt='Card image cap')
+            //-   .card-body
+            //-     h4.card-title=product.title
+            //-     p.card-text=product.description
+            //-   .card-footer.d-flex.justify-content-around
+            //-     form(action='/cart', method='POST')
+            //-       input.hidden(value='1', name='quantity')
+            //-       input.hidden(name="product", value=product)
+            //-       button.btn.btn-success(type='submit')
+            //-         i.fa.fa-cart-plus.cart-added-item
+            //-         |  Añadir
+            //-     button.btn.btn-info(type='button', data-toggle='modal', data-target=`#${product._id}`)
+            //-       //- button.btn.btn-info(type='button', data-toggle='modal', data-target='#modal-product-detail')
+            //-       i.fa.fa-info-circle
+            //-       |  Detalles
                 // <small class="text-muted">Last updated 3 mins ago</small>
       
       // NEW_Modal PRODUCT DETAILS
@@ -42,6 +59,8 @@ block content
             .modal-content
               .modal-header
                 h3.product-title=product.title
+                button.close(type='button', aria-label='Close', data-dismiss='modal')
+                  span(aria-hidden='true') ×
               .modal-body
                 .container.product-details
                   .card-modal

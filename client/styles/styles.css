@@ -1,8 +1,10 @@
+*, ::before, ::after{
+  transition: all ease-in-out 200ms;
+}
 
 body{
   margin-top:55px;
 }
-
 
 header .top-navbar-admin{
   background: #164a40;
@@ -10,7 +12,7 @@ header .top-navbar-admin{
 
 header .navbar-dark{
   /*background-color: #55d6aa!important;*/
-  box-shadow: 0 0 4px rgba(0,0,0,.14);
+  box-shadow: 0 0 4px rgba(0,0,0,.14), 0 6px 8px rgba(0,0,0,.28);
 }
 
 .back-button{
@@ -57,6 +59,11 @@ header .navbar-dark{
   color:white;
 }
 
+.fixed-top .cart-button{
+    background: transparent;
+    border: none;
+}
+
 
 .jumbotron{
   background-image: url('../img/backgrounds/verduleria.jpg');
@@ -81,9 +88,32 @@ header .navbar-dark{
   opacity: 0.9;
 }
 
-.card{
+.card-deck{
+  margin-right:auto;
+  margin-left:auto;
+}
+
+.productbox .img-div{
+  /*background-image: url('../img/backgrounds/verduleria.jpg');*/
+  background-size: cover;
+  background-position: center;
+}
+
+@media(max-width: 576px){
+  .card-deck{
+    flex-wrap:wrap;
+  }
+  
+}
+
+/*.productbox .item-info{
+  border-radius:100%;
+  background: red;
+}*/
+
+.card, .productbox{
   min-width: 200px;
-  max-width: 260px;
+  max-width: 322px;
   margin-bottom:15px;
 }
 
@@ -387,11 +417,11 @@ header .navbar-dark{
   }
 }
 
-@media (min-width: 460px){
+/*@media (min-width: 460px){
   .dashboard-body h1 {
     text-align: left;
     font-size: 2.2rem;
-  }
+  }*/
 
 }
 
@@ -695,4 +725,35 @@ body {
   .footer-middle{
     flex-direction: row!important;
   }
+}
+
+
+/* ==== PRODUCT BOX ==== */
+
+.productbox {
+  background-color:#EDECE8;
+  padding:10px;
+  margin-bottom:10px;
+  -webkit-box-shadow: 0 8px 6px -6px  #999;
+  -moz-box-shadow: 0 8px 6px -6px  #999;
+  box-shadow: 0 8px 6px -6px #999;
+}
+
+.productbox img{
+  width: 100%;
+}
+
+.producttitle {
+  font-weight:bold;
+  padding:5px 0 5px 0;
+}
+
+.productprice {
+  border-top:1px solid #dadada;
+  padding-top:5px;
+}
+
+.pricetext {
+  font-weight:bold;
+  font-size:1.4em;
 }
