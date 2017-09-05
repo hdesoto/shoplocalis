@@ -16,9 +16,9 @@ myApp.controller('newProductController', function ($routeParams, $location, Data
     SweetAlert.swal({
       title: 'Confirma los datos?',
       text: '',
-      type: 'warning',
+      type: 'success',
       showCancelButton: true,
-      confirmButtonColor: '#DD6B55',
+      confirmButtonColor: '#28a745',
       confirmButtonText: 'Crear',
       cancelButtonText: 'Cancelar',
       closeOnConfirm: false,
@@ -27,7 +27,7 @@ myApp.controller('newProductController', function ($routeParams, $location, Data
       if (isConfirm) {
         DataService.createProduct(self.newProduct, function (response) {
           SweetAlert.swal('Creado!', 'Producto creado.', 'success')
-          $location.path('/edit_product/' + response)
+          $location.path('/')
         })
       } else {
         SweetAlert.swal('Cancelado', 'Producto NO creado :)', 'error')

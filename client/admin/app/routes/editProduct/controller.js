@@ -38,6 +38,7 @@ myApp.controller('editProductController',function($routeParams, $location, DataS
        if (isConfirm) {
         DataService.updateProduct(self.id, self.updatedProduct, function(response){
         SweetAlert.swal("Actualizado!", "Producto actualizado.", "success")
+        $location.path('/')
         })
        } else {
         SweetAlert.swal("Cancelado", "Producto NO actualizado :)", "error");

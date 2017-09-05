@@ -3,9 +3,9 @@
 angular.module('storeApp')
       .config(function ($routeProvider) {
         $routeProvider
-      .when('/search', {
-        templateUrl: 'app/routes/searchProduct/card_deck.html',
-        contoller: 'searchProductController',
+      .when('/search/:query', {
+        templateUrl: 'app/routes/searchProduct/search_results.html',
+        controller: 'searchController',
         controllerAs: 'searchCtrl'
       })
       })

@@ -1,12 +1,12 @@
-<div class="container-fluid text-center admin-home-header">
-  <h1>Admin Home</h1>
+  <div class="container-fluid text-center search-results-header">
+  <h1>Search Results</h1>
 </div>
 <div class="container alert alert-primary" role="alert">
-   [{{adminHomeCtrl.aProducts.length}}] productos existentes en catálogo.
+   [<span class='font-weight-bold'>{{searchCtrl.resultArray.length}}</span>] productos encontrados con el texto: " {{searchCtrl.query}} "
 </div>
 <div class="container">
-  <div class="card-deck d-flex justify-content-around flex-wrap" ng-init="showAllProducts()">
-    <div ng-repeat='product in adminHomeCtrl.aProducts' class="card">
+  <div class="card-deck d-flex justify-content-around flex-wrap">
+    <div ng-repeat='product in searchCtrl.resultArray' class="card">
       <a href="#!/edit_product/{{product._id}}"><img class="card-img-top" ng-src='{{product.image_url}}' alt="Card image cap"></a>
       <div class="card-body">
         <h4 class="card-title">{{product.title}}</h4>
@@ -22,4 +22,7 @@
       </div>
     </div>
   </div>
+</div>
+<div class='container d-flex justify-content-center' ng-show='searchCtrl.noResults'>
+  <a class="btn btn-success" href="#!/new_product">Crear Producto Nuevo</a>
 </div>

@@ -16,7 +16,7 @@ function addProduct (req, res) {
 
   // Product.create(product)
   product.save()
-    .then((product) => res.json(product))
+    .then((product) => res.send(product))
 }
 
 module.exports = addProduct

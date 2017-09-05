@@ -26,21 +26,17 @@
       <ul class="navbar-nav mr-auto navbar-list">
         <li class="nav-item disabled"><a href="#!/" class="nav-link">Inicio <span class="sr-only">(current)</span></a></li>
         <li class="nav-item" disabled><a href="#!/pedidos" class="nav-link disabled">Ver Pedidos</a></li>
-        <!-- <li class="nav-item"><a href="#!/edit_products" class="nav-link">Editar Producto</a></li> -->
         <li class="nav-item"><a href="#!/new_product" class="nav-link">Crear Producto</a></li>
-        <!-- <li class="nav-item"><a href="#!/delete_product" class="nav-link">Eliminar Producto</a></li> -->
         <li class="nav-item"><a href="#!/logout" class="nav-link">Desconectarse</a></li>
       </ul>
-      <form class="form-inline my-2 my-lg-0" action="/search">
-        <div class="input-group">
-          <input type="text" class="form-control" placeholder="Search for..." aria-label="Search for...">
+      <div class="form-inline my-2 my-lg-0" ng-controller="getQueryController as getCtrl">
+        <div class="input-group" >
+          <input type="text" ng-model="getCtrl.query" class="form-control" placeholder="Buscar..." aria-label="Buscar...">
           <span class="input-group-btn">
-            <button class="btn btn-secondary" type="button">Go!</button>
+            <button class="btn btn-secondary admin-search-button" ng-click="getCtrl.getQueryAndRedirect()" type="submit">Go!</button>
           </span>
         </div>
-        <!-- <input ng-model="searchCtrl.query" type="text" placeholder="Buscar Producto" aria-label="Search" class="form-control mr-sm-1"/>
-        <button type="submit" ng-click="searchCtrl.searchProduct()" class="btn btn-outline-success my-2 my-sm-0">Buscar</button> -->
-      </form>
+      </div>
       <!-- <a href="#" data-toggle="modal" data-target="#modal-cart" class="nav-link btn btn-secondary ml-2 mb-sm-3 mb-lg-0 my-2 my-sm-0"><span class="cart-span mr-2"><i class="fa fa-shopping-cart"></i></span>Carrito <span class="badge badge-danger items-in-cart">3</span><span class="sr-only">Items in cart</span></a> -->
     </div>
   </nav>
@@ -97,8 +93,8 @@
     <script src="app/routes/adminHome/config.js"></script>
 
     <!-- DASHBOARD -->
-    <script src="app/routes/dashboard/controller.js"></script>
-    <script src="app/routes/dashboard/config.js"></script>
+    <!-- <script src="app/routes/dashboard/controller.js"></script>
+    <script src="app/routes/dashboard/config.js"></script> -->
 
     <!-- EDIT PRODUCT -->
     <script src="app/routes/editProduct/controller.js"></script>
@@ -115,6 +111,8 @@
      <!-- SEARCH PRODUCTS -->
     <script src="app/routes/searchProduct/controller.js"></script>
     <script src="app/routes/searchProduct/config.js"></script>
+
+    <script src="app/routes/getQuery/controller.js"></script>
 
     <!-- ROUTE / nowPlaying -->
     <!-- <script src="app/routes/nowPlaying/controller.js"></script>

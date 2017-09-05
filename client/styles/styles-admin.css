@@ -79,7 +79,7 @@ header .navbar-nav ul form{
 }
 
 .edit-header .back-button:hover{
-  color:#ffc107;
+  color:#e67e22;
 }
 
 .upload-header .back-button:hover{
@@ -574,8 +574,26 @@ header .navbar-nav ul form{
 }
 
 .edit-header{
-  background: #ffc107;
+  background: #e67e22;
+  /*#ffc107;*/
 }
+
+.btn-warning{
+  background: #e67e22;
+  color:white;
+}
+
+/*.product-edit .btn-warning{
+  background: #e67e22;
+  color:white;
+}*/
+
+.product-edit .btn-warning:hover,
+.product-edit .btn-warning:focus{
+  background: #d35400;
+  color:white;
+}
+
 .edit-header h1{
   color:white;
   padding:10px;
