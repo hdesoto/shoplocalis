@@ -1,5 +1,8 @@
 <div class="container-fluid text-center edit-header">
+<div class="container d-flex justify-content-around">
   <h1>Editar Producto</h1>
+  <button type="button" class="btn btn-outline-light back-button" onclick="history.back()">Atrás</button>
+  </div>
 </div>
 
 <div class="container product-edit">
@@ -49,7 +52,7 @@
         </div>
         <div class="row">
           <div class="action col-md-12">
-            <button type="button" ng-click="editCtrl.updateProduct()" class="btn btn-warning btn-add-to-cart edit-button"><i class="fa fa-edit"></i> 
+            <button type="button" ng-click="editCtrl.updateProduct()" class="btn btn-warning edit-button"><i class="fa fa-edit"></i> 
             Aplicar Cambios
             </button>
           </div>

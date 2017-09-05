@@ -1,9 +1,8 @@
 /* global myApp */
 
-myApp.controller('adminHomeController', function ($routeParams, $location, DataService) {
+myApp.controller('adminHomeController', function ($routeParams, $location, DataService, SweetAlert) {
   console.log('Admin Home Controller loaded...')
   var self = this
-  // self.aProducts = []
   showAllProducts()
 
   function showAllProducts () {

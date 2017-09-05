@@ -41,7 +41,6 @@ app.use(function (req, res, next) {
 })
 
 app.set('view engine', 'pug')
-// console.log(path.join(__dirname,''))
 app.set('views', path.join(__dirname, '/views'))
 
 app.locals.pretty = true
@@ -61,163 +60,14 @@ const User = require('./models/User')
 // ********** API PRODUCTS ********** //
 const routesProducts = require('./routes/admin/products')
 app.use('/api/products', routesProducts)
-// Old routes
-  // app.get('/api/products', function (req, res) {
-  //   Product.getAllProducts(function (err, products) {
-  //     if (err) {
-  //       throw err
-  //     }
-  //     res.json(products)
-  //   })
-  // })
-
-  // app.post('/api/products', function (req, res) {
-  //   var product = req.body
-  //   Product.addProduct(product, function (err, product) {
-  //     if (err) {
-  //       throw err
-  //     }
-  //     res.json(product)
-  //   })
-  // })
-
-  // app.put('/api/product/:_id', function (req, res) {
-  //   var id = req.params._id
-  //   var updatedProduct = {
-  //     title: req.body.title,
-  //     description: req.body.description,
-  //     price: req.body.price,
-  //     uom: req.body.uom,
-  //     stock: req.body.stock,
-  //     image_url: req.body.image_url
-  //   }
-  //   Product.updateProduct(id, updatedProduct, {}, function (err, product) {
-  //     if (err) {
-  //       throw err
-  //     }
-  //     res.json(product)
-  //   })
-  // })
-
-  // app.get('/api/products/search', function (req, res) {
-  //   Product.searchProductByTitle(req.query.title, function (err, products) {
-  //     if (err) {
-  //       throw err
-  //     }
-  //     res.json(products)
-  //   })
-  // })
 
 // ********** API ORDERS **********
 const routesOrders = require('./routes/admin/orders')
 app.use('/api/orders', routesOrders)
-// Old routes
-  // app.get('/api/orders', function (req, res) {
-  //   Order.getAllOrders(function (err, orders) {
-  //     if (err) {
-  //       throw err
-  //     }
-  //     res.json(orders)
-  //   })
-  // })
-
-  // var lastOrderNumber = 5;
-
-  // app.post('/api/orders', function (req, res) {
-  //   var order = req.body
-  //   // order.ordernbr = lastOrderNumber + 1
-  //   Order.addOrder(order, function (err, order) {
-  //     if (err) {
-  //       throw err
-  //     }
-  //     res.json(order)
-  //   })
-  // })
-
-  // app.put('/api/order/:_id', function (req, res) {
-  //   var id = req.params._id
-  //   var updatedOrder = {
-  //     deliveryaddress: req.body.deliveryaddress,
-  //     dateofdelivery: req.body.dateofdelivery
-  //   }
-  //   Order.updateOrder(id, updatedOrder, {}, function (err, order) {
-  //     if (err) {
-  //       throw err
-  //     }
-  //     res.json(order)
-  //   })
-  // })
-
-  // app.delete('/api/order/:_id', function (req, res) {
-  //   var id = req.params._id
-  //   Order.deleteOrder(id, function (err, order) {
-  //     if (err) {
-  //       throw err
-  //     }
-  //     res.json(order)
-  //   })
-  // })
 
 // ********** API USERS **********
 const routesUsers = require('./routes/admin/users')
 app.use('/api/users', routesUsers)
-
-// Old routes
-  // app.get('/api/users', function (req, res) {
-  //   User.getAllUsers(function (err, users) {
-  //     if (err) {
-  //       throw err
-  //     }
-  //     res.json(users)
-  //   })
-  // })
-
-  // var lastOrderNumber = 5;
-
-  // app.post('/api/users', function (req, res) {
-  //   var user = req.body
-  //   User.addUser(user, function (err, user) {
-  //     if (err) {
-  //       throw err
-  //     }
-  //     res.json(user)
-  //   })
-  // })
-
-  // app.put('/api/user/:_id', function (req, res) {
-  //   var id = req.params._id
-  //   var updatedUser = {
-  //     name: req.body.name,
-  //     email: req.body.email,
-  //     password: req.body.password,
-  //     isAdmin: req.body.isAdmin
-  //   }
-  //   User.updateUser(id, updatedUser, {}, function (err, user) {
-  //     if (err) {
-  //       throw err
-  //     }
-  //     res.json(user)
-  //   })
-  // })
-
-  // app.delete('/api/user/:_id', function (req, res) {
-  //   var id = req.params._id
-  //   User.deleteUser(id, function (err, user) {
-  //     if (err) {
-  //       throw err
-  //     }
-  //     res.json(user)
-  //   })
-  // })
-
-  // app.get('/api/users/search', function (req, res) {
-  //   User.searchUserByName(req.query.name, function (err, users) {
-  //     if (err) {
-  //       throw err
-  //     }
-  //     res.json(users)
-  //   })
-  // })
 
 // ********** API HOME **********
 app.get('/', function (req, res) {
@@ -236,7 +86,6 @@ app.get('/product/search', function (req, res) {
     if (err) {
       throw err
     }
-    // const cart = req.session.cart
     res.render('pages/index', {products, cart})
   })
 })
@@ -271,10 +120,7 @@ app.get('/cart', (req, res) => {
 
 app.delete('/cart/:cartItem', function (req, res) {
   var cartItem = +req.params.cartItem
-  // console.log(req.session.cart)
-  // console.log('Cart item to remove: ' + cartItem)
   var newCart = req.session.cart.filter(item => { return item.cartItem !== cartItem })
-  // console.log(newCart)
   req.session.cart = newCart
   req.session.save(function (err) {
     if (err) throw err
@@ -286,8 +132,6 @@ app.put('/cart/:cartItem', function (req, res) {
   var cartItem = +req.params.cartItem
   var newQuantity = +req.body.quantity
   console.log(req.session.cart)
-  // console.log(req.body)
-  // console.log(newQuantity)
   req.session.cart.forEach(function (item) {
     if (item.cartItem === cartItem) {
       item.quantity = newQuantity
@@ -299,16 +143,6 @@ app.put('/cart/:cartItem', function (req, res) {
     res.send({'ok': 'Quantity updated', 'cart': req.session.cart})
   })
 })
-
-// const routesAllProducts = require('./routes/products')
-// const routesSingleProduct = require('./routes/product')
-// // app.use('/', routesAllProducts)
-// app.use('/product', routesSingleProduct)
-
-// app.use('/products', routesAllProducts)
-// app.use('/api/products', routesAllProducts)
-// const searchProduct = require('./routes/product')
-// app.use('/api/product', searchProduct)
 
 app.listen(PORT)
 console.log(`Listening on PORT ${PORT}`)

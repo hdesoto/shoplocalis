@@ -1,3 +1,7 @@
+*, ::before, ::after{
+  transition: all ease-in-out 200ms;
+  /*box-sizing: border-box;*/
+}
 
 body{
   margin-top:55px;
@@ -13,6 +17,79 @@ header .navbar-dark{
   box-shadow: 0 0 4px rgba(0,0,0,.14);
 }
 
+
+header .navbar-nav ul form{
+  padding:0 15px;
+}
+
+
+
+.navbar-nav a:hover,
+.navbar-nav a:focus{
+    color: #000;
+    background: transparent;
+  }
+
+.navbar-nav a::before{
+    content:'';
+    display:block;
+    height:5px;
+    background-color: #CEFFED;
+    position:absolute;
+    top:0;
+    width:0%;
+    transition: all ease-in-out 200ms;
+  }
+
+  .navbar-nav a:hover::before{
+    width:100%;
+  }
+
+  .navbar-nav a.disabled {
+    cursor: not-allowed;
+  }
+
+  .navbar-nav a.disabled:hover::before{
+    width: 0;
+  }
+
+  .navbar-nav li,
+  .navbar-nav .li-non-collapsible{
+    display: inline-block;
+    margin :0;
+    margin-left: 2vw;
+    border: none;
+    position: relative;
+  }
+
+  .fixed-top form {
+    margin-left: 2vw;
+  }
+
+
+  /* ================ */
+
+
+.back-button{
+  margin:auto 0;
+}
+
+.delete-header .back-button:hover{
+  color:#dc3545;
+}
+
+.edit-header .back-button:hover{
+  color:#ffc107;
+}
+
+.upload-header .back-button:hover{
+  color:#28a745;
+}
+
+.edit-button{
+  /*color: white;*/
+}
+
 .fixed-top{
     padding: 0 16px;
 }
@@ -22,7 +99,7 @@ header .navbar-dark{
 }
 
 .fixed-top li{
-  margin-right: 5%;
+  /*margin-right: 5%;*/
 }
 
 .navbar-list > ul > li > a{
@@ -94,6 +171,10 @@ header .navbar-dark{
   max-width: 80%;
 }
 
+.card-footer a{
+  margin-right: 5px;
+}
+
 .form-signin input{
   margin-bottom:10px;
 }
@@ -120,9 +201,9 @@ header .navbar-dark{
     height: 100%;
   }
 
-  .sidebar{
+  /*.sidebar{
     top:55px;
-  }
+  }*/
 
 }
 
@@ -171,7 +252,7 @@ header .navbar-dark{
     }
 
     .picture-left img{
-      max-width: 100%;
+      max-width: 69%;
       height: auto;
     }
   }
@@ -378,19 +459,19 @@ header .navbar-dark{
   }
 }*/
 
-@media (min-width: 989px){
+/*@media (min-width: 989px){
   .sidebar{
     top:99px;
   }
-}
+}*/
 
-@media (min-width: 460px){
+/*@media (min-width: 460px){
   .dashboard-body h1 {
     text-align: left;
     font-size: 2.2rem;
   }
 
-}
+}*/
 
 
 /* === UPLOAD AND EDIT CHOOSE FILE PARAMS === */
@@ -427,12 +508,17 @@ header .navbar-dark{
 }
 .upload-header h1{
   color:white;
-  padding:15px;
+  padding:10px;
 }
 
 .upload-form{
   padding-left: 0px;
   padding-right: 0px;
+}
+
+.upload-form img{
+  min-width: 190px;
+  min-height: 200px;
 }
 
 .group-upload-details{
@@ -464,9 +550,11 @@ header .navbar-dark{
 /* === EDIT ITEM ===*/
 
 .edit-form{
-  padding-left: 0px;
-  padding-right: 0px;
+ /* padding-left: 0px;
+  padding-right: 0px;*/
+  margin: 10px;
 }
+
 
 .edit-btn{
   width: 38px;
@@ -490,7 +578,7 @@ header .navbar-dark{
 }
 .edit-header h1{
   color:white;
-  padding:15px;
+  padding:10px;
 }
 
 .edit-form{
@@ -520,10 +608,28 @@ header .navbar-dark{
     margin-top:0;
   }
   .edit-form{
-    padding:15px;
+    /*padding:15px;*/
   }  
 }
 
+
+/* ===== DELETE PRODUCT ==== */
+
+.delete-header{
+  background: #dc3545;
+}
+.delete-header h1{
+  color:white;
+  padding:10px;
+}
+
+.delete-button{
+  width: 100%;
+}
+
+.delete-form{
+  margin:10px;
+}
 
 
 /* ==== FOOTER STYLES === */

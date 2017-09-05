@@ -1,0 +1,65 @@
+<div class="container-fluid text-center delete-header">
+  <div class="container d-flex justify-content-around">
+  <h1>Eliminar Producto</h1>
+  <button type="button" class="btn btn-outline-light back-button" onclick="history.back()">Atrás</button>
+  </div>
+</div>
+
+<div class="container product-delete">
+  <!-- <div class="card"> -->
+    <div class="container-fluid">
+      <form class="delete-form">
+        <div class="form-row delete-form">
+          <div class="col-md-4 picture-left d-flex flex-column">
+            <img ng-src="{{delCtrl.product.image_url}}" class="img-thumbnail" alt="Responsive image">
+            <!-- <div class="form-group">
+              <label class="form-control-label" for="image">Imagen (url) </label>
+              <input disabled type="text" name="image_url" ng-model="delCtrl.image_url" class="form-control" id="image" placeholder="URL de Imagen">
+            </div> -->
+          </div>
+          <div class="details-right col-md-8">
+            <div class="form-group">
+              <label for="delete-title" class="col-form-label">Titulo</label>
+              <input disabled type="text" name="title" class="form-control" id="delete-title" placeholder="Titulo" ng-value="delCtrl.product.title">
+            </div>
+            <!-- <p>{{delCtrl.title}}</p> -->
+            <div class="form-group group-delete-details">
+              <label for="delete-details">Description</label>
+              <textarea name="description" class="form-control delete-details" id="delete-details" rows="3" disabled>{{delCtrl.product.description}}</textarea>
+            </div>
+             <div class="form-row">
+              <div class="form-group col-md-6">
+                <label for="delete-price" class="col-form-label">Price</label>
+                <input disabled name="price" type="number" class="form-control" id="delete-price" placeholder="Precio" ng-value="delCtrl.product.price">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="uomselect" class="col-form-label">Unidad</label>
+                <select name="uom" id="uomselect" class="form-control custom-select select-delete" ng-value="delCtrl.product.uom" disabled>
+                  <option selected ng-value="delCtrl.uom">{{delCtrl.product.uom}}</option>
+                  <option value="por Kg">por Kg</option>
+                  <option value="por Unidad">por Unidad</option>
+                  <option value="por Litro">Litro</option>
+                  <option value="por Paquete">por Paquete</option>
+                </select>
+              </div>
+              <div class="form-group col-md-2">
+                <label for="delete-stock" class="col-form-label">Stock</label>
+                <input disabled name="stock" type="number" class="form-control" id="delete-stock" ng-value="delCtrl.product.stock" placeholder="Stock inicial">
+              </div>
+            </div>
+            <p class="small pull-right">Última modificación: {{delCtrl.product.modifiedDate * 1000 | date:'dd-MM-yyyy'}}</p>        
+          </div>
+        </div>
+        <div class="row">
+          <div class="action col-md-12">
+            <button type="button" ng-click="delCtrl.deleteProduct()" class="btn btn-danger delete-button"><i class="fa fa-trash-o"></i> 
+            ELIMINAR PRODUCTO
+            </button>
+          </div>
+        </div>
+
+      </form>
+
+    </div>
+<!--   </div> -->
+</div>

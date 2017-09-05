@@ -3,7 +3,7 @@
 </div>
 
 <div class="container">
-  <div class="card-deck" ng-init="showAllProducts()">
+  <div class="card-deck d-flex justify-content-around flex-wrap" ng-init="showAllProducts()">
     <div ng-repeat='product in adminHomeCtrl.aProducts' class="card">
       <img class="card-img-top" ng-src='{{product.image_url}}' alt="Card image cap">
       <div class="card-body">
@@ -12,9 +12,10 @@
       </div>
       <div class="card-footer d-flex justify-content-around">
           <input type="text" class="hidden" value="{{product._id}}">
-          <a  href="#!/edit_product/{{product._id}}" class="btn btn-info">
+          <a href="#!/edit_product/{{product._id}}" class="btn btn-warning">
           <i class="fa fa-pencil-square-o"></i> Editar</a>
-          <button type="submit" class="btn btn-danger" data-toggle="modal" data-target="#modal-product-detail"><i class="fa fa-times"></i> Eliminar </button>
+          <a href="#!/delete_product/{{product._id}}" class="btn btn-danger">
+          <i class="fa fa-times"></i> Eliminar </a>
         <!-- <small class="text-muted">Last updated 3 mins ago</small> -->
       </div>
     </div>

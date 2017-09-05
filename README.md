@@ -32,12 +32,12 @@ curl -H "Content-Type: application/json" -X POST -d '{"title":"Yerba Mate","desc
 
 
 **Create Product**
-curl -H "Content-Type: application/json" -X POST -d '{"title":"Patatas fritas gourmet finissimas",
+curl -H "Content-Type: application/json" -X POST -d '{"title":"Nuevo producto",
 "description":"Denominación del alimento:Patatas fritas
 Nombre del operador de la empresa alimentaria:PepsiCo Foods. A.I.E.
 Nombre del importador:PepsiCo Foods. A.I.E.
 Dirección del operador/importador:Avenida de los Olmos, 2, 01013 - Vitoria, España",
-"price": 1.89,
+"price": 3,
 "uom":"unidad",
 "stock": 50,
 "image_url": "https://static.carrefour.es/hd_280x_/supermercado/bcc_static/catalogImages/product/799201/799201.png"}' http://localhost:3001/api/products
