@@ -69,7 +69,7 @@ app.use('/api/orders', routesOrders)
 const routesUsers = require('./routes/admin/users')
 app.use('/api/users', routesUsers)
 
-// ********** API HOME **********
+// ********** HOME **********
 app.get('/', function (req, res) {
   const cart = req.session.cart
   Product.getAllProducts(function (err, products) {
@@ -77,20 +77,27 @@ app.get('/', function (req, res) {
       throw err
     }
     res.render('pages/index', {products, cart})
-  }, 10)
+  }, 70)
 })
 
 app.get('/product/search', function (req, res) {
   const cart = req.session.cart
-  Product.searchProductByTitle(req.query.title, function (err, products) {
+  const search = true
+  const query = req.query.title
+  Product.searchProductByTitle(query, function (err, products) {
     if (err) {
       throw err
     }
-    res.render('pages/index', {products, cart})
+    res.render('pages/index', {products, cart, search, query})
   })
 })
 
-// **** ADD ITEM TO CART
+app.get('/checkout', function (req, res) {
+  const cart = req.session.cart
+  res.render('pages/checkout', {cart})
+})
+
+// ********** ADD ITEM TO CART **********
 app.post('/cart', (req, res) => {
   const {_id, title, image_url, price} = JSON.parse(req.body.product)
   const quantity = +req.body.quantity
@@ -113,9 +120,15 @@ app.post('/cart', (req, res) => {
   })
 })
 
+// ********** See CART **********
 app.get('/cart', (req, res) => {
   const cart = req.session.cart
-  res.render('pages/cart', {cart})
+  // console.log(cart)
+  const total = cart.reduce(function(sum, value){
+    return sum + value.itemTotal
+  },0)
+  // console.log(total)
+  res.render('pages/cart', {cart, total})
 })
 
 app.delete('/cart/:cartItem', function (req, res) {
@@ -143,6 +156,9 @@ app.put('/cart/:cartItem', function (req, res) {
     res.send({'ok': 'Quantity updated', 'cart': req.session.cart})
   })
 })
+
+
+
 
 app.listen(PORT)
 console.log(`Listening on PORT ${PORT}`)

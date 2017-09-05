@@ -10,11 +10,15 @@ block content
                 input.form-control.text-center(type='text', name='title', placeholder='Search for...', aria-label='Search for...')
                 span.input-group-btn
                   button.btn.btn-secondary(type='submit') Go!
+      if search
+        .container.alert.alert-primary(role='alert')
+          | [ #{products.length} ] productos encontrados con el texto: " #{query} " .
       .container
         .card-deck
           each product in products
             .card
-              img.card-img-top(src=product.image_url, alt='Card image cap')
+              a(href="#", data-toggle='modal', data-target=`#${product._id}`)
+                img.card-img-top(src=product.image_url, alt='Card image cap')
               .card-body
                 h4.card-title=product.title
                 p.card-text=product.description

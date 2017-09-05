@@ -1,0 +1,109 @@
+extends ../layout
+
+block content
+      .container-fluid.text-center.upload-header
+        .container.d-flex.justify-content-around
+          h1 Ingresar datos de Envío
+          button.btn.btn-outline-light.back-button(type='button', onclick='history.back()') Atrás
+      .container
+        form
+          .form-row
+            .form-group.col-md-6
+              label.col-form-label(for='input-name') Nombre
+              input#input-name.form-control(type='text', placeholder='NOMBRE')
+            .form-group.col-md-6
+              label.col-form-label(for='input-lastname') Apellido
+              input#input-lastname.form-control(type='text', placeholder='APELLIDO')
+          .form-group.direccion1-row
+            label.col-form-label(for='input-address') Dirección
+            input#input-address.form-control(type='text', placeholder='Calle y Número de Puerta')
+          .form-group.direccion2-row
+            label.col-form-label(for='input-address2') Dirección 2
+            input#input-address2.form-control(type='text', placeholder='Piso, Puerta, etc..')
+          .form-row.ciudad-provincia-zip-row
+            .form-group.col-md-6.ciudad-group
+              label.col-form-label(for='input-city') Ciudad
+              input#input-city.form-control(type='text', placeholder='CIUDAD')
+            .form-group.col-md-4.provincia-group
+              label.col-form-label(for='input-state', placeholder='PROVINCIA') Provincia
+              select#input-state.form-control
+                option(value='') Seleccione...
+                option(value='15') A coruña
+                option(value='1') Álava
+                option(value='2') Albacete
+                option(value='3') Alicante
+                option(value='4') Almería
+                option(value='33') Asturias
+                option(value='5') Ávila
+                option(value='6') Badajoz
+                option(value='7') Baleares
+                option(value='8') Barcelona
+                option(value='9') Burgos
+                option(value='10') Cáceres
+                option(value='11') Cádiz
+                option(value='39') Cantabria
+                option(value='12') Castellón
+                option(value='51') Ceuta
+                option(value='13') Ciudad Real
+                option(value='14') Córdoba
+                option(value='16') Cuenca
+                option(value='99') Extranjero
+                option(value='17') Girona
+                option(value='18') Granada
+                option(value='19') Guadalajara
+                option(value='20') Guipúzcoa
+                option(value='21') Huelva
+                option(value='22') Huesca
+                option(value='23') Jaén
+                option(value='26') La rioja
+                option(value='35') Las palmas
+                option(value='24') León
+                option(value='25') Lleida
+                option(value='27') Lugo
+                option(value='28') Madrid
+                option(value='29') Málaga
+                option(value='52') Melilla
+                option(value='30') Murcia
+                option(value='31') Navarra
+                option(value='32') Ourense
+                option(value='34') Palencia
+                option(value='36') Pontevedra
+                option(value='37') Salamanca
+                option(value='38') Santa cruz de tenerife
+                option(value='40') Segovia
+                option(value='41') Sevilla
+                option(value='42') Soria
+                option(value='43') Tarragona
+                option(value='44') Teruel
+                option(value='45') Toledo
+                option(value='46') Valencia
+                option(value='47') Valladolid
+                option(value='48') Vizcaya
+                option(value='49') Zamora
+                option(value='50') Zaragoza
+            .form-group.col-md-2
+              label.col-form-label(for='inputZip') Código Postal
+              input#inputZip.form-control(type='text')
+          .form-row.checkout-last-row
+            .form-group.col-md-6.horario-entrega
+              label.mr-sm-2.col-form-label(for='inlineFormCustomSelect') Horario de Entrega
+              select#delivery-hour.custom-select.mb-2.mr-sm-2.mb-sm-0
+                option(selected='') Seleccione...
+                option(value='1') de 9 hs a 12 hs
+                option(value='2') de 12 hs a 17 hs
+                option(value='3') de 17 hs a 21 hs
+            .form-group.col-md-6.medio-pago
+              label.mr-sm-2.col-form-label(for='inlineFormCustomSelect') Método de Pago
+              select#payment-methods.custom-select.mb-2.mr-sm-2.mb-sm-0
+                option(selected='') Seleccione...
+                option(value='1')
+                  i.fa.fa-money
+                  | Efectivo
+                option(value='2')
+                  i.fa.fa-credit-card
+                  | Tarjeta
+                option(value='3') PayPal
+          button.btn.btn-lg.btn-block.btn-success.mb-3(type='submit')
+            i.fa.fa-check.mx-3
+            | Confirmar Compra
+

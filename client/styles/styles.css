@@ -13,6 +13,15 @@ header .navbar-dark{
   box-shadow: 0 0 4px rgba(0,0,0,.14);
 }
 
+.back-button{
+  margin:auto 0;
+}
+
+.back-button:hover{
+  color:#28a745;
+}
+
+
 .fixed-top{
     padding: 0 16px;
 }

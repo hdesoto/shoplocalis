@@ -55,3 +55,9 @@ var Product = module.exports = mongoose.model('Product', productSchema)
 module.exports.getAllProducts = function (callback, limit) {
   Product.find(callback).limit(limit)
 }
+
+module.exports.searchProductByTitle = function (query, callback) {
+  const searchedTitle = new RegExp(query, 'i')
+  Product.find({title: searchedTitle}, callback)
+    // .then((products) => res.json(products))
+}

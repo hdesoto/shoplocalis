@@ -7,20 +7,23 @@ header
       span.navbar-toggler-icon
     #navbarSupportedContent.collapse.navbar-collapse
       ul.navbar-nav.mr-auto.navbar-list
+        li.nav-item
+          a.navbar-admin-link(href="/admin") Administrador
         //- li.nav-item.active
         //-   a.nav-link(href='/')
         //-     | Inicio 
         //-     span.sr-only (current)
         //- li.nav-item
         //-   a.nav-link(href='#', data-toggle='modal', data-target='#modal-login') Login
-        li.nav-item.dropdown.navbar-admin
-          a#navbarAdmin.nav-link.dropdown-toggle.navbar-admin-link(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-            | Administrador
-          .dropdown-menu.navbar-admin-dropdown(aria-labelledby='navbarAdmin')
-            a.dropdown-item(href='/admin') Panel de Control
-            a.dropdown-item(href='#') Modificar Producto
-            a.dropdown-item(href='#') Crear Producto
-            a.dropdown-item(href='#') Eliminar Producto
+        //- li.nav-item.dropdown.navbar-admin
+
+          //- a#navbarAdmin.nav-link.dropdown-toggle.navbar-admin-link(href='#', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+          //-   | Administrador
+          //- .dropdown-menu.navbar-admin-dropdown(aria-labelledby='navbarAdmin')
+          //-   a.dropdown-item(href='/admin') Panel de Control
+          //-   a.dropdown-item(href='#') Modificar Producto
+          //-   a.dropdown-item(href='#') Crear Producto
+          //-   a.dropdown-item(href='#') Eliminar Producto
       form.form-inline.my-2.my-lg-0(action='/product/search', method='get')
         input.form-control.mr-sm-2(type='text', name='title' , placeholder='Buscar Producto', aria-label='Search')
         button.btn.btn-outline-success.my-2.my-sm-0(type='submit') Buscar
