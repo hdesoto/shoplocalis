@@ -110,7 +110,8 @@ header .navbar-dark{
   background: red;
 }*/
 
-.card, .productbox{
+/*.card, */
+.productbox{
   min-width: 200px;
   max-width: 322px;
   margin-bottom:15px;
@@ -780,3 +781,49 @@ body {
   font-weight:bold;
   font-size:1.4em;
 }
+
+/* ===== ORDER CONFIRMATION ===== */
+
+.confirmation-header{
+  background: #2ecc71;
+}
+.confirmation-header h1{
+  color:white;
+  padding:15px;
+}
+
+.back-button-confirm{
+  margin:auto 0;
+}
+
+.back-button-confirm:hover{
+  color:#2ecc71;
+}
+
+.order-nbr-span{
+  background: #FFF2A7;
+  padding: 4px;
+  border:1px solid #2ecc71;
+  border-radius: 10px;
+}
+
+.order-correct{
+  padding-top: 15px;
+}
+
+.header-order-nbr{
+  padding: 30px;
+}
+
+.deliver-delay{
+  padding:20px;
+}
+
+.thanks{
+  padding: 20px;
+  text-transform: uppercase;
+
+}
+
+/* ================== */
+

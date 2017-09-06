@@ -45,9 +45,9 @@ header .navbar-nav ul form{
     width:100%;
   }
 
-  .navbar-nav a.disabled {
+  /*.navbar-nav a.disabled {
     cursor: not-allowed;
-  }
+  }*/
 
   .navbar-nav a.disabled:hover::before{
     width: 0;
@@ -158,7 +158,7 @@ header .navbar-nav ul form{
   margin-left:auto;
 }
 
-.card{
+.card-product{
   min-width: 200px;
   max-width: 220px;
   margin-bottom:15px;
@@ -885,3 +885,12 @@ body {
 }
 
 
+/* ======= ORDER LIST ======= */
+
+.card-order .order-details{
+  list-style: none;
+}
+
+.card-order .order-details-label{
+  font-weight: bold;
+}

@@ -1,0 +1,112 @@
+<div class="container-fluid text-center orders-list-header text-center">
+  <h1>Listado de Órdenes</h1>
+</div>
+<div class="container alert alert-primary text-center" role="alert">
+   [{{ordersListCtrl.aOrders.length}}] órdenes recibidas.
+</div>
+
+<div class="container">
+  <div id="accordion" role="tablist">
+    <!-- <div ng-repeat='order in ordersListCtrl.aOrders'> -->
+      <div class='card card-order' ng-repeat='order in ordersListCtrl.aOrders'>
+        <div class="card-header d-flex justify-content-between" role="tab" id="heading{{order.orderNbr}}">
+          <!-- <h5 class="mb-0"> -->
+            <button class='btn btn-outline-primary' data-toggle="collapse" data-target='#{{order.orderNbr}}' aria-expanded="true" aria-controls="{{order.orderNbr}}">
+            Orden: {{order.orderNbr}}
+            </button>
+            <span class='small'>Fecha: {{order.orderDate | date:'dd-MM-yyyy'}}</span>
+          <!-- </h5> -->
+        </div>
+        <div id="{{order.orderNbr}}" class="collapse" role="tabpanel" aria-labelledby="heading{{order.orderNbr}}" data-parent="#accordion">
+          <div class="card-body">
+            <ul class='order-details'>
+              <li><span class='order-details-label'>Nombre: </span>{{order.name}}</li>
+              <li><span class='order-details-label'>Apellido: </span>{{order.lastName}}</li>
+              <li><span class='order-details-label'>E-mail: </span>{{order.email}}</li>
+              <li><span class='order-details-label'>Dirección: </span>{{order.deliveryAddress1}}</li>
+              <li><span class='order-details-label'>Dirección (cont.): </span>{{order.deliveryAddress2}}</li>
+              <li><span class='order-details-label'>Ciudad: </span>{{order.city}}</li>
+              <li><span class='order-details-label'>Provincia: </span>{{order.state}}</li>
+              <li><span class='order-details-label'>Código Postal: </span>{{order.postalCode}}</li>
+              <li><span class='order-details-label'>Forma de Pago: </span>{{order.paymentMethod}}</li>
+              <li><span class='order-details-label'>Horario de Entrega: </span>{{order.preferedTimeOfDelivery}}</li>
+            </ul>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target='#{{order._id}}' aria-expanded="false" aria-controls="collapseExample">
+              Ver Items
+            </button>
+            <div class="collapse" id='{{order._id}}'>
+              <div class="card card-body">
+                <ul class="list-group order-items">
+                  <li class="list-group-item list-group-item-secondary list-header">
+                    <div class="row align-items-center">
+                      <div class="col-sm-2 img-div">
+                        <p class="font-weight-bold text-center"></p>
+                      </div>
+                      <div class="col-sm-3 col-3">
+                        <p class="font-weight-bold text-center">Producto</p>
+                      </div>
+                      <div class="col-sm-1 col-1 cant">
+                        <p class="font-weight-bold text-center">Cant.</p>
+                      </div>
+                      <div class="col-sm-2 col-3">
+                        <p class="font-weight-bold text-center">Precio</p>
+                      </div>
+                      <div class="col-sm-2 col-3">
+                        <p class="font-weight-bold text-center">Total</p>
+                      </div>
+                      <div class="col-sm-2 col-2">
+                        <p class="font-weight-bold text-center remove-title">Quitar</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="list-group-item order-item" ng-repeat='item in order.items'>
+                    <div class="row align-items-center">
+                      <div class="col-sm-2 img-div">
+                      <!-- <img ng-src='{{order.image_url}}' class="img-thumbnail img-fluid"/> -->
+                      </div>
+                      <div class="col-sm-3 col-3">
+                        <p class="align-middle">{{item._id}}</p>
+                      </div>
+                      <div class="col-sm-1 col-1 div-quantity">
+                        <p class="align-middle">{{item.quantity}}</p>
+                      </div>
+                      <div class="col-sm-2 col-3">
+                        <p></p>
+                      </div>
+                      <div class="col-sm-2 col-3">
+                        <p></p>
+                      </div>
+                      <div class="col-sm-2 col-2">
+                        <p></p>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- <li class="list-group-item list-group-item-secondary list-totals">
+                    <div class="row align-items-center">
+                      <div class="col-sm-2 img-div">
+                        <p class="font-weight-bold text-center"></p>
+                      </div>
+                      <div class="col-sm-3 col-3">
+                        <p class="font-weight-bold text-center"></p>
+                      </div>
+                      <div class="col-sm-3 col-4">
+                        <p class="font-weight-bold text-center">Monto Total:</p>
+                      </div>
+                      <div class="col-sm-2 col-3">
+                        <p class="font-weight-bold text-center"></p>
+                      </div>
+                      <div class="col-sm-2 col-2">
+                        <p class="font-weight-bold text-center remove-title"></p>
+                      </div>
+                    </div>
+                  </li> -->
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- </div> -->
+  </div>
+</div>
+  

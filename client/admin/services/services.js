@@ -4,24 +4,24 @@ myApp.service('DataService', function ($http) {
 	var self = this
 
 	self.searchProductByName = function (query, callback) {
-	// console.log('search Called (in service)')
-	var title = query.title
-	var url = '/api/products/search?title=' + title
-	$http.get(url)
-	  .then(function(response){
-	  	// console.log(response)
-	  	callback(response.data.results)
-	  })
+		// console.log('search Called (in service)')
+		var title = query.title
+		var url = '/api/products/search?title=' + title
+		$http.get(url)
+		  .then(function(response){
+		  	// console.log(response)
+		  	callback(response.data.results)
+		  })
 	}
 
 	self.searchAllProducts = function (callback) {
-	// console.log('Service Search ALL products called')
-	var url = '/api/products'
-	$http.get(url)
-		.then(function(response){
-			// console.log(response.data)
-			callback(response.data)
-		})
+		// console.log('Service Search ALL products called')
+		var url = '/api/products'
+		$http.get(url)
+			.then(function(response){
+				// console.log(response.data)
+				callback(response.data)
+			})
 	}
 
 	self.getProduct = function (id, callback) {
@@ -70,4 +70,15 @@ myApp.service('DataService', function ($http) {
 				callback(response)
 			})
 	}
+
+	self.searchAllOrders = function (callback) {
+		// console.log('Service Search ALL products called')
+		var url = '/api/orders'
+		$http.get(url)
+			.then(function(response){
+				// console.log(response.data)
+				callback(response.data)
+			})
+	}
+
 })
