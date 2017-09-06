@@ -213,6 +213,12 @@ header .navbar-dark{
   .checkout-last-row .custom-select{
     width: 100%;
   }
+  
+  .btn-checkout{
+    width: 100%;
+  }
+
+
 
   .hidden{
     display:none;
@@ -314,6 +320,18 @@ header .navbar-dark{
   padding-top: 9px;
 }
 
+.cart-items li{
+  padding-left: 5px;
+}
+
+.cart-item .row{
+  padding:0;
+}
+
+.cart-items .row{
+  margin:0;
+}
+
 .cart-items p{
   margin-bottom: 0rem;
 }
@@ -340,6 +358,10 @@ header .navbar-dark{
   border: none;
 }
 
+.cant{
+    padding-left: 0!important;
+  }
+
 .cart-items .cart-quantity{
   width: 100%;
   text-align: center;
@@ -362,7 +384,8 @@ header .navbar-dark{
 
 @media (max-width: 767px){
   .cart-items-container{
-    padding-left: ;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 

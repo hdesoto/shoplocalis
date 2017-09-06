@@ -7,6 +7,7 @@ const path = require('path')
 const bodyParser = require('body-parser')
 const session = require('express-session')
 const FileStore = require('session-file-store')(session)
+const shortid = require('shortid')
 
 mongoose.Promise = Promise
 
@@ -90,6 +91,12 @@ app.get('/product/search', function (req, res) {
     }
     res.render('pages/index', {products, cart, search, query})
   })
+})
+
+app.get('/order_confirmation', function (req, res) {
+  const orderNbr = req.session.orderNbr
+  const cart = req.session.cart
+  res.render('pages/order_confirmation', {orderNbr, cart})
 })
 
 app.get('/checkout', function (req, res) {

@@ -11,7 +11,7 @@ block content
                 p.font-weight-bold.text-center
               .col-sm-3.col-3
                 p.font-weight-bold.text-center Producto
-              .col-sm-1.col-1
+              .col-sm-1.col-1.cant
                 p.font-weight-bold.text-center Cant.
               .col-sm-2.col-3
                 p.font-weight-bold.text-center Precio
@@ -24,7 +24,7 @@ block content
               h3 No tienes nada en el carrito!
           else
           for item in cart
-            li.list-group-item
+            li.list-group-item.cart-item
               .row.align-items-center
                 .col-sm-2.img-div
                   img.img-thumbnail.img-fluid(src=item.image_url)
@@ -32,7 +32,6 @@ block content
                   p.align-middle #{item.title}
                 .col-sm-1.col-1.div-quantity
                   input.cart-quantity(type="text", id=item.cartItem, value=item.quantity)
-                  //- p #{item.quantity}
                 .col-sm-2.col-3
                   p
                     strong
@@ -49,7 +48,7 @@ block content
                   button.btn.btn-danger.btn-sm.cart-remove-btn(id=item.cartItem)
                     i.fa.fa-times
           if total != 0
-            li.list-group-item.list-group-item-secondary.list-header
+            li.list-group-item.list-group-item-secondary.list-totals
               .row.align-items-center
                 .col-sm-2.img-div
                   p.font-weight-bold.text-center
@@ -63,3 +62,9 @@ block content
                   p.font-weight-bold.text-center € #{total}
                 .col-sm-2.col-2
                   p.font-weight-bold.text-center.remove-title
+            li.list-group-item.list-group-item-secondary.checkout
+              .row.d-flex.justify-content-center
+                .col-sm-6
+                  a.btn.btn-success.btn-checkout(href="/checkout")
+                    i.fa.fa-cart-arrow-down
+                    |  Comprar

@@ -1,0 +1,13 @@
+extends ../layout
+
+block content
+      .container-fluid.text-center.upload-header
+        .container.d-flex.justify-content-around
+          h1 Confirmación de Pedido
+          a.btn.btn-outline-light.back-button(href='/') Inicio
+      .container
+        h1 Su órden ha sido reigstrada correctamente
+        h2 Este es su Número de Orden: #{orderNbr}
+        h3 Será entregada en 24 horas en el horario seleccionado.
+        h3 Muchas gracias por su compra.
+

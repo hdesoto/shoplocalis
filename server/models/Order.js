@@ -3,13 +3,20 @@ const collection = 'orders'
 const Schema = mongoose.Schema
 const ObjectId = Schema.Types.ObjectId
 
-
 var orderSchema = new mongoose.Schema({
-  ordernbr: {
-    type: Number,
-    required: true,
-    index: true,
-    unique: true
+  orderNbr: {
+    type: String,
+    required: true
+    // index: true,
+    // unique: true
+  },
+  name: {
+    type: String,
+    required: true
+  },
+  lastName: {
+    type: String,
+    required: true
   },
   email: {
     type: String,
@@ -19,15 +26,39 @@ var orderSchema = new mongoose.Schema({
     type: ObjectId,
     ref: 'User'
   },
-  deliveryaddress: {
+  deliveryAddress1: {
     type: String,
     required: true
   },
-  orderdate: {
+  deliveryAddress2: {
+    type: String,
+    required: false
+  },
+  city: {
+    type: String,
+    required: true
+  },
+  state: {
+    type: String,
+    required: true
+  },
+  postalCode: {
+    type: Number,
+    required: true
+  },
+  preferedTimeOfDelivery: {
+    type: String,
+    required: false
+  },
+  paymentMethod: {
+    type: String,
+    required: true
+  },
+  orderDate: {
     type: Number,
     default: Date.now()
   },
-  dateofdelivery: {
+  dateOfDelivery: {
     type: Number,
     required: false
   },
@@ -40,8 +71,8 @@ var orderSchema = new mongoose.Schema({
     ref: 'User'
   },
   items: [{
-    type: ObjectId,
-    ref: 'Product'
+    type: String
+    // ref: 'Product'
   }]
 }, { collection })
 
