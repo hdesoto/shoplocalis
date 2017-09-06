@@ -1,7 +1,10 @@
   <div class="container-fluid text-center search-results-header">
-  <h1>Search Results</h1>
+    <div class="container d-flex justify-content-around">
+      <h1>Resultados de la Búsqueda</h1>
+    <button type="button" class="btn btn-outline-light back-button" onclick="history.back()">Atrás</button>
+    </div>
 </div>
-<div class="container alert alert-primary" role="alert">
+<div class="container alert alert-primary text-center" role="alert">
    [<span class='font-weight-bold'>{{searchCtrl.resultArray.length}}</span>] productos encontrados con el texto: " {{searchCtrl.query}} "
 </div>
 <div class="container">

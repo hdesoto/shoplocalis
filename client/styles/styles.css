@@ -103,7 +103,6 @@ header .navbar-dark{
   .card-deck{
     flex-wrap:wrap;
   }
-  
 }
 
 /*.productbox .item-info{
@@ -414,13 +413,14 @@ header .navbar-dark{
 
 
 
-/*
+
 @media (min-width: 576px){
-  .modal-dialog-cart {
-    max-width: 95%;
+   .jumbotron{
+    padding: 2rem 1rem;
   }
 }
 
+/*
 @media(max-width: 780px){
   .media-object{
     display:none;

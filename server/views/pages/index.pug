@@ -3,11 +3,11 @@ extends ../layout
 block content
       .jumbotron.jumbotron-fluid
         .container.bg-dark
-          h1.display-3.text-uppercase.text-center.bg-dark.text-light Shop Localis
+          //- h1.display-3.text-uppercase.text-center.bg-dark.text-light Shop Localis
           .row
             .col-lg-12
               form.input-group.input-group-lg(action='/product/search', method='get')
-                input.form-control.text-center(type='text', name='title', placeholder='Search for...', aria-label='Search for...')
+                input.form-control.text-center(type='text', name='title', placeholder='Buscar Productos...', aria-label='Buscar Productos...')
                 span.input-group-btn
                   button.btn.btn-secondary(type='submit') Go!
       if search

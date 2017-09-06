@@ -86,6 +86,10 @@ header .navbar-nav ul form{
   color:#28a745;
 }
 
+.search-results-header .back-button:hover{
+  color:#3b5a76;
+}
+
 .edit-button{
   /*color: white;*/
 }
@@ -545,6 +549,15 @@ header .navbar-nav ul form{
   .upload-form{
     padding:15px;
   }  
+}
+
+.search-results-header{
+  background: #3b5a76;
+}
+
+.search-results-header h1{
+  color:white;
+  padding:10px;
 }
 
 /* === EDIT ITEM ===*/
