@@ -1,6 +1,6 @@
+
 *, ::before, ::after{
   transition: all ease-in-out 200ms;
-  /*box-sizing: border-box;*/
 }
 
 body{
@@ -13,7 +13,6 @@ header .top-navbar-admin{
 }
 
 header .navbar-dark{
-  /*background-color: #55d6aa!important;*/
   box-shadow: 0 0 4px rgba(0,0,0,.14);
 }
 
@@ -22,7 +21,15 @@ header .navbar-nav ul form{
   padding:0 15px;
 }
 
+.admin-text{
+  color:#f1c40f;
+}
 
+.logout-menu{
+  background: #118770;
+  color: white;
+  border-radius: 0px;
+}
 
 .navbar-nav a:hover,
 .navbar-nav a:focus{
@@ -45,9 +52,6 @@ header .navbar-nav ul form{
     width:100%;
   }
 
-  /*.navbar-nav a.disabled {
-    cursor: not-allowed;
-  }*/
 
   .navbar-nav a.disabled:hover::before{
     width: 0;
@@ -68,7 +72,6 @@ header .navbar-nav ul form{
 
 
   /* ================ */
-
 
 .back-button{
   margin:auto 0;
@@ -103,7 +106,6 @@ header .navbar-nav ul form{
 }
 
 .fixed-top li{
-  /*margin-right: 5%;*/
 }
 
 .navbar-list > ul > li > a{
@@ -205,10 +207,6 @@ header .navbar-nav ul form{
     height: 100%;
   }
 
-  /*.sidebar{
-    top:55px;
-  }*/
-
 }
 
 
@@ -229,7 +227,6 @@ header .navbar-nav ul form{
   }
 
   .picture-left img{
-    /*max-width: 444px;*/
     height: auto;
     margin:1px auto;
   }
@@ -261,7 +258,6 @@ header .navbar-nav ul form{
     }
   }
 
-
   .checkout-last-row .custom-select{
     width: 100%;
   }
@@ -270,19 +266,6 @@ header .navbar-nav ul form{
     display:none;
   }
 
-  /*
- * Base structure
- */
-
-/* Move down content because we have a fixed navbar that is 3.5rem tall */
-/*body {
-  padding-top: 3.5rem;
-}*/
-
-/*
- * Typography
- */
-
 .dashboard-body h1 {
   margin-bottom: 20px;
   padding-bottom: 9px;
@@ -290,14 +273,6 @@ header .navbar-nav ul form{
   text-align:center;
   font-size: 190%;
 }
-
-/* .dashboard-body .navbar-brand img{
-  width: 100px;
-}*/
-
-/*
- * Sidebar
- */
 
 .sidebar {
   position: fixed;
@@ -332,10 +307,6 @@ header .navbar-nav ul form{
 .sidebar .nav-link {
   border-radius: 0;
 }
-
-/*
- * Dashboard
- */
 
  /* Placeholders */
 .placeholders {
@@ -441,43 +412,6 @@ header .navbar-nav ul form{
   
 }
 
-
-
-/*
-@media (min-width: 576px){
-  .modal-dialog-cart {
-    max-width: 95%;
-  }
-}
-
-@media(max-width: 780px){
-  .media-object{
-    display:none;
-  }
-  .media-body{
-    font-size:1rem;
-  }
-  #modal-cart .modal-body{
-    padding-left: 2px;
-    padding-right: 2px;
-  }
-}*/
-
-/*@media (min-width: 989px){
-  .sidebar{
-    top:99px;
-  }
-}*/
-
-/*@media (min-width: 460px){
-  .dashboard-body h1 {
-    text-align: left;
-    font-size: 2.2rem;
-  }
-
-}*/
-
-
 /* === UPLOAD AND EDIT CHOOSE FILE PARAMS === */
 
 .custom-file-control:lang(en)::before {
@@ -505,6 +439,22 @@ header .navbar-nav ul form{
 
 .upload-details{
   height: 186px;
+}
+
+.register-header{
+  background: #7f8c8d;
+}
+.register-header h1{
+  color:white;
+  padding:10px;
+}
+
+.login-header{
+  background: #007bff;
+}
+.login-header h1{
+  color:white;
+  padding:10px;
 }
 
 .upload-header{

@@ -84,7 +84,6 @@ app.use('/', routesHome)
 const routesCart = require('./routes/public/cart')
 app.use('/cart', routesCart)
 
-
 const routesAuth = require('./routes/auth')
 app.use(routesAuth)
 

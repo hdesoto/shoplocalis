@@ -5,23 +5,6 @@ const Schema = mongoose.Schema
 // const ObjectId = Schema.Types.ObjectId
 
 var userSchema = new Schema({
-  // name: {
-  //   type: String,
-  //   required: true
-  // },
-  // email: {
-  //   type: String,
-  //   // required: true,
-  //   // unique: true
-  // },
-  // password: {
-  //   type: String,
-  //   required: true
-  // },
-  // isAdmin: {
-  //   type: Boolean,
-  //   required: false
-  // },
   dateOfCreation: {
     type: Number,
     default: Date.now()
