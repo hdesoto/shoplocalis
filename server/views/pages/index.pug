@@ -13,7 +13,7 @@ block content
       if search
         .container.alert.alert-primary(role='alert')
           | [ #{products.length} ] productos encontrados con el texto: " #{query} " .
-      .container
+      .container.container-deck
         .card-deck.d-flex.justify-content-around
           each product in products
             .col.productbox.d-flex.flex-column.justify-content-between.mx-1

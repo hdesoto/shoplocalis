@@ -108,7 +108,7 @@ app.get('/checkout', function (req, res) {
 app.post('/cart', (req, res) => {
   const {_id, title, image_url, price} = JSON.parse(req.body.product)
   const quantity = +req.body.quantity
-  const itemTotal = quantity * price
+  const itemTotal = Math.round((quantity * price) * 100) / 100
   const cartItem = req.session.cart.length + 1
   // console.log("Cart item: " + cartItem)
   const newCartItem = {cartItem, _id, title, image_url, price, quantity, itemTotal}

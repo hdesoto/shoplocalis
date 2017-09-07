@@ -15,6 +15,7 @@ header .navbar-dark{
   box-shadow: 0 0 4px rgba(0,0,0,.14), 0 6px 8px rgba(0,0,0,.28);
 }
 
+
 .back-button{
   margin:auto 0;
 }
@@ -104,6 +105,8 @@ header .navbar-dark{
     flex-wrap:wrap;
   }
 }
+
+
 
 
 
@@ -790,8 +793,24 @@ body {
 
 .pricetext {
   font-weight:bold;
-  font-size:1.4em;
 }
+
+@media (min-width: 445px){
+  .pricetext{
+    font-weight:bold;
+    font-size:1.4em;
+  }
+}
+
+@media (max-width: 470px){
+  .container-deck{
+    padding-left: 0;
+    padding-right: 0;
+    /*max-width:646px;*/
+  }
+}
+
+
 
 /* ===== ORDER CONFIRMATION ===== */
 
