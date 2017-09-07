@@ -6,6 +6,7 @@ angular.module('storeApp')
       .when('/new_product', {
         templateUrl: 'app/routes/newProduct/product_upload.html',
         controller: 'newProductController',
-        controllerAs: 'newCtrl'
+        controllerAs: 'newCtrl',
+        secure: true
       })
       })

@@ -1,0 +1,21 @@
+<header>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark top-navbar-admin"><a href="/" class="navbar-brand"><img src="../img/icons/logohorizontal-narrow.png"/></a>[ADMIN]
+    <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
+    <div id="navbarSupportedContent" class="collapse navbar-collapse align-items-middle">
+      <ul class="navbar-nav mr-auto navbar-list">
+        <li class="nav-item disabled"><a href="#!/adminHome" class="nav-link">Inicio <span class="sr-only">(current)</span></a></li>
+        <li class="nav-item"><a href="#!/orders" class="nav-link">Ver Pedidos</a></li>
+        <li class="nav-item"><a href="#!/new_product" class="nav-link">Crear Producto</a></li>
+        <li ng-controller="navbarController" class="nav-item"><a href="#!/logout" class="nav-link" ng-click="logout()">Desconectarse</a></li>
+      </ul>
+      <div class="form-inline my-2 my-lg-0" ng-controller="getQueryController as getCtrl">
+        <div class="input-group" >
+          <input type="text" ng-model="getCtrl.query" class="form-control" placeholder="Buscar..." aria-label="Buscar...">
+          <span class="input-group-btn">
+            <button class="btn btn-secondary admin-search-button" ng-click="getCtrl.getQueryAndRedirect()" type="submit">Go!</button>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

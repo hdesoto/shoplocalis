@@ -6,7 +6,8 @@ angular.module('storeApp')
       .when('/orders', {
         templateUrl: 'app/routes/orderList/orders_list.html',
         controller: 'ordersListController',
-        controllerAs: 'ordersListCtrl'
+        controllerAs: 'ordersListCtrl',
+        secure: true
       })
     })
       

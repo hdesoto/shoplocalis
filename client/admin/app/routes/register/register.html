@@ -1,0 +1,16 @@
+<div class="container-fluid admin-login-body">
+    <form class="form-signin" ng-submit='registerCtrl.register($event)'>
+        <h2 class="form-signin-heading">Ingrese sus datos para registrarse:</h2>
+        <label for="username" class="sr-only">Usuario</label>
+        <input type="text" id="username" class="form-control" placeholder="Nombre de Usuario" ng-model="registerCtrl.username" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" ng-model="registerCtrl.password" required>
+        <!-- <div class="checkbox">
+            <label>
+                <input type="checkbox" value="remember-me"> Recordarme
+            </label>
+        </div> -->
+        <button class="btn btn-lg btn-dark btn-block" type="submit">REGISTRAR</button>
+    </form>
+</div>
+<!-- /container -->

@@ -1,5 +1,6 @@
+/* global myApp */
 
-myApp.controller('editProductController',function($routeParams, $location, DataService, SweetAlert){
+myApp.controller('editProductController', function ($routeParams, $location, DataService, SweetAlert) {
   console.log('edit Product Controller loaded...')
   var self = this;
   self.id = $routeParams.id

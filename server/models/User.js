@@ -1,27 +1,27 @@
 const mongoose = require('mongoose')
+const passportLocalMongoose = require('passport-local-mongoose')
 const collection = 'users'
 const Schema = mongoose.Schema
-const ObjectId = Schema.Types.ObjectId
+// const ObjectId = Schema.Types.ObjectId
 
-var userSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: true,
-    index: true,
-    unique: true
-  },
-  email: {
-    type: String,
-    required: true
-  },
-  password: {
-    type: String,
-    required: true
-  },
-  isAdmin: {
-    type: Boolean,
-    required: false
-  },
+var userSchema = new Schema({
+  // name: {
+  //   type: String,
+  //   required: true
+  // },
+  // email: {
+  //   type: String,
+  //   // required: true,
+  //   // unique: true
+  // },
+  // password: {
+  //   type: String,
+  //   required: true
+  // },
+  // isAdmin: {
+  //   type: Boolean,
+  //   required: false
+  // },
   dateOfCreation: {
     type: Number,
     default: Date.now()
@@ -32,5 +32,6 @@ var userSchema = new mongoose.Schema({
   }
 }, { collection })
 
+userSchema.plugin(passportLocalMongoose)
 // var User = module.exports = mongoose.model('User', userSchema)
 module.exports = mongoose.model('User', userSchema)

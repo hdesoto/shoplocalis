@@ -1,0 +1,30 @@
+{
+  "name": "shoplocalis",
+  "description": "Marketplace with focus on local shops.",
+  "main": "/server/app.js",
+  "authors": [
+    "Hernán de Soto"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "shop",
+    "local",
+    "project"
+  ],
+  "homepage": "https://github.com/hdesoto/shoplocalis",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "v4.0.0-alpha.6",
+    "angular-jwt": "^0.1.9",
+    "angular": "^1.6.6",
+    "jquery": "^3.2.1",
+    "tether": "^1.4.0"
+  }
+}

@@ -6,6 +6,7 @@ angular.module('storeApp')
       .when('/search/:query', {
         templateUrl: 'app/routes/searchProduct/search_results.html',
         controller: 'searchController',
-        controllerAs: 'searchCtrl'
+        controllerAs: 'searchCtrl',
+        secure: true
       })
       })

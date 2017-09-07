@@ -6,6 +6,7 @@ angular.module('storeApp')
       .when('/edit_product/:id', {
         templateUrl: 'app/routes/editProduct/product_edit.html',
         controller: 'editProductController',
-        controllerAs: 'editCtrl'
+        controllerAs: 'editCtrl',
+        secure: true
       })
       })

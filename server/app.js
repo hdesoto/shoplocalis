@@ -17,7 +17,7 @@ const URL_DB = process.env.URL_DB || 'mongodb://localhost:27017/shoplocalis'
 const app = express()
 
 global.__base = path.join(__dirname)
-console.log(__base)
+console.log('Base is: ' + __base)
 
 const assetsPath = path.join('__dirname', '../client')
 const adminPath = path.join('__dirname', '../client/admin')
@@ -25,8 +25,11 @@ const adminPath = path.join('__dirname', '../client/admin')
 app.use(express.static(assetsPath))
 app.use('/admin', express.static(adminPath))
 
+/* bodyParser */
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
+
+/* express-session */
 app.use(session({
   secret: 'zebrapassenger',
   // cookie: { secure: true },
@@ -35,6 +38,11 @@ app.use(session({
   store: new FileStore(),
   name: 'cookie-Cart'
 }))
+
+/* ===== Passport Load ===== */
+const passport = require('./config/passport/')
+app.use(passport.initialize())
+/* ===== Passport Load END===== */
 
 app.use(function (req, res, next) {
   req.session.cart = req.session.cart || []
@@ -54,117 +62,31 @@ mongoose.connect(URL_DB, (err, db) => {
 /* === Routes === */
 
 // Call to Models and theirs methods
-const Product = require('./models/Product')
-// const Order = require('./models/Order')
 const User = require('./models/User')
-
-// ********** API PRODUCTS ********** //
+// ********** APIs **********
+  // ==== API PRODUCTS ==== //
 const routesProducts = require('./routes/admin/products')
 app.use('/api/products', routesProducts)
 
-// ********** API ORDERS **********
+  // ==== API ORDERS ====
 const routesOrders = require('./routes/admin/orders')
 app.use('/api/orders', routesOrders)
 
-// ********** API USERS **********
+  // ==== API USERS ====
 const routesUsers = require('./routes/admin/users')
 app.use('/api/users', routesUsers)
 
 // ********** HOME **********
-app.get('/', function (req, res) {
-  const cart = req.session.cart
-  Product.getAllProducts(function (err, products) {
-    if (err) {
-      throw err
-    }
-    res.render('pages/index', {products, cart})
-  }, 70)
-})
+const routesHome = require('./routes/public/home')
+app.use('/', routesHome)
 
-app.get('/product/search', function (req, res) {
-  const cart = req.session.cart
-  const search = true
-  const query = req.query.title
-  Product.searchProductByTitle(query, function (err, products) {
-    if (err) {
-      throw err
-    }
-    res.render('pages/index', {products, cart, search, query})
-  })
-})
-
-app.get('/order_confirmation', function (req, res) {
-  const orderNbr = req.session.orderNbr
-  const cart = req.session.cart
-  res.render('pages/order_confirmation', {orderNbr, cart})
-})
-
-app.get('/checkout', function (req, res) {
-  const cart = req.session.cart
-  res.render('pages/checkout', {cart})
-})
-
-// ********** ADD ITEM TO CART **********
-app.post('/cart', (req, res) => {
-  const {_id, title, image_url, price} = JSON.parse(req.body.product)
-  const quantity = +req.body.quantity
-  const itemTotal = Math.round((quantity * price) * 100) / 100
-  const cartItem = req.session.cart.length + 1
-  // console.log("Cart item: " + cartItem)
-  const newCartItem = {cartItem, _id, title, image_url, price, quantity, itemTotal}
-  var repeated = false
-  req.session.cart.forEach(function (item) {
-    if (item._id === newCartItem._id) {
-      repeated = true
-    }
-  })
-  if (!repeated) {
-    req.session.cart.push(newCartItem)
-  }
-  req.session.save(function (err) {
-    if (err) throw err
-    res.redirect('/')
-  })
-})
-
-// ********** See CART **********
-app.get('/cart', (req, res) => {
-  const cart = req.session.cart
-  // console.log(cart)
-  const total = Math.round((cart.reduce(function (sum, value) {
-    return sum + value.itemTotal
-  }, 0)) * 100) / 100
-  res.render('pages/cart', {cart, total})
-})
-
-app.delete('/cart/:cartItem', function (req, res) {
-  var cartItem = +req.params.cartItem
-  var newCart = req.session.cart.filter(item => { return item.cartItem !== cartItem })
-  req.session.cart = newCart
-  req.session.save(function (err) {
-    if (err) throw err
-    res.send({'ok': 'Item deleted from Cart', 'cart': req.session.cart})
-  })
-})
-
-app.put('/cart/:cartItem', function (req, res) {
-  var cartItem = +req.params.cartItem
-  var newQuantity = +req.body.quantity
-  console.log(req.session.cart)
-  req.session.cart.forEach(function (item) {
-    if (item.cartItem === cartItem) {
-      item.quantity = newQuantity
-      item.itemTotal = Math.round((newQuantity * item.price) * 100) / 100
-    }
-  })
-  req.session.save(function (err) {
-    if (err) throw err
-    res.send({'ok': 'Quantity updated', 'cart': req.session.cart})
-  })
-})
+// ********** CART **********
+const routesCart = require('./routes/public/cart')
+app.use('/cart', routesCart)
 
 
-
+const routesAuth = require('./routes/auth')
+app.use(routesAuth)
 
 app.listen(PORT)
 console.log(`Listening on PORT ${PORT}`)

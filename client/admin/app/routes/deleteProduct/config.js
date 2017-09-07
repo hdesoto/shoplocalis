@@ -6,6 +6,7 @@ angular.module('storeApp')
       .when('/delete_product/:id', {
         templateUrl: 'app/routes/deleteProduct/product_delete.html',
         controller: 'deleteProductController',
-        controllerAs: 'delCtrl'
+        controllerAs: 'delCtrl',
+        secure: true
       })
       })

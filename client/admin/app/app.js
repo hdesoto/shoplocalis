@@ -1,25 +1,27 @@
 /* global angular */
 
-var myApp = angular.module('storeApp', ['ngRoute', 'oitozero.ngSweetAlert'])
+var myApp = angular.module('storeApp', ['ngRoute', 'oitozero.ngSweetAlert', 'angular-jwt'])
+  .config(function ($httpProvider) {
+    $httpProvider.interceptors.push('AuthInterceptor')
+  })
+  .config(function ($routeProvider) {
+    $routeProvider
+      .otherwise('/login')
+  })
+  .run(function ($rootScope, $location, StorageService, AuthService) {
+    if (AuthService.isLoggedIn()) {
+      const token = StorageService.getToken()
+      AuthService.setCredentials(token)
+    }
 
-// // Rutas
-// .config(function($routeProvider){
-
-//   $routeProvider
-//     // .when('/admi/', {
-//     //   templateUrl: './app/templates/dashboard.html',
-//     //   controller: 'dashboardController'
-//     // })
-//     // .when('/admin/addProduct', {
-//     //   templateUrl: 'app/templates/product_upload.html',
-//     //   controller: 'addProductController'
-//     // })
-// })
-
-// angular.controller('dashboardContoller', function($scope) { 
-//   $scope.message = 'This is DAAAASSHHHHBOAAARRDDDD!!!'
-// })
-
-// angular.controller('addProductController', function($scope) {
-//   $scope.message = 'This is Add Product'
-// })
+    $rootScope.$on('$routeChangeStart', function (event, next, current) {
+      console.log('route has changed')
+      if (next && next.secure) {
+        console.log('this route is secured!!')
+        if (!AuthService.isLoggedIn()) {
+          $location.path('/login')
+        }
+      }
+    })
+  })
+  
