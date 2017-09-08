@@ -20,7 +20,40 @@
 
 <body>
 
-    <div ng-include="'/app/partials/navbar.html'"></div>
+    <!-- <div ng-include="'app/partials/navbar.html'"></div> -->
+    <header>
+      <nav class="navbar fixed-top navbar-expand-lg navbar-dark top-navbar-admin"><a href="/" class="navbar-brand"><img src="../img/icons/logohorizontal-narrow.png"/></a>
+        <span class="admin-text">[ADMIN]</span>
+        <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
+        <div id="navbarSupportedContent" class="collapse navbar-collapse align-items-middle">
+          <ul class="navbar-nav mr-auto navbar-list">
+            <li class="nav-item disabled"><a href="#!/" class="nav-link">Inicio <span class="sr-only">(current)</span></a></li>
+            <li class="nav-item"><a href="#!/orders" class="nav-link">Ver Pedidos</a></li>
+            <li class="nav-item">
+              <a href="#!/new_product" class="nav-link">Crear Producto</a>
+            </li>
+            <li class="dropdown nav-item" ng-if="loggedUser" ng-controller="navbarController">
+              <a class="dropdown-toggle nav-link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> ADMIN: {{ loggedUser }} <span class="caret"></span></a>
+              <ul class="dropdown-menu logout-menu">
+                <li>
+                  <a class="nav-link" href="#" ng-click="logout()">Desconectarse</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <div class="form-inline my-2 my-lg-0" ng-controller="getQueryController as getCtrl">
+            <div class="input-group" >
+              <input type="text" ng-model="getCtrl.query" class="form-control" placeholder="Buscar..." aria-label="Buscar...">
+              <span class="input-group-btn">
+                <button class="btn btn-secondary admin-search-button" ng-click="getCtrl.getQueryAndRedirect()" type="submit">Go!</button>
+              </span>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    
     <div class='ng-view' autoscroll="true"></div>
 
 <!-- SCRIPTS -->
