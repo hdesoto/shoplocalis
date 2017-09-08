@@ -4,6 +4,7 @@
   "description": "Marketplace with focus on local shops.",
   "main": "index.js",
   "scripts": {
+    "postinstall": "node ./node_modules/bower/bin/bower install",
     "start": "node server/app.js",
     "dev": "nodemon server/app.js --ignore sessions/",
     "test": "echo \"Error: no test specified\" && exit 1"
