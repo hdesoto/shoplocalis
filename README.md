@@ -104,13 +104,35 @@ In the /admin part of the site:
 ## Mobile Screenshots
 
 
+---
+
 [![Home](https://github.com/hdesoto/shoplocalis/blob/master/screenshots/home.jpg)]
+
+---
+
 [![Carrito](https://github.com/hdesoto/shoplocalis/blob/master/screenshots/carrito.jpg)]
+
+---
+
 [![OrderConfirmation](https://github.com/hdesoto/shoplocalis/blob/master/screenshots/order-confirmation.jpg)]
+
+---
+
 [![Admin-Home](https://github.com/hdesoto/shoplocalis/blob/master/screenshots/admin-home.jpg)]
+
+---
+
 [![Admin-Product-Creation](https://github.com/hdesoto/shoplocalis/blob/master/screenshots/admin-product-creation-confirmation.jpg)]
+
+---
+
 [![Admin-Home-NotLogged](https://github.com/hdesoto/shoplocalis/blob/master/screenshots/admin-home-not-logged.jpg)]
+
+---
+
 [![Admin-Home](https://github.com/hdesoto/shoplocalis/blob/master/screenshots/admin-menu.jpg)]
+
+---
 
 
 ## TEST APIs
