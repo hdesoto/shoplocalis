@@ -55,7 +55,7 @@
                         <p class="font-weight-bold text-center">Total</p>
                       </div>
                       <div class="col-sm-2 col-2">
-                        <p class="font-weight-bold text-center remove-title">Quitar</p>
+                        <p class="font-weight-bold text-center remove-title"></p>
                       </div>
                     </div>
                   </li>
@@ -68,13 +68,13 @@
                         <p class="align-middle">{{item.product.title}}</p>
                       </div>
                       <div class="col-sm-1 col-1 div-quantity">
-                        <p class="align-middle">{{item.quantity}}</p>
+                        <p class="align-right">{{item.quantity}}</p>
                       </div>
                       <div class="col-sm-2 col-3">
-                        <p></p>
+                        <p class="align-right">{{item.product.price}}</p>
                       </div>
                       <div class="col-sm-2 col-3">
-                        <p></p>
+                        <p class="align-right">{{item.product.price * item.quantity | number : 2}}</p>
                       </div>
                       <div class="col-sm-2 col-2">
                         <p></p>
