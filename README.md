@@ -15,7 +15,7 @@
 [![PUG](https://avatars0.githubusercontent.com/u/9338635?v=4&s=200)](https://pugjs.org)
 
 
-# [SHOPLOCALIS](https://shoplocalis.herokuapp.com/#!/)
+# [SHOPLOCALIS - e-commerce solution](https://shoplocalis.herokuapp.com/#!/)
 
 ---
 
@@ -87,7 +87,7 @@ The main objective is to work and put into practice all the tools, skills and te
 
 ## SHOP LOCALIS
 
-ShopLocalis is an online store where a small shop can show all their products to a wider audience as well as receive simple purchase orders.
+ShopLocalis is an online store where a small shop can show all their products to a wider audience as well as receive simple purchase orders, making **e-commerce** accesible to small businesses.
 
 In the main page:
 * The buyer will land in the main home, with the products visible and a big search button. At this first stage the user doesn't need to be registered to browse the products, add to the cart nor make an order.

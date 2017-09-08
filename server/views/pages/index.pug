@@ -3,7 +3,6 @@ extends ../layout
 block content
       .jumbotron.jumbotron-fluid
         .container.bg-dark
-          //- h1.display-3.text-uppercase.text-center.bg-dark.text-light Shop Localis
           .row
             .col-lg-12
               form.input-group.input-group-lg(action='/product/search', method='get')
@@ -32,25 +31,6 @@ block content
                         i.fa.fa-cart-plus.cart-added-item
                         |  Agregar
                   .pricetext € #{product.price}
-            
-            //- .card
-            //-   a(href="#", data-toggle='modal', data-target=`#${product._id}`)
-            //-     img.card-img-top(src=product.image_url, alt='Card image cap')
-            //-   .card-body
-            //-     h4.card-title=product.title
-            //-     p.card-text=product.description
-            //-   .card-footer.d-flex.justify-content-around
-            //-     form(action='/cart', method='POST')
-            //-       input.hidden(value='1', name='quantity')
-            //-       input.hidden(name="product", value=product)
-            //-       button.btn.btn-success(type='submit')
-            //-         i.fa.fa-cart-plus.cart-added-item
-            //-         |  Añadir
-            //-     button.btn.btn-info(type='button', data-toggle='modal', data-target=`#${product._id}`)
-            //-       //- button.btn.btn-info(type='button', data-toggle='modal', data-target='#modal-product-detail')
-            //-       i.fa.fa-info-circle
-            //-       |  Detalles
-                // <small class="text-muted">Last updated 3 mins ago</small>
       
       // NEW_Modal PRODUCT DETAILS
       each product in products
@@ -91,9 +71,7 @@ block content
                                 button.btn.btn-outline-secondary.btn-number(type='button', data-type='minus', data-field='quantity')
                                   i.fa.fa-minus
                             .action
-                              //- form.addToCart(action="/addToCart", method="POST")
                               input.hidden(name="product", value=product)
-                              //- input.hidden(name="_id", value=product._id)
                               button.btn.btn-success.btn-add-to-cart(type="submit")
                                 i.fa.fa-cart-plus.cart-added-item
                                 |  Añadir
@@ -102,28 +80,22 @@ block content
                 button.btn.btn-outline-secondary(type='button', data-dismiss='modal')
                   | Cerrar  
 
-
-      nav(aria-label='Page navigation')
-          ul.pagination.justify-content-center
-            li.page-item.disabled
-              a.page-link(href='#', aria-label='Previous')
-                span(aria-hidden='true') «
-                span.sr-only Previous
-            li.page-item.disabled
-              a.page-link(href='#') 1
-            li.page-item.disabled
-              a.page-link(href='#') 2
-            li.page-item.disabled
-              a.page-link(href='#') 3
-            li.page-item.disabled
-              a.page-link(href='#') 4  
-            li.page-item.disabled
-              a.page-link(href='#', aria-label='Next')
-                span(aria-hidden='true') »
-                span.sr-only Next        
-      // Modals
-
-      
-      
-      
-
+      //- TODO
+      //- nav(aria-label='Page navigation')
+      //-     ul.pagination.justify-content-center
+      //-       li.page-item.disabled
+      //-         a.page-link(href='#', aria-label='Previous')
+      //-           span(aria-hidden='true') «
+      //-           span.sr-only Previous
+      //-       li.page-item.disabled
+      //-         a.page-link(href='#') 1
+      //-       li.page-item.disabled
+      //-         a.page-link(href='#') 2
+      //-       li.page-item.disabled
+      //-         a.page-link(href='#') 3
+      //-       li.page-item.disabled
+      //-         a.page-link(href='#') 4  
+      //-       li.page-item.disabled
+      //-         a.page-link(href='#', aria-label='Next')
+      //-           span(aria-hidden='true') »
+      //-           span.sr-only Next
