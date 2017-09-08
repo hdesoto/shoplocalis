@@ -41,7 +41,7 @@ $npm run dev
 
 ## API
 
-The server part has multiple **API endpoints** using several routes:
+The server part has multiple **API endpoints** using several routes returning all the infromation in JSON format:
 
 - `/api/orders` -> Will handle all order related requests.
 - `/api/products` -> Handles all product related operations.
@@ -52,7 +52,6 @@ The server part has multiple **API endpoints** using several routes:
 ## Built with:
 
 - **Front-end**
-
     - angular: 1.6.4
       - angular-route: 1.6.6
       - angular-jwt: 0.1.9
@@ -75,6 +74,8 @@ The server part has multiple **API endpoints** using several routes:
 ## Author
 
 [Hernán de Soto](https://github.com/hdesoto)
+
+---
 
 # Description of the concept.
 
@@ -99,22 +100,23 @@ In the /admin part of the site:
 4 Delete products.
 5 See all the Purchase Orders received with all the information of the order.
 
-
+---
 ## Mobile Screenshots
 
 
-
-## Technologies used in this project
-
+[![Home](https://github.com/hdesoto/shoplocalis/blob/master/screenshots/home.jpg)]
+[![Carrito](https://github.com/hdesoto/shoplocalis/blob/master/screenshots/carrito.jpg)]
+[![OrderConfirmation](https://github.com/hdesoto/shoplocalis/blob/master/screenshots/order-confirmation.jpg)]
+[![Admin-Home](https://github.com/hdesoto/shoplocalis/blob/master/screenshots/admin-home.jpg)]
+[![Admin-Product-Creation](https://github.com/hdesoto/shoplocalis/blob/master/screenshots/admin-product-creation-confirmation.jpg)]
+[![Admin-Home-NotLogged](https://github.com/hdesoto/shoplocalis/blob/master/screenshots/admin-home-not-logged.jpg)]
+[![Admin-Home](https://github.com/hdesoto/shoplocalis/blob/master/screenshots/admin-menu.jpg)]
 
 
 ## TEST APIs
 
-curl -H "Content-Type: application/json" -X POST -d '{"title":"Yerba Mate","description":"Yerba Canarias - la yerba de mi pías", "price": 5,"uom":"kg", "stock": 25, "image_url": "http://canarias.com.uy/wp-content/uploads/2012/11/home-canarias.png"}' http://localhost:3001/api/products
-
-
 **Create Product**
-curl -H "Content-Type: application/json" -X POST -d '{"title":"Nuevo producto",
+curl -H "Content-Type: application/json" -X POST -d '{"title":"Patatas Fritas",
 "description":"Denominación del alimento:Patatas fritas
 Nombre del operador de la empresa alimentaria:PepsiCo Foods. A.I.E.
 Nombre del importador:PepsiCo Foods. A.I.E.
@@ -124,8 +126,4 @@ Dirección del operador/importador:Avenida de los Olmos, 2, 01013 - Vitoria, Esp
 "stock": 50,
 "image_url": "https://static.carrefour.es/hd_280x_/supermercado/bcc_static/catalogImages/product/799201/799201.png"}' http://localhost:3001/api/products
 
-
-
-**Create Order**
-curl -H "Content-Type: application/json" -X POST -d '{"ordernbr":2,"email": "some@mail.com","deliveryaddress":"Carrer Ferran nro 28, piso 3","items": [{"_id":"59a7df85c10c4820648155f9"}]}' localhost:3001/api/orders
 ****************************************
