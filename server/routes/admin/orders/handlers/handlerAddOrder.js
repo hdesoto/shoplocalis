@@ -20,7 +20,9 @@ function addOrder (req, res) {
   const order = new Order()
   const orderNbr = shortid.generate()
   // const items = JSON.parse(req.session.cart)
-  const items = req.session.cart
+  const items = req.session.cart.map((_item) => {
+      return { product: _item._id, quantity: _item.quantity }
+  })
   // console.log(items)
 
   order.orderNbr = orderNbr

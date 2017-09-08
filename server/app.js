@@ -54,9 +54,8 @@ app.set('views', path.join(__dirname, '/views'))
 
 app.locals.pretty = true
 
-mongoose.connect(URL_DB, (err, db) => {
-  if (err) throw err
-  console.log('Connected correctly to DB Shoplocalis')
+mongoose.connect(URL_DB, {
+  useMongoClient: true
 })
 
 /* === Routes === */

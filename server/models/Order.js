@@ -73,6 +73,7 @@ var orderSchema = new mongoose.Schema({
   items: [{
     product: {
       type: ObjectId,
+      required: true,
       ref: 'Product'
     },
     quantity: {
