@@ -6,7 +6,7 @@
 </div>
 <div class="container">
   <div class="card-deck d-flex justify-content-around flex-wrap" ng-init="showAllProducts()">
-    <div ng-repeat='product in adminHomeCtrl.aProducts' class="card card-product">
+    <div ng-repeat='product in adminHomeCtrl.aProducts' class="card-product card">
       <a href="#!/edit_product/{{product._id}}"><img class="card-img-top" ng-src='{{product.image_url}}' alt="Card image cap"></a>
       <div class="card-body">
         <h4 class="card-title">{{product.title}}</h4>

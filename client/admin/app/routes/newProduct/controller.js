@@ -10,7 +10,7 @@ myApp.controller('newProductController', function ($routeParams, $location, Data
       description: self.description,
       price: self.price,
       uom: self.uom,
-      stock: self.stock,
+      // stock: self.stock,
       image_url: self.image_url
     }
     SweetAlert.swal({

@@ -1,10 +1,8 @@
 /* global myApp */
 (function () {
-  // angular.module('MyApp')
   myApp.factory('AuthService', AuthService)
 
   function AuthService ($rootScope, $http, StorageService, jwtHelper) {
-
     function isLoggedIn () {
       const token = StorageService.getToken()
       if (!token) return false

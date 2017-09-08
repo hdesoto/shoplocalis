@@ -10,11 +10,9 @@ function addProduct (req, res) {
   product.description = req.body.description
   product.price = req.body.price
   product.uom = req.body.uom
-  product.stock = req.body.stock
+  // product.stock = req.body.stock
   product.image_url = req.body.image_url
-  // const product = req.body
 
-  // Product.create(product)
   product.save()
     .then((product) => res.send(product))
 }

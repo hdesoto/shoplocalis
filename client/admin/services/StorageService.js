@@ -1,6 +1,5 @@
 /* global myApp */
 (function () {
-  // angular.module('MyApp')
   myApp.factory('StorageService', StorageService)
 
   function StorageService ($window) {

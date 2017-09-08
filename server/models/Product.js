@@ -22,7 +22,7 @@ var productSchema = new Schema({
   },
   stock: {
     type: Number,
-    required: true
+    required: false
   },
   image_url: {
     type: String,

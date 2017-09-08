@@ -1,8 +1,6 @@
-/* global angular */
 /* global myApp */
 
 (function () {
-
   myApp.factory('AuthInterceptor', AuthInterceptor)
 
   function AuthInterceptor (StorageService) {

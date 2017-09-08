@@ -1,5 +1,8 @@
 <div class="container-fluid text-center orders-list-header text-center">
-  <h1>Listado de Órdenes</h1>
+  <div class="container d-flex justify-content-around">
+    <h1>Listado de Órdenes</h1>
+    <a href="#!/" class="btn btn-outline-light back-button" >Inicio</a>
+  </div>
 </div>
 <div class="container alert alert-primary text-center" role="alert">
    [{{ordersListCtrl.aOrders.length}}] órdenes recibidas.
@@ -31,7 +34,7 @@
               <li><span class='order-details-label'>Forma de Pago: </span>{{order.paymentMethod}}</li>
               <li><span class='order-details-label'>Horario de Entrega: </span>{{order.preferedTimeOfDelivery}}</li>
             </ul>
-            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target='#{{order._id}}' aria-expanded="false" aria-controls="collapseExample">
+            <button class="btn btn-dark" type="button" data-toggle="collapse" data-target='#{{order._id}}' aria-expanded="false" aria-controls="collapseExample">
               Ver Items
             </button>
             <div class="collapse" id='{{order._id}}'>

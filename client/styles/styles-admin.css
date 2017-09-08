@@ -93,6 +93,10 @@ header .navbar-nav ul form{
   color:#3b5a76;
 }
 
+.orders-list-header .back-button:hover{
+  color:#a0cbfa;
+}
+
 .edit-button{
   /*color: white;*/
 }
@@ -162,7 +166,7 @@ header .navbar-nav ul form{
 
 .card-product{
   min-width: 200px;
-  max-width: 220px;
+  max-width: 220px !important;
   margin-bottom:15px;
 }
 
@@ -445,6 +449,14 @@ header .navbar-nav ul form{
   background: #7f8c8d;
 }
 .register-header h1{
+  color:white;
+  padding:10px;
+}
+
+.orders-list-header{
+  background: #a0cbfa;
+}
+.orders-list-header h1{
   color:white;
   padding:10px;
 }

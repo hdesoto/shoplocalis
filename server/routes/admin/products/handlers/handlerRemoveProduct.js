@@ -9,18 +9,3 @@ function deleteProduct (req, res) {
 }
 
 module.exports = deleteProduct
-
-// DELETE PRODUCT
-// module.exports.deleteProduct = function (id, callback) {
-//   Product.findByIdAndRemove(id, callback)
-// }
-
-// app.delete('/api/product/:_id', function (req, res) {
-  
-//   Product.deleteProduct(id, function (err, product) {
-//     if (err) {
-//       throw err
-//     }
-//     res.json(product)
-//   })
-// })
